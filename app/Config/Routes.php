@@ -24,7 +24,24 @@ $routes->post('auth/register', 'Auth::add_register');
 $routes->get('login', 'Auth::index');
 $routes->post('auth/login', 'Auth::login'); // Proses login
 $routes->get('auth/logout', 'Auth::logout'); // Proses logout
-$routes->get('shop', 'Shop::index'); // Halaman shop untuk customer
-$routes->get('profile', 'Profile::index'); // Halaman profil untuk siswa
-$routes->get('admin/dashboard', 'Admin::dashboard'); // Halaman dashboard untuk admin
-$routes->get('superadmin/dashboard', 'SuperAdmin::dashboard'); // Halaman dashboard untuk superadmin
+
+
+$routes->group('superadmin',function($routes){
+    $routes->get('dashboard', 'SuperAdmin::index'); // Halaman dashboard untuk superadmin
+});
+
+$routes->group('admin',function($routes){
+    $routes->get('dashboard', 'Admin::dashboard'); // Halaman dashboard untuk admin
+});
+
+$routes->group('siswa',function($routes){
+    $routes->get('dashboard', 'Siswa::index'); // Halaman profil untuk siswa
+});
+
+$routes->group('customer',function($routes){
+    $routes->get('dashboard', 'Customer::index'); // Halaman shop untuk customer
+});
+
+$routes->group('industri',function($routes){
+    $routes->get('dashboard', 'Industri::index'); // Halaman shop untuk customer
+});

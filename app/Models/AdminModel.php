@@ -13,6 +13,13 @@ class AdminModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
+    public function getUser($username, $level)
+    {
+        return $this->where('username', $username)
+                    ->where('id_level', $level)
+                    ->first();
+    }
+
     public function getUserByUsernameOrEmail($usernameOrEmail)
     {
         return $this->select('admin.*, level.nama AS level_name')

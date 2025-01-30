@@ -4,7 +4,6 @@
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register -->
-          <?= $this->include('flashalert')?>
           <div class="card">
             <div class="card-body">
               <!-- Logo -->
@@ -72,7 +71,7 @@
               <h4 class="mb-2">Selamat datang di Lapak Siswa👋</h4>
               <p class="mb-4">Mohon masuk untuk menjelajahi lebih lanjut</p>
 
-              <form id="formAuthentication" class="mb-3" action="<?= base_url('auth/login') ?>" method="POST">
+              <form class="mb-3" action="<?= base_url('auth/login') ?>" method="POST">
                 <div class="mb-3">
                   <label for="username" class="form-label">Masuk sebagai</label>
                   <select class="form-control" name="level" id="">
@@ -117,7 +116,7 @@
 
               <p class="text-center">
                 <span>Belum punya akun?</span>
-                <a href="auth-register-basic.html">
+                <a href="<?= base_url('register')?>">
                   <span>Registrasi disini!</span>
                 </a>
               </p>

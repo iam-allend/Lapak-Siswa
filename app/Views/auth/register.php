@@ -123,11 +123,14 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="username" class="form-label">Level</label>
+                  <label for="username" class="form-label">Sebagai</label>
                   <select class="form-control" name="level" id="">
                     <option value="">-- Pilih --</option>
                     <option value="4">Super Admin</option>
                     <option value="3">Admin</option>
+                    <option value="2">Siswa</option>
+                    <option value="1">Customer</option>
+                    <option value="5">Industri</option>
                   </select>
                 </div>
                 <div class="mb-3">
@@ -148,7 +151,7 @@
 
               <p class="text-center">
                 <span>Already have an account?</span>
-                <a href="auth-login-basic.html">
+                <a href="<?= base_url('login')?>">
                   <span>Sign in instead</span>
                 </a>
               </p>
