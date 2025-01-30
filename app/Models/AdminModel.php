@@ -21,6 +21,13 @@ class AdminModel extends Model
     //     'status_registrasi' => 'required',
     // ];
 
+    public function getUser($username, $level)
+    {
+        return $this->where('username', $username)
+                    ->where('id_level', $level)
+                    ->first();
+    }
+
     public function getUserByUsernameOrEmail($usernameOrEmail)
     {
         return $this->select('admin.*, level.nama AS level_name')

@@ -8,6 +8,7 @@ use CodeIgniter\Controller;
 class Auth extends Controller
 {
     protected $adminModel;
+    protected $loginModel;
 
     public function index() {
 
@@ -61,73 +62,51 @@ class Auth extends Controller
 
     public function login()
     {
+        $session = session();
+        $this->loginModel = new AdminModel();
 
-        // Aturan validasi
-        $rules = [
-            'email-username' => 'required',
-            'password' => 'required'
-        ];
-        
-        
-        if ($this->request->getMethod() === 'post') {
-            $usernameOrEmail = $this->request->getPost('email-username');
-            $password = $this->request->getPost('password');
+        $username = $this->request->getPost('email-username');
+        $password = $this->request->getPost('password');
+        $level = $this->request->getPost('level');
 
-            log_message('debug', 'Username/Email: ' . $usernameOrEmail);
-            log_message('debug', 'Password: ' . $password);
+        $user = $this->loginModel->getUser($username, $level);
 
-            $userModel = new AdminModel();
-            $user = $userModel->getUserByUsernameOrEmail($usernameOrEmail);
+        if ($user) {
+            if (password_verify($password, $user['password'])) { // Gunakan password_verify()
+                $sessionData = [
+                    'id_admin' => $user['id_admin'],
+                    'id_level' => $user['id_level'],
+                    'fullname' => $user['full_name'],
+                    'username' => $user['username'],
+                    'email' => $user['email'],
+                    'gender' => $user['gender'],
+                    'url_image' => $user['url_image'],
+                    'logged_in' => true
+                ];
+                $session->set($sessionData);
 
-            if ($user) {
-                log_message('debug', 'User  found: ' . json_encode($user));
-                if (password_verify($password, $user['password'])) {
-                    $this->setUserSession($user);
-                    return $this->redirectUser ($user['id_level']);
-                } else {
-                    log_message('error', 'Password mismatch for user: ' . $usernameOrEmail);
+                if ($level == 3) {
+                    return redirect()->to(base_url('admin/dashboard'))->with('alert','login_sukses');
+                } elseif ($level == 4) {
+                    return redirect()->to(base_url('superadmin/dashboard'))->with('alert','login_sukses');
+                } elseif ($level == 2) {
+                    return redirect()->to(base_url('siswa/dashboard'))->with('alert','login_sukses');
+                } elseif ($level == 1) {
+                    return redirect()->to(base_url('customer/dashboard'))->with('alert','login_sukses');
+                } elseif ($level == 5) {
+                    return redirect()->to(base_url('industri/dashboard'))->with('alert','login_sukses');
                 }
             } else {
-                log_message('error', 'User  not found: ' . $usernameOrEmail);
+                return redirect()->to(base_url('login'))->with('alert','login_gagal');
             }
-
-            return redirect()->back()->with('error', 'Username atau password salah');
-        }
-
-        return redirect('auth/register')->back()->with('error', 'masih error');
-    }
-
-    private function setUserSession($user)
-    {
-        // Set session data
-        session()->set([
-            'id' => $user['id_admin'],
-            'username' => $user['username'],
-            'level_user' => $user['id_level'],
-            'level_name' => $user['level_name'], // Menyimpan nama level
-            'logged_in' => true,
-        ]);
-    }
-
-    private function redirectUser ($levelId)
-    {
-        switch ($levelId) {
-            case 1: // Customer
-                return redirect()->to('/shop'); // Ganti dengan URL halaman shop
-            case 2: // Siswa
-                return redirect()->to('/profile'); // Ganti dengan URL halaman profil siswa
-            case 3: // Admin
-                return redirect()->to('/admin/dashboard'); // Ganti dengan URL dashboard admin
-            case 4: // Superadmin
-                return redirect()->to('/superadmin/dashboard'); // Ganti dengan URL dashboard superadmin
-            default:
-                return redirect()->to('/register'); // Jika level tidak dikenali
+        } else {
+            return redirect()->to(base_url('login'))->with('alert','login_gagal');
         }
     }
 
     public function logout()
     {
         session()->destroy(); // Menghancurkan session
-        return redirect()->to('auth/login'); // Ganti dengan URL login yang sesuai
+        return redirect()->to('login'); // Ganti dengan URL login yang sesuai
     }
 }

@@ -1,7 +1,6 @@
 <?= $this->include('backend/layOutTemplate/header'); ?>
 <?= $this->include('backend/layOutTemplate/sidebar'); ?>
 
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
