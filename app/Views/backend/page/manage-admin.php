@@ -23,37 +23,6 @@
                     </thead>
                     <tbody class="table-border-bottom-0">
                       
-                        <tr>
-                            <td>
-                                <div class="m-0 avatar-group d-flex align-items-center me-3">
-                                    <a
-                                    data-bs-toggle="tooltip"
-                                    data-popup="tooltip-custom"
-                                    data-bs-placement="top"
-                                    class="avatar avatar-xs pull-up"
-                                    title="Anur Mustakim"
-                                    >
-                                    <img src="<?= base_url()?>backend/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
-                                    </a>
-                                </div>
-                            </td>
-                            
-                            <td><i class="fab fa-angular fa-lg text-danger "></i>anurmustakim</td>
-                            <td>anurmustakim@gmail.com</td>
-                            <td>Male</td>
-                            <td><span class="badge bg-label-success me-1">Registered</span></td>
-
-                            <td>
-                                <a href="" class="btn btn-outline-primary text-decoration-none">
-                                    <i class='bx bxs-edit' ></i>
-                                </a>
-
-                                <a href="" class="btn btn-outline-danger text-decoration-none">
-                                    <i class='bx bxs-trash-alt' ></i>
-                                </a>
-                            </td>
-                        </tr>
-
                         <?php foreach ($admins as $admin): ?>
                         <tr>
                             <td>
@@ -71,12 +40,10 @@
                                 <a href="<?= base_url('admin/edit/' . $admin['id_admin']) ?>" class="btn btn-outline-primary text-decoration-none">
                                     <i class='bx bxs-edit'></i>
                                 </a>
-                                <form action="<?= base_url('admin/delete/' . $admin['id_admin']) ?>" method="post" style="display:inline;">
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <button type="submit" class="btn btn-outline-danger text-decoration-none">
-                                        <i class='bx bxs-trash-alt'></i>
-                                    </button>
-                                </form>
+                                <a href="<?= base_url('admin/delete/' . $admin['id_admin']) ?>" class="btn btn-outline-danger text-decoration-none">
+                                <i class='bx bxs-trash-alt'></i>
+                                </a>
+                                
                             </td>
                         </tr>
                         <?php endforeach; ?>
