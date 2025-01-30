@@ -12,8 +12,8 @@ class LayOutController extends BaseController
     }
     
     public function card() {
-        $data['activePage'] = 'card';
-        return view('backend/page/card', $data);
+        $data['activePage'] = 'Manage Admin';
+        return view('backend/page/manage-admin', $data);
     }
 
 }

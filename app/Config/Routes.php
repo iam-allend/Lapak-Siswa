@@ -14,7 +14,8 @@ $routes->get('/profile', 'Home::profile');
 
 
 $routes->get('/dashboard', 'LayOutController::dashboard');
-$routes->get('/card', 'LayOutController::card');
+
+$routes->get('/manage-admin', 'ManageAdminContoller::index');
 
 
 

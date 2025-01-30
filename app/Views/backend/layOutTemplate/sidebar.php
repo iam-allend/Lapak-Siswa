@@ -78,10 +78,10 @@
             <!-- Menu lainnya -->
 
             <!-- Card -->
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'card') ? 'active' : '' ?>">
-                <a href="<?= base_url('card') ?>" class="menu-link">
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Admin') ? 'active' : '' ?>">
+                <a href="<?= base_url('manage-admin') ?>" class="menu-link">
                     <i class="menu-icon tf-icons bx bx-collection"></i>
-                    <div data-i18n="Analytics">Card</div>
+                    <div data-i18n="Analytics">Manage Admin</div>
                 </a>
             </li>
             <!-- Menu lainnya -->
