@@ -30,6 +30,9 @@ class Session extends BaseConfig
      *
      * The session cookie name, must contain only [0-9a-z_-] characters
      */
+    public $sessionDriver = 'CodeIgniter\Session\Handlers\DatabaseHandler'; // atau 'CodeIgniter\Session\Handlers\FileHandler'
+    public $sessionSavePath = ''; // Jika menggunakan DatabaseHandler, pastikan untuk mengatur ini
+
     public string $cookieName = 'ci_session';
 
     /**

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'codeigniter4/appstarter',
-        'pretty_version' => 'v4.6.0',
-        'version' => '4.6.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '159c39baa6ac58fb2ea7eb5fdb256f2ddc95459f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'codeigniter4/appstarter' => array(
-            'pretty_version' => 'v4.6.0',
-            'version' => '4.6.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '159c39baa6ac58fb2ea7eb5fdb256f2ddc95459f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -137,9 +137,9 @@
             'dev_requirement' => true,
         ),
         'phpunit/phpunit' => array(
-            'pretty_version' => '10.5.41',
-            'version' => '10.5.41.0',
-            'reference' => 'e76586fa3d49714f230221734b44892e384109d7',
+            'pretty_version' => '10.5.43',
+            'version' => '10.5.43.0',
+            'reference' => 'fb117a8772c14fdc41acb1ded0de44de0c9091f9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
