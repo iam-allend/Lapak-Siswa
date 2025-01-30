@@ -13,7 +13,7 @@ $routes->get('/contactus', 'Home::contactus');
 $routes->get('/profile', 'Home::profile');
 
 
-$routes->get('/dashboard', 'LayOutController::dashboard');
+$routes->get('/dashboard', 'DashboardController::dashboard');
 
 
 
@@ -38,4 +38,5 @@ $routes->get('admin/create', 'ManageAdminController::create');
 $routes->post('admin/store', 'ManageAdminController::store');
 $routes->get('admin/edit/(:num)', 'ManageAdminController::edit/$1');
 $routes->post('admin/update/(:num)', 'ManageAdminController::update/$1');
-$routes->post('admin/delete/(:num)', 'ManageAdminController::delete/$1');
+// $routes->post('admin/delete/(:num)', 'ManageAdminController::delete/$1');
+$routes->get('admin/delete/(:num)', 'ManageAdminController::delete/$1');

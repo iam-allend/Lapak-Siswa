@@ -53,7 +53,7 @@ class Auth extends Controller
             'password' => password_hash($password, PASSWORD_DEFAULT),
             'gender' => $this->request->getPost('gender'),
             'url_image' => $newName,
-            'status_registrasi' => true
+            'status_registrasi' => false
         ];
         $this->adminModel->insert($data);
         return redirect()->to(base_url('login'))->with('alert','register_sukses');
