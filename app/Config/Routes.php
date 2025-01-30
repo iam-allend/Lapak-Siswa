@@ -18,9 +18,10 @@ $routes->get('/card', 'LayOutController::card');
 
 
 
-$routes->get('auth/login', 'Auth::index'); // Halaman   login
+$routes->get('register', 'Auth::register');
+$routes->post('auth/register', 'Auth::add_register');
 
-$routes->get('auth/login', 'Auth::login'); // Halaman login
+$routes->get('login', 'Auth::index');
 $routes->post('auth/login', 'Auth::login'); // Proses login
 $routes->get('auth/logout', 'Auth::logout'); // Proses logout
 $routes->get('shop', 'Shop::index'); // Halaman shop untuk customer

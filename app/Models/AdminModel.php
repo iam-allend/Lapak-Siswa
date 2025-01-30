@@ -8,7 +8,10 @@ class AdminModel extends Model
 {
     protected $table = 'admin';
     protected $primaryKey = 'id_admin';
-    protected $allowedFields = ['username', 'password', 'id_level', 'email']; // Pastikan 'email' ada di sini
+    protected $allowedFields = ['id_level','full_name','username',
+    'email','password','gender','group_name','url_image','status_registrasi']; // Pastikan 'email' ada di sini
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
 
     public function getUserByUsernameOrEmail($usernameOrEmail)
     {
