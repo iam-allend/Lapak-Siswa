@@ -84,6 +84,12 @@
                     <div data-i18n="Analytics">Manage Admin</div>
                 </a>
             </li>
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Siswa') ? 'active' : '' ?>">
+                <a href="<?= base_url() ?>manage-siswa" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-collection"></i>
+                    <div data-i18n="Analytics">Manage Siswa</div>
+                </a>
+            </li>
             <!-- Menu lainnya -->
 
             <!-- Layouts -->

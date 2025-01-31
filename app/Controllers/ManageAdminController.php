@@ -18,7 +18,7 @@ class ManageAdminController extends Controller
     public function index()
     {
         $data = [
-            'admins' => $this->adminModel->findAll(),
+            'admins' => $this->adminModel->where('id_level', 3)->findAll(),
             'activePage' => 'Manage Admin',
             'tittle' => 'Lapak Siswa | Kelola Admin',
             'navigasi' => 'Manage Admin Data'
@@ -40,17 +40,27 @@ class ManageAdminController extends Controller
     // Menyimpan data admin baru
     public function store()
     {
-        $validation = $this->validate([
+        // Validasi input dengan pesan kustom
+        $validationRules = [
             'full_name' => 'required|min_length[3]',
-            'username' => 'required|is_unique[admin.username]',
+            'username' => 'required|min_length[5]|is_unique[admin.username]',
             'email' => 'required|valid_email|is_unique[admin.email]',
             'password' => 'required|min_length[6]',
             'gender' => 'required',
             'status_registrasi' => 'required',
             'url_image' => 'uploaded[url_image]|is_image[url_image]|max_size[url_image,2048]',
-        ]);
+        ];
 
-        if (!$validation) {
+        $customMessages = [
+            'username' => [
+                'is_unique' => 'Username "{value}" sudah digunakan.',
+            ],
+            'email' => [
+                'is_unique' => 'Email "{value}" sudah digunakan.',
+            ],
+        ];
+
+        if (!$this->validate($validationRules, $customMessages)) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
@@ -67,7 +77,7 @@ class ManageAdminController extends Controller
             'email' => $this->request->getPost('email'),
             'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
             'gender' => $this->request->getPost('gender'),
-            'url_image' => 'img_user/' . $fileName, // Pastikan ini benar
+            'url_image' => 'img_user/' . $fileName,
             'status_registrasi' => $this->request->getPost('status_registrasi'),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -91,23 +101,32 @@ class ManageAdminController extends Controller
     // Memperbarui data admin
     public function update($id)
     {
-        // Validasi input
-        $validation = $this->validate([
-            'full_name' => 'min_length[3]',
-            'username' => 'min_length[5]',
-            'email' => 'valid_email|min_length[6]',
-            'url_image' => 'is_image[url_image]|max_size[url_image,2048]',
-        ]);
+        // Ambil data admin yang ada
+        $adminData = $this->adminModel->find($id);
 
-        if (!$validation) {
+        // Validasi input
+        $validationRules = [
+            'full_name' => 'min_length[3]',
+            'username' => "min_length[5]|is_unique[admin.username,id_admin,{$id}]",
+            'email' => "valid_email|min_length[6]|is_unique[admin.email,id_admin,{$id}]",
+            'url_image' => 'is_image[url_image]|max_size[url_image,2048]',
+        ];
+
+        $customMessages = [
+            'username' => [
+                'is_unique' => 'Username "{value}" sudah digunakan.',
+            ],
+            'email' => [
+                'is_unique' => 'Email "{value}" sudah digunakan.',
+            ],
+        ];
+    
+        if (!$this->validate($validationRules, $customMessages)) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
-        // Ambil data admin yang ada
-        $adminData = $this->adminModel->find($id);
-        $dataToUpdate = [];
-
         // Cek dan tambahkan field yang diubah
+        $dataToUpdate = [];
         if ($this->request->getPost('full_name')) {
             $dataToUpdate['full_name'] = $this->request->getPost('full_name');
         }
@@ -127,7 +146,6 @@ class ManageAdminController extends Controller
         // Cek jika ada file gambar yang diupload
         $file = $this->request->getFile('url_image');
         if ($file && $file->isValid()) {
-            // Path direktori untuk menyimpan gambar
             $imgPath = 'img_user/';
             
             // Hapus gambar lama jika bukan gambar default
@@ -138,9 +156,8 @@ class ManageAdminController extends Controller
             // Simpan gambar baru
             $fileName = $file->getRandomName();
             $file->move($imgPath, $fileName);
-            $dataToUpdate['url_image'] = $imgPath . $fileName; // Update URL gambar
+            $dataToUpdate['url_image'] = $imgPath . $fileName;
         } else {
-            // Jika tidak ada gambar baru, pertahankan gambar lama
             $dataToUpdate['url_image'] = $adminData['url_image'];
         }
 

@@ -55,8 +55,8 @@
                                 <a href="<?= base_url('manage-admin/edit/' . $admin['id_admin']) ?>" class="btn btn-outline-primary text-decoration-none">
                                     <i class='bx bxs-edit'></i>
                                 </a>
-                                <a href="<?= base_url('manage-admin/delete/' . $admin['id_admin']) ?>" class="btn btn-outline-danger text-decoration-none">
-                                <i class='bx bxs-trash-alt'></i>
+                                <a href="<?= base_url('manage-admin/delete/' . $admin['id_admin']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                                    <i class='bx bxs-trash-alt'></i>
                                 </a>
                                 
                             </td>

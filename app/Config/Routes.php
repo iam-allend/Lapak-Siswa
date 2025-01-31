@@ -26,8 +26,18 @@ $routes->get('profile', 'Profile::index'); // Halaman profil untuk siswa
 // $routes->get('superadmin/dashboard', 'SuperAdmin::dashboard'); // Halaman dashboard untuk superadmin
 
 
+$routes->get('dashboard', 'DashboardController::dashboard');
+
+// MANAGE SISWA
+    $routes->get('manage-siswa/', 'ManageSiswaController::index');
+    $routes->get('manage-siswa/create', 'ManageSiswaController::create');
+    $routes->post('manage-siswa/store', 'ManageSiswaController::store');
+    $routes->get('manage-siswa/edit/(:num)', 'ManageSiswaController::edit/$1');
+    $routes->post('manage-siswa/update/(:num)', 'ManageSiswaController::update/$1');
+    $routes->post('manage-siswa/delete/(:num)', 'ManageSiswaController::delete/$1');
+    $routes->get('manage-siswa/delete/(:num)', 'ManageSiswaController::delete/$1');
+
 // MANAGE ADMIN
-    $routes->get('dashboard', 'DashboardController::dashboard'); // Halaman dashboard untuk superadmin$routes->get('manage-admin', 'ManageAdminController::index');
     $routes->get('manage-admin/', 'ManageAdminController::index');
     $routes->get('manage-admin/create', 'ManageAdminController::create');
     $routes->post('manage-admin/store', 'ManageAdminController::store');
@@ -36,6 +46,9 @@ $routes->get('profile', 'Profile::index'); // Halaman profil untuk siswa
     $routes->post('manage-admin/delete/(:num)', 'ManageAdminController::delete/$1');
     $routes->get('manage-admin/delete/(:num)', 'ManageAdminController::delete/$1');
     
+
+
+
 $routes->group('superadmin',function($routes){
 
 });

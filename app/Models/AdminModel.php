@@ -9,7 +9,7 @@ class AdminModel extends Model
     protected $table = 'admin';
     protected $primaryKey = 'id_admin';
     protected $allowedFields = [
-        'id_level','full_name','username', 'email', 'password', 'gender', 'url_image', 'status_registrasi', 'updated_at' ]; // Pastikan 'email' ada di sini
+        'id_level','full_name','username', 'email', 'password', 'gender', 'url_image', 'group_name', 'status_registrasi', 'updated_at' ]; // Pastikan 'email' ada di sini
 
     
     // protected $validationRules = [
