@@ -86,7 +86,7 @@ class Auth extends Controller
                 $session->set($sessionData);
 
                 if ($level == 3) {
-                    return redirect()->to(base_url('admin/dashboard'))->with('alert','login_sukses');
+                    return redirect()->to(base_url('dashboard'))->with('alert','login_sukses');
                 } elseif ($level == 4) {
                     return redirect()->to(base_url('superadmin/dashboard'))->with('alert','login_sukses');
                 } elseif ($level == 2) {

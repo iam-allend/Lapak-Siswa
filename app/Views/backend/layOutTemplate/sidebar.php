@@ -79,7 +79,7 @@
 
             <!-- Card -->
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Admin') ? 'active' : '' ?>">
-                <a href="<?= base_url() ?>admin" class="menu-link">
+                <a href="<?= base_url() ?>manage-admin" class="menu-link">
                     <i class="menu-icon tf-icons bx bx-collection"></i>
                     <div data-i18n="Analytics">Manage Admin</div>
                 </a>

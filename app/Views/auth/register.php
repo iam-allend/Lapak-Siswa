@@ -88,8 +88,8 @@
                   <label for="username" class="form-label">Gender</label>
                   <select class="form-control" name="gender" id="">
                     <option value="">-- Pilih --</option>
-                    <option value="Laki-Laki">Laki-Laki</option>
-                    <option value="Perempuan">Perempuan</option>
+                    <option value="male">Laki-Laki</option>
+                    <option value="female">Perempuan</option>
                   </select>
                 </div>
 

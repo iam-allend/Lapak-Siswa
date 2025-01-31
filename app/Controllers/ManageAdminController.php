@@ -29,7 +29,12 @@ class ManageAdminController extends Controller
     // Menampilkan form untuk menambah admin
     public function create()
     {
-        return view('admin/create');
+        $data = [
+            'activePage' => 'Manage Admin',
+            'tittle' => 'Lapak Siswa | Admin',
+            'navigasi' => 'Tambah Data Admin'
+        ];
+        return view('backend/page/admin/add-admin', $data);
     }
 
     // Menyimpan data admin baru
@@ -68,7 +73,7 @@ class ManageAdminController extends Controller
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
-        return redirect()->to('/admin')->with('success', 'Admin created successfully');
+        return redirect()->to('/manage-admin')->with('success', 'Admin created successfully');
     }
 
     // Menampilkan form untuk mengedit admin
@@ -115,7 +120,7 @@ class ManageAdminController extends Controller
         if ($this->request->getPost('gender')) {
             $dataToUpdate['gender'] = $this->request->getPost('gender');
         }
-        if ($this->request->getPost('status_registrasi')) {
+        if ($this->request->getPost('status_registrasi') !== null) {
             $dataToUpdate['status_registrasi'] = $this->request->getPost('status_registrasi');
         }
 
@@ -142,13 +147,24 @@ class ManageAdminController extends Controller
         // Update admin data
         $this->adminModel->update($id, $dataToUpdate + ['updated_at' => date('Y-m-d H:i:s')]);
 
-        return redirect()->to('/admin')->with('success', 'Admin updated successfully');
+        $username = $this->request->getPost('username') ?: $adminData['username'];
+        return redirect()->to('/manage-admin')->with('success', "Admin '{$username}' Updated successfully");
     }
 
     // Menghapus admin
     public function delete($id)
     {
+        // Ambil data admin yang ada
+        $adminData = $this->adminModel->find($id);
+
+        // Hapus gambar profil jika bukan gambar default
+        if ($adminData['url_image'] && $adminData['url_image'] != 'img_user/user.png') {
+            @unlink($adminData['url_image']);
+        }
+
+        // Hapus admin dari database
         $this->adminModel->delete($id);
-        return redirect()->to('/admin')->with('success', 'Admin deleted successfully');
+        $username = $this->request->getPost('username') ?: $adminData['username'];
+        return redirect()->to('/manage-admin')->with('success', "Admin '{$username}' Delete successfully");
     }
 }

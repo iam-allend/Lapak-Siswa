@@ -9,7 +9,7 @@
             <!-- <h5 class="card-header">Edit data admin</h5> -->
             <div class="card-body">
                 
-            <form action="<?= base_url('admin/update/' . $admin['id_admin']) ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('manage-admin/update/' . $admin['id_admin']) ?>" method="post" enctype="multipart/form-data">
                 
                 <div class="mb-3">
                     <label for="full_name" class="form-label">Full Name</label>
@@ -40,7 +40,10 @@
                 </div>
                 <div class="mb-3">
                     <label for="status_registrasi" class="form-label">Status Registrasi</label>
-                    <input type="text" class="form-control" name="status_registrasi" value="<?= $admin['status_registrasi'] ?>">
+                    <select class="form-select" name="status_registrasi" required>
+                        <option value="0" <?= $admin['status_registrasi'] == 0 ? 'selected' : '' ?>>Not Registered</option>
+                        <option value="1" <?= $admin['status_registrasi'] == 1 ? 'selected' : '' ?>>Registered</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Update Admin</button>
             </form>

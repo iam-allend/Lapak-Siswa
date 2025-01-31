@@ -5,7 +5,18 @@
                 <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> <?= $navigasi ?></h4>
+            <div class="d-flex justify-content-between">
+                <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> <?= $navigasi ?></h4>
+                <a href="manage-admin/create">
+                    <button class="btn btn-primary"><i class='bx bx-user-plus'></i> Tambah</button>
+                </a>
+            </div>
+
+            <?php if (session()->getFlashdata('success')): ?>
+                <div class="alert alert-primary">
+                    <?= session()->getFlashdata('success') ?>
+                </div>
+            <?php endif; ?>
 
             <div class="card">
                 <h5 class="card-header">Data Admin</h5>
@@ -41,10 +52,10 @@
                                 </span>
                             </td>                      
                             <td>
-                                <a href="<?= base_url('admin/edit/' . $admin['id_admin']) ?>" class="btn btn-outline-primary text-decoration-none">
+                                <a href="<?= base_url('manage-admin/edit/' . $admin['id_admin']) ?>" class="btn btn-outline-primary text-decoration-none">
                                     <i class='bx bxs-edit'></i>
                                 </a>
-                                <a href="<?= base_url('admin/delete/' . $admin['id_admin']) ?>" class="btn btn-outline-danger text-decoration-none">
+                                <a href="<?= base_url('manage-admin/delete/' . $admin['id_admin']) ?>" class="btn btn-outline-danger text-decoration-none">
                                 <i class='bx bxs-trash-alt'></i>
                                 </a>
                                 
