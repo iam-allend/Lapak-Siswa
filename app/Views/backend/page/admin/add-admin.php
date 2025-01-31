@@ -44,9 +44,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="status_registrasi" class="form-label">Status Registrasi</label>
-                    <input type="text" class="form-control" name="status_registrasi" required>
+                    <select class="form-select" name="status_registrasi" required>
+                        <option value="0">Not Registered</option>
+                        <option value="1">Registered</option>
+                    </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Add Admin</button>
+                <button type="submit" class="btn btn-primary">Tambah Admin</button>
+                <a class="btn btn-outline-primary" href="<?= base_url()?>manage-admin">Kembali</a>
             </form>
         </div>
         </div>

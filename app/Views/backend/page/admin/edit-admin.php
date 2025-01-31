@@ -46,6 +46,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Update Admin</button>
+                <a class="btn btn-outline-primary" href="<?= base_url()?>manage-admin">Kembali</a>
             </form>
             </div>
         </div>
