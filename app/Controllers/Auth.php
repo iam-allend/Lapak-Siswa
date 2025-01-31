@@ -64,46 +64,41 @@ class Auth extends Controller
     {
         $session = session();
         $this->loginModel = new AdminModel();
-
+    
         $username = $this->request->getPost('email-username');
         $password = $this->request->getPost('password');
-        $level = $this->request->getPost('level');
-
-        $user = $this->loginModel->getUser($username, $level);
-
-        if ($user) {
-            if (password_verify($password, $user['password'])) { // Gunakan password_verify()
-                $sessionData = [
-                    'id_admin' => $user['id_admin'],
-                    'id_level' => $user['id_level'],
-                    'fullname' => $user['full_name'],
-                    'username' => $user['username'],
-                    'email' => $user['email'],
-                    'gender' => $user['gender'],
-                    'url_image' => $user['url_image'],
-                    'logged_in' => true
-                ];
-                $session->set($sessionData);
-
-                if ($level == 3) {
-                    return redirect()->to(base_url('dashboard'))->with('alert','login_sukses');
-                } elseif ($level == 4) {
-                    return redirect()->to(base_url('superadmin/dashboard'))->with('alert','login_sukses');
-                } elseif ($level == 2) {
-                    return redirect()->to(base_url('siswa/dashboard'))->with('alert','login_sukses');
-                } elseif ($level == 1) {
-                    return redirect()->to(base_url('customer/dashboard'))->with('alert','login_sukses');
-                } elseif ($level == 5) {
-                    return redirect()->to(base_url('industri/dashboard'))->with('alert','login_sukses');
-                }
-            } else {
-                return redirect()->to(base_url('login'))->with('alert','login_gagal');
-            }
-        } else {
-            return redirect()->to(base_url('login'))->with('alert','login_gagal');
+    
+        $user = $this->loginModel->getUser($username);
+    
+        if ($user && password_verify($password, $user['password'])) {
+            $sessionData = [
+                'id_admin'  => $user['id_admin'],
+                'id_level'  => $user['id_level'],
+                'fullname'  => $user['full_name'],
+                'username'  => $user['username'],
+                'email'     => $user['email'],
+                'gender'    => $user['gender'],
+                'url_image' => $user['url_image'],
+                'logged_in' => true
+            ];
+            $session->set($sessionData);
+    
+            $redirectRoutes = [
+                3 => 'dashboard',
+                4 => 'dashboard',
+                2 => '/',
+                1 => 'customer/dashboard',
+                5 => 'industri/dashboard'
+            ];
+    
+            $redirectUrl = isset($redirectRoutes[$user['id_level']]) ? base_url($redirectRoutes[$user['id_level']]) : base_url('login');
+            
+            return redirect()->to($redirectUrl)->with('alert', 'login_sukses');
         }
+        
+        return redirect()->to(base_url('login'))->with('alert', 'login_gagal');
     }
-
+    
     public function logout()
     {
         session()->destroy(); // Menghancurkan session

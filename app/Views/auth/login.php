@@ -73,16 +73,6 @@
 
               <form class="mb-3" action="<?= base_url('auth/login') ?>" method="POST">
                 <div class="mb-3">
-                  <label for="username" class="form-label">Masuk sebagai</label>
-                  <select class="form-control" name="level" id="">
-                    <option value="">-- Pilih --</option>
-                    <option value="1">Customer</option>
-                    <option value="2">Siswa</option>
-                    <option value="3">Admin</option>
-                    <option value="4">Super Admin</option>
-                  </select>
-                </div>
-                <div class="mb-3">
                     <label for="email" class="form-label">Email or Username</label>
                     <input
                         type="text"

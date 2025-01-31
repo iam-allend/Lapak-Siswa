@@ -21,12 +21,11 @@ class AdminModel extends Model
     //     'status_registrasi' => 'required',
     // ];
 
-    public function getUser($username, $level)
+    public function getUser($username)
     {
-        return $this->where('username', $username)
-                    ->where('id_level', $level)
-                    ->first();
+        return $this->where('username', $username)->first();
     }
+
 
     public function getUserByUsernameOrEmail($usernameOrEmail)
     {
