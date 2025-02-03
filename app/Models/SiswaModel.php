@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Controllers\Admin;
 use CodeIgniter\Model;
 
 class SiswaModel extends Model
@@ -21,4 +22,5 @@ class SiswaModel extends Model
             ->get()
             ->getResultArray();
     }
+
 }

@@ -77,18 +77,24 @@
             </li>
             <!-- Menu lainnya -->
 
-            <!-- Card -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">MANAGE USER</span>
+            </li>
+            
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Admin') ? 'active' : '' ?>">
-                <a href="<?= base_url() ?>manage-admin" class="menu-link">
-                    <i class="menu-icon tf-icons bx bx-collection"></i>
-                    <div data-i18n="Analytics">Manage Admin</div>
-                </a>
+              <a href="<?= base_url() ?>manage-admin" class="menu-link">
+                <i class='menu-icon tf-icons bx bxs-user-account'></i>
+                <div>Manage Admin</div>
+              </a>
             </li>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Siswa') ? 'active' : '' ?>">
-                <a href="<?= base_url() ?>manage-siswa" class="menu-link">
-                    <i class="menu-icon tf-icons bx bx-collection"></i>
-                    <div data-i18n="Analytics">Manage Siswa</div>
-                </a>
+              <a href="<?= base_url() ?>manage-siswa" class="menu-link">
+                  <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                  <div>Manage Siswa</div>
+              </a>
+            </li>
+
+              
             </li>
             <!-- Menu lainnya -->
 
@@ -131,6 +137,7 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Pages</span>
             </li>
+
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
@@ -455,7 +462,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="<?= base_url('img_user/'. session('url_image'))?>" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="<?= base_url(session('url_image'))?>" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -464,12 +471,27 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="<?= base_url('img_user/'. session('url_image'))?>" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="<?= base_url(session('url_image'))?>" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
                             <span class="fw-semibold d-block"><?= session('fullname')?></span>
-                            <small class="text-muted">Admin</small>
+                            <small class="text-muted">
+                                <?php
+                                $id_level = session('id_level');
+                                if ($id_level == 1) {
+                                    echo 'Customer';
+                                } elseif ($id_level == 2) {
+                                    echo 'Siswa';
+                                } elseif ($id_level == 3) {
+                                    echo 'Admin';
+                                } elseif ($id_level == 4) {
+                                    echo 'Superadmin';
+                                } else {
+                                    echo 'Tidak Diketahui';
+                                }
+                                ?>
+                            </small>
                           </div>
                         </div>
                       </a>

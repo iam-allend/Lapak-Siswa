@@ -142,7 +142,11 @@ class ManageAdminController extends Controller
         if ($this->request->getPost('status_registrasi') !== null) {
             $dataToUpdate['status_registrasi'] = $this->request->getPost('status_registrasi');
         }
-
+        // Cek jika ada password baru yang diinput
+        if ($this->request->getPost('password')) {
+            $dataToUpdate['password'] = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT); // Hash password
+        }
+        
         // Cek jika ada file gambar yang diupload
         $file = $this->request->getFile('url_image');
         if ($file && $file->isValid()) {

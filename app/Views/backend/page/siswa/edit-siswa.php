@@ -17,49 +17,79 @@
                     </div>
                 <?php endif ?>
 
-                <form action="<?= base_url('manage-admin/update/' . $admin['id_admin']) ?>" method="post" enctype="multipart/form-data">
+                <!-- Ubah action ke endpoint update siswa -->
+                <form action="<?= base_url('manage-siswa/update/' . $siswa['id_siswa']) ?>" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="full_name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" name="full_name" value="<?= old('full_name', $admin['full_name']) ?>">
+                        <input type="text" class="form-control" name="full_name" value="<?= old('full_name', $siswa['full_name']) ?>">
                     </div>
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" name="username" value="<?= old('username', $admin['username']) ?>">
+                        <input type="text" class="form-control" name="username" value="<?= old('username', $siswa['username']) ?>">
                         <?php if (session()->getFlashdata('errors') && array_key_exists('username', session()->getFlashdata('errors'))): ?>
                             <small class="text-danger"><?= session()->getFlashdata('errors')['username'] ?></small>
                         <?php endif ?>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="text" class="form-control" name="email" value="<?= old('email', $admin['email']) ?>">
+                        <input type="email" class="form-control" name="email" value="<?= old('email', $siswa['email']) ?>">
                         <?php if (session()->getFlashdata('errors') && array_key_exists('email', session()->getFlashdata('errors'))): ?>
                             <small class="text-danger"><?= session()->getFlashdata('errors')['email'] ?></small>
                         <?php endif ?>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password (Leave blank to keep current password)</label>
+                        <label for="password" class="form-label">Password (Biarkan kosong jika tidak diubah)</label>
                         <input type="password" class="form-control" name="password">
                     </div>
                     <div class="mb-3">
                         <label for="gender" class="form-label">Gender</label>
                         <select class="form-select" name="gender">
-                            <option value="male" <?= old('gender', $admin['gender']) == 'male' ? 'selected' : '' ?>>Male</option>
-                            <option value="female" <?= old('gender', $admin['gender']) == 'female' ? 'selected' : '' ?>>Female</option>
+                            <option value="male" <?= old('gender', $siswa['gender']) == 'male' ? 'selected' : '' ?>>Male</option>
+                            <option value="female" <?= old('gender', $siswa['gender']) == 'female' ? 'selected' : '' ?>>Female</option>
                         </select>
                     </div>
+                    
+                    <!-- Dropdown untuk Kelas -->
                     <div class="mb-3">
-                        <label for="url_image" class="form-label">Profile Image (Leave blank to keep current image)</label>
+                        <label for="id_kelas" class="form-label">Kelas</label>
+                        <select class="form-select" name="id_kelas" required>
+                            <option value="">Pilih Kelas</option>
+                            <?php foreach ($kelas as $kelasItem): ?>
+                                <option value="<?= $kelasItem['id_kelas'] ?>" 
+                                    <?= old('id_kelas', $siswa['id_kelas']) == $kelasItem['id_kelas'] ? 'selected' : '' ?>>
+                                    <?= esc($kelasItem['nama']) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <!-- Dropdown untuk Pembimbing (Admin) -->
+                    <div class="mb-3">
+                        <label for="id_admin" class="form-label">Pembimbing</label>
+                        <select class="form-select" name="id_admin" required>
+                            <option value="">Pilih Pembimbing</option>
+                            <?php foreach ($admins as $admin): ?>
+                                <option value="<?= $admin['id_admin'] ?>" 
+                                    <?= old('id_admin', $siswa['id_admin']) == $admin['id_admin'] ? 'selected' : '' ?>>
+                                    <?= esc($admin['full_name']) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="url_image" class="form-label">Foto Profil (Biarkan kosong jika tidak diubah)</label>
                         <input type="file" class="form-control" name="url_image" accept="image/*">
                     </div>
                     <div class="mb-3">
                         <label for="status_registrasi" class="form-label">Status Registrasi</label>
                         <select class="form-select" name="status_registrasi" required>
-                            <option value="0" <?= old('status_registrasi', $admin['status_registrasi']) == 0 ? 'selected' : '' ?>>Not Registered</option>
-                            <option value="1" <?= old('status_registrasi', $admin['status_registrasi']) == 1 ? 'selected' : '' ?>>Registered</option>
+                            <option value="0" <?= old('status_registrasi', $siswa['status_registrasi']) == 0 ? 'selected' : '' ?>>Not Registered</option>
+                            <option value="1" <?= old('status_registrasi', $siswa['status_registrasi']) == 1 ? 'selected' : '' ?>>Registered</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="return confirm('Yakin ingin mengubah data ini?');">Update Admin</button>
-                    <a class="btn btn-outline-primary" href="<?= base_url()?>manage-admin">Kembali</a>
+                    <button type="submit" class="btn btn-primary" onclick="return confirm('Yakin ingin mengubah data ini?');">Update Siswa</button>
+                    <a class="btn btn-outline-primary" href="<?= base_url()?>manage-siswa">Kembali</a>
                 </form>
             </div>
         </div>

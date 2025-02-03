@@ -94,12 +94,14 @@ class ManageSiswaController extends Controller
         return redirect()->to('/manage-siswa')->with('success', 'Siswa created successfully');
     }
     // Menampilkan form untuk mengedit siswa
-    public function edit($id)
-    {
+    public function edit($id) {
+    
         $data = [
             'siswa' => $this->siswaModel->find($id),
+            'kelas' => $this->kelasModel->findAll(),
+            'admins' => $this->adminModel->findAll(),
             'activePage' => 'Manage Siswa',
-            'tittle' => 'Lapak Siswa | Siswa',
+            'tittle' => 'Lapak Siswa | Edit Siswa',
             'navigasi' => 'Edit Data Siswa'
         ];
         return view('backend/page/siswa/edit-siswa', $data);
