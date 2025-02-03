@@ -139,11 +139,18 @@ class ManageSiswaController extends Controller
         if ($this->request->getPost('gender')) {
             $dataToUpdate['gender'] = $this->request->getPost('gender');
         }
-        if ($this->request->getPost('kelas')) {
-            $dataToUpdate['kelas'] = $this->request->getPost('kelas');
+        if ($this->request->getPost('id_kelas')) {
+            $dataToUpdate['id_kelas'] = $this->request->getPost('id_kelas'); // Sesuaikan dengan nama field di form
+        }
+        if ($this->request->getPost('id_admin')) {
+            $dataToUpdate['id_admin'] = $this->request->getPost('id_admin'); // Sesuaikan dengan nama field di form
         }
         if ($this->request->getPost('status_registrasi') !== null) {
             $dataToUpdate['status_registrasi'] = $this->request->getPost('status_registrasi');
+        }
+        // Cek jika ada password baru yang diinput
+        if ($this->request->getPost('password')) {
+            $dataToUpdate['password'] = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT); // Hash password
         }
 
         // Cek jika ada file gambar yang diupload
@@ -172,7 +179,6 @@ class ManageSiswaController extends Controller
         $username = $this->request->getPost('username') ?: $siswaData['username'];
         return redirect()->to('/manage-siswa')->with('success', "Siswa '{$username}' Updated successfully");
     }
-
     // Menghapus siswa
     public function delete($id)
     {
