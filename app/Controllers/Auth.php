@@ -27,30 +27,41 @@ class Auth extends Controller
 
     public function add_register(){
         $this->adminModel = new AdminModel();
-
-        // Validasi file
+    
         if (!$this->validate([
             'photo' => [
                 'uploaded[photo]',
                 'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
-                'max_size[photo,4096]', // max 4MB
+                'max_size[photo,4096]',
             ],
         ])) {
             return redirect()->back()->with('error', 'Invalid file.');
         }
-
-        // Mengambil file dan mengubah namanya
+    
+        $username = $this->request->getPost('username');
+        $email = $this->request->getPost('email');
+    
+        $existingUser = $this->adminModel->where('username', $username)->orWhere('email', $email)->first();
+        if ($existingUser) {
+            if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
+                return redirect()->back()->with('alert', 'validate_usn_email');
+            } elseif ($existingUser['username'] === $username) {
+                return redirect()->back()->with('alert', 'validate_username');
+            } elseif ($existingUser['email'] === $email) {
+                return redirect()->back()->with('alert', 'validate_email');
+            }
+        }
+    
         $file = $this->request->getFile('photo');
         $newName = $file->getRandomName();
         $file->move(ROOTPATH . 'public/img_user', $newName);
-
-
+    
         $password = $this->request->getPost('password');
         $data = [
             'id_level' => $this->request->getPost('level'),
             'full_name' => $this->request->getPost('fullname'),
-            'username' => $this->request->getPost('username'),
-            'email' => $this->request->getPost('email'),
+            'username' => $username,
+            'email' => $email,
             'password' => password_hash($password, PASSWORD_DEFAULT),
             'gender' => $this->request->getPost('gender'),
             'url_image' => $newName,

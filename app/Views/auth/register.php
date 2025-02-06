@@ -78,15 +78,14 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="username"
                     name="fullname"
                     placeholder="Enter your name"
-                    autofocus
+                    required
                   />
                 </div>
                 <div class="mb-3">
                   <label for="username" class="form-label">Gender</label>
-                  <select class="form-control" name="gender" id="">
+                  <select class="form-control" name="gender" id="" required>
                     <option value="">-- Pilih --</option>
                     <option value="male">Laki-Laki</option>
                     <option value="female">Perempuan</option>
@@ -98,33 +97,32 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="username"
                     name="username"
                     placeholder="Enter your username"
-                    autofocus
+                    required
                   />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" required />
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <label class="form-label" for="password">Password</label>
                   <div class="input-group input-group-merge">
                     <input
                       type="password"
-                      id="password"
                       class="form-control"
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
+                      required
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="username" class="form-label">Sebagai</label>
-                  <select class="form-control" name="level" id="">
+                  <select class="form-control" name="level" id="" required>
                     <option value="">-- Pilih --</option>
                     <option value="4">Super Admin</option>
                     <option value="3">Admin</option>
@@ -135,11 +133,11 @@
                 </div>
                 <div class="mb-3">
                   <label for="username" class="form-label">Foto Profile</label>
-                  <input type="file" class="form-control" name="photo">
+                  <input type="file" class="form-control" name="photo" required>
                 </div>
                 <div class="mb-3">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
+                    <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" required />
                     <label class="form-check-label" for="terms-conditions">
                       I agree to
                       <a href="javascript:void(0);">privacy policy & terms</a>
