@@ -87,7 +87,7 @@
                 <div>Manage Admin</div>
               </a>
             </li>
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Industri - Perusahaan') ? 'active' : '' ?>">
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage IndPer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-indper" class="menu-link">
                   <i class='menu-icon tf-icons bx bxs-user-account'></i>
                   <div>Industri - Perusahaan</div>
@@ -99,7 +99,6 @@
                   <div>Manage Siswa</div>
               </a>
             </li>
-
               
             </li>
             <!-- Menu lainnya -->

@@ -19,17 +19,17 @@
         <div class="card">
             <h5 class="card-header">Data Industri</h5>
             <div class="table-responsive text-nowrap">
-                <table class="table">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>Profil</th>
                             <th>Nama</th>
                             <th>Username</th>
                             <th>Email</th>
-                            <th>Tipe Industri</th>
+                            <th>Tipe</th>
                             <th>Superadmin</th>
-                            <th>Tanggal Mulai</th>
-                            <th>Tanggal Selesai</th>
+                            <th>Kerjasama</th>
+                            <th>Selesai</th>
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>

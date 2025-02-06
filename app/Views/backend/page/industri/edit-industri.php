@@ -17,7 +17,7 @@
                     </div>
                 <?php endif ?>
 
-                <form action="<?= base_url('manage-industri/update/' . $industri['id_industri']) ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url('manage-indper/update/' . $industri['id_industri']) ?>" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama Industri</label>
                         <input type="text" class="form-control" name="nama" value="<?= old('nama', $industri['nama']) ?>" required>
@@ -46,10 +46,6 @@
                     <div class="mb-3">
                         <label for="password" class="form-label">Password (Biarkan kosong jika tidak diubah)</label>
                         <input type="password" class="form-control" name="password">
-                    </div>
-                    <div class="mb-3">
-                        <label for="nama_admin" class="form-label">Nama Superadmin</label>
-                        <input type="text" class="form-control" name="nama_admin" value="<?= old('nama_admin', $industri['nama_admin']) ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="tgl_mulai_kerjasama" class="form-label">Tanggal Mulai Kerjasama</label>

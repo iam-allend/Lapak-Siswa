@@ -22,9 +22,9 @@ class ManageIndPerController extends Controller
     {
         $data = [
             'industris' => $this->industriModel->getIndustriWithAdmin(),
-            'activePage' => 'Manage Industri',
+            'activePage' => 'Manage IndPer',
             'tittle' => 'Lapak Siswa | Kelola Industri',
-            'navigasi' => 'Manage Industri Data'
+            'navigasi' => 'Manage IndPer Data'
         ];
         return view('backend/page/industri/manage-industri', $data);
     }
@@ -139,6 +139,9 @@ class ManageIndPerController extends Controller
         }
         if ($this->request->getPost('status_registrasi') !== null) {
             $dataToUpdate['status_registrasi'] = $this->request->getPost('status_registrasi');
+        }
+        if ($this->request->getPost('id_admin') !== null) {
+            $dataToUpdate['id_admin'] = $this->request->getPost('id_admin');
         }
         // Cek jika ada password baru yang diinput
         if ($this->request->getPost('password')) {

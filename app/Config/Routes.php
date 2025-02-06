@@ -37,6 +37,15 @@ $routes->get('dashboard', 'DashboardController::dashboard');
     $routes->post('manage-siswa/delete/(:num)', 'ManageSiswaController::delete/$1');
     $routes->get('manage-siswa/delete/(:num)', 'ManageSiswaController::delete/$1');
 
+        // MANAGE INDUSTRI - Perusahaan
+    $routes->get('manage-admin/', 'ManageAdminController::index');
+    $routes->get('manage-admin/create', 'ManageAdminController::create');
+    $routes->post('manage-admin/store', 'ManageAdminController::store');
+    $routes->get('manage-admin/edit/(:num)', 'ManageAdminController::edit/$1');
+    $routes->post('manage-admin/update/(:num)', 'ManageAdminController::update/$1');
+    $routes->post('manage-admin/delete/(:num)', 'ManageAdminController::delete/$1');
+    $routes->get('manage-admin/delete/(:num)', 'ManageAdminController::delete/$1');
+
 // MANAGE INDUSTRI - Perusahaan
     $routes->get('manage-indper/', 'ManageIndPerController::index');
     $routes->get('manage-indper/create', 'ManageIndPerController::create');
