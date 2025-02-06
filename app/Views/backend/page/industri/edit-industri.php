@@ -1,0 +1,92 @@
+<?= $this->include('backend/layOutTemplate/header'); ?>
+<?= $this->include('backend/layOutTemplate/sidebar'); ?>
+
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> <?= $navigasi ?></h4>
+
+        <div class="card">
+            <div class="card-body">
+                <?php if (session()->getFlashdata('errors')): ?>
+                    <div class="alert alert-danger">
+                        <ul>
+                            <?php foreach (session()->getFlashdata('errors') as $error): ?>
+                                <li><?= esc($error) ?></li>
+                            <?php endforeach ?>
+                        </ul>
+                    </div>
+                <?php endif ?>
+
+                <form action="<?= base_url('manage-industri/update/' . $industri['id_industri']) ?>" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama Industri</label>
+                        <input type="text" class="form-control" name="nama" value="<?= old('nama', $industri['nama']) ?>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipe_indper" class="form-label">Tipe Industri</label>
+                        <select class="form-select" name="tipe_indper" required>
+                            <option value="Perusahaan" <?= old('tipe_indper', $industri['tipe_indper']) == 'Perusahaan' ? 'selected' : '' ?>>Perusahaan</option>
+                            <option value="Industri" <?= old('tipe_indper', $industri['tipe_indper']) == 'Industri' ? 'selected' : '' ?>>Industri</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username" value="<?= old('username', $industri['username']) ?>" required>
+                        <?php if (session()->getFlashdata('errors') && array_key_exists('username', session()->getFlashdata('errors'))): ?>
+                            <small class="text-danger"><?= session()->getFlashdata('errors')['username'] ?></small>
+                        <?php endif ?>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" value="<?= old('email', $industri['email']) ?>" required>
+                        <?php if (session()->getFlashdata('errors') && array_key_exists('email', session()->getFlashdata('errors'))): ?>
+                            <small class="text-danger"><?= session()->getFlashdata('errors')['email'] ?></small>
+                        <?php endif ?>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password (Biarkan kosong jika tidak diubah)</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nama_admin" class="form-label">Nama Superadmin</label>
+                        <input type="text" class="form-control" name="nama_admin" value="<?= old('nama_admin', $industri['nama_admin']) ?>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tgl_mulai_kerjasama" class="form-label">Tanggal Mulai Kerjasama</label>
+                        <input type="date" class="form-control" name="tgl_mulai_kerjasama" value="<?= old('tgl_mulai_kerjasama', $industri['tgl_mulai_kerjasama']) ?>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tgl_selesai_kerjasama" class="form-label">Tanggal Selesai Kerjasama</label>
+                        <input type="date" class="form-control" name="tgl_selesai_kerjasama" value="<?= old('tgl_selesai_kerjasama', $industri['tgl_selesai_kerjasama']) ?>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="url_image" class="form-label">Gambar Profil (Biarkan kosong jika tidak diubah)</label>
+                        <input type="file" class="form-control" name="url_image" accept="image/*">
+                    </div>
+                    <div class="mb-3">
+                        <label for="status_registrasi" class="form-label">Status Registrasi</label>
+                        <select class="form-select" name="status_registrasi" required>
+                            <option value="0" <?= old('status_registrasi', $industri['status_registrasi']) == 0 ? 'selected' : '' ?>>Not Registered</option>
+                            <option value="1" <?= old('status_registrasi', $industri['status_registrasi']) == 1 ? 'selected' : '' ?>>Registered</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_admin" class="form-label">Admin</label>
+                        <select class="form-select" name="id_admin" required>
+                            <option value="">Pilih Admin</option>
+                            <?php foreach ($admins as $admin): ?>
+                                <option value="<?= $admin['id_admin'] ?>" <?= old('id_admin', $industri['id_admin']) == $admin['id_admin'] ? 'selected' : '' ?>>
+                                    <?= esc($admin['full_name']) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="return confirm('Yakin ingin mengubah data ini?');">Update Industri</button>
+                    <a class="btn btn-outline-primary" href="<?= base_url()?>manage-industri">Kembali</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?= $this->include('backend/layOutTemplate/footer'); ?>
