@@ -3,11 +3,15 @@
 namespace App\Controllers;
 
 use App\Models\AdminModel;
+use App\Models\SiswaModel;
+use App\Models\KelasModel;
 use CodeIgniter\Controller;
 
 class Auth extends Controller
 {
     protected $adminModel;
+    protected $siswaModel;
+    protected $kelasModel;
     protected $loginModel;
 
     public function index() {
@@ -25,50 +29,189 @@ class Auth extends Controller
         return view('auth/register', $data);
     }
 
+    public function getContent()
+    {
+        $this->kelasModel = new KelasModel();
+        $data['kelas'] = $this->kelasModel->findAll();
+
+        if ($this->request->isAJAX()) {
+            $level = $this->request->getPost('level'); 
+
+            $content = "";
+
+            switch ($level) {
+                case "4":
+                    $content = view('auth/register-form/superadmin'); 
+                    break;
+                case "3":
+                    $content = view('auth/register-form/admin');
+                    break;
+                case "2":
+                    $content = view('auth/register-form/siswa',$data);
+                    break;
+                case "1":
+                    $content = view('auth/register-form/customer');
+                    break;
+                case "5":
+                    $content = view('auth/register-form/industri');
+                    break;
+                default:
+                    $content = "<p style='color:red;'>Halaman tidak ditemukan</p>";
+                    break;
+            }
+
+            return $this->response->setJSON(['content' => $content]); 
+        }
+
+        return redirect()->to(base_url()); 
+    }
+
     public function add_register(){
         $this->adminModel = new AdminModel();
-    
-        if (!$this->validate([
-            'photo' => [
-                'uploaded[photo]',
-                'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
-                'max_size[photo,4096]',
-            ],
-        ])) {
-            return redirect()->back()->with('error', 'Invalid file.');
+        $this->siswaModel = new SiswaModel();
+
+        $level = $this->request->getPost('level'); 
+        switch($level){
+            case "1": //customer
+                //
+                break;
+            case "2": //siswa
+                if (!$this->validate([
+                    'photo' => [
+                        'uploaded[photo]',
+                        'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'max_size[photo,4096]',
+                    ],
+                ])) {
+                    return redirect()->back()->with('error', 'Invalid file.');
+                }
+            
+                $username = $this->request->getPost('username');
+                $email = $this->request->getPost('email');
+            
+                $existingUser = $this->adminModel->where('username', $username)->orWhere('email', $email)->first();
+                if ($existingUser) {
+                    if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_usn_email');
+                    } elseif ($existingUser['username'] === $username) {
+                        return redirect()->back()->with('alert', 'validate_username');
+                    } elseif ($existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_email');
+                    }
+                }
+            
+                $file = $this->request->getFile('photo');
+                $newName = $file->getRandomName();
+                $file->move(ROOTPATH . 'public/backend/img_siswa', $newName);
+            
+                $password = $this->request->getPost('password');
+                $data = [
+                    'id_level' => $this->request->getPost('level'),
+                    'full_name' => $this->request->getPost('fullname'),
+                    'id_kelas' => $this->request->getPost('kelas'),
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    'gender' => $this->request->getPost('gender'),
+                    'url_image' => $newName,
+                    'status_registrasi' => false
+                ];
+                $this->siswaModel->insert($data);
+                return redirect()->to(base_url('login'))->with('alert','register_sukses');
+        
+                break;
+            case "3": //admin
+                if (!$this->validate([
+                    'photo' => [
+                        'uploaded[photo]',
+                        'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'max_size[photo,4096]',
+                    ],
+                ])) {
+                    return redirect()->back()->with('error', 'Invalid file.');
+                }
+            
+                $username = $this->request->getPost('username');
+                $email = $this->request->getPost('email');
+            
+                $existingUser = $this->adminModel->where('username', $username)->orWhere('email', $email)->first();
+                if ($existingUser) {
+                    if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_usn_email');
+                    } elseif ($existingUser['username'] === $username) {
+                        return redirect()->back()->with('alert', 'validate_username');
+                    } elseif ($existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_email');
+                    }
+                }
+            
+                $file = $this->request->getFile('photo');
+                $newName = $file->getRandomName();
+                $file->move(ROOTPATH . 'public/img_user', $newName);
+            
+                $password = $this->request->getPost('password');
+                $data = [
+                    'id_level' => $this->request->getPost('level'),
+                    'full_name' => $this->request->getPost('fullname'),
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    'gender' => $this->request->getPost('gender'),
+                    'url_image' => $newName,
+                    'status_registrasi' => false
+                ];
+                $this->adminModel->insert($data);
+                return redirect()->to(base_url('login'))->with('alert','register_sukses');
+        
+                break;
+            case "4": //superadmin
+                if (!$this->validate([
+                    'photo' => [
+                        'uploaded[photo]',
+                        'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'max_size[photo,4096]',
+                    ],
+                ])) {
+                    return redirect()->back()->with('error', 'Invalid file.');
+                }
+            
+                $username = $this->request->getPost('username');
+                $email = $this->request->getPost('email');
+            
+                $existingUser = $this->adminModel->where('username', $username)->orWhere('email', $email)->first();
+                if ($existingUser) {
+                    if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_usn_email');
+                    } elseif ($existingUser['username'] === $username) {
+                        return redirect()->back()->with('alert', 'validate_username');
+                    } elseif ($existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_email');
+                    }
+                }
+            
+                $file = $this->request->getFile('photo');
+                $newName = $file->getRandomName();
+                $file->move(ROOTPATH . 'public/img_user', $newName);
+            
+                $password = $this->request->getPost('password');
+                $data = [
+                    'id_level' => $this->request->getPost('level'),
+                    'full_name' => $this->request->getPost('fullname'),
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    'gender' => $this->request->getPost('gender'),
+                    'url_image' => $newName,
+                    'status_registrasi' => false
+                ];
+                $this->adminModel->insert($data);
+                return redirect()->to(base_url('login'))->with('alert','register_sukses');
+        
+                break;
+            case "5": //industri
+                //
+                break;
         }
-    
-        $username = $this->request->getPost('username');
-        $email = $this->request->getPost('email');
-    
-        $existingUser = $this->adminModel->where('username', $username)->orWhere('email', $email)->first();
-        if ($existingUser) {
-            if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
-                return redirect()->back()->with('alert', 'validate_usn_email');
-            } elseif ($existingUser['username'] === $username) {
-                return redirect()->back()->with('alert', 'validate_username');
-            } elseif ($existingUser['email'] === $email) {
-                return redirect()->back()->with('alert', 'validate_email');
-            }
-        }
-    
-        $file = $this->request->getFile('photo');
-        $newName = $file->getRandomName();
-        $file->move(ROOTPATH . 'public/img_user', $newName);
-    
-        $password = $this->request->getPost('password');
-        $data = [
-            'id_level' => $this->request->getPost('level'),
-            'full_name' => $this->request->getPost('fullname'),
-            'username' => $username,
-            'email' => $email,
-            'password' => password_hash($password, PASSWORD_DEFAULT),
-            'gender' => $this->request->getPost('gender'),
-            'url_image' => $newName,
-            'status_registrasi' => false
-        ];
-        $this->adminModel->insert($data);
-        return redirect()->to(base_url('login'))->with('alert','register_sukses');
     }
 
     public function login()

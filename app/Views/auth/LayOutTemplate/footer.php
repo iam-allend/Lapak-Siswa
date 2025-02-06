@@ -1,5 +1,4 @@
-    
-    
+    <script src="<?= base_url('backend/assets/js/ajax-main.js')?>"></script>
     <script src="<?= base_url()?>backend/assets/vendor/libs/jquery/jquery.js"></script>
     <script src="<?= base_url()?>backend/assets/vendor/libs/popper/popper.js"></script>
     <script src="<?= base_url()?>backend/assets/vendor/js/bootstrap.js"></script>
@@ -11,7 +10,7 @@
     <!-- Vendors JS -->
 
     <!-- Main JS -->
-    <script src="<?= base_url()?>backend/assets/js/main.js"></script>
+    <script src="<?= base_url('backend/assets/js/main.js')?>"></script>
 
     <!-- Page JS -->
 

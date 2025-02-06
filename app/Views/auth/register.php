@@ -74,67 +74,20 @@
 
               <form class="mb-3" action="<?= base_url('auth/register')?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                  <label for="username" class="form-label">Full Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="fullname"
-                    placeholder="Enter your name"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="username" class="form-label">Gender</label>
-                  <select class="form-control" name="gender" id="" required>
-                    <option value="">-- Pilih --</option>
-                    <option value="male">Laki-Laki</option>
-                    <option value="female">Perempuan</option>
-                  </select>
-                </div>
-
-                <div class="mb-3">
-                  <label for="username" class="form-label">Username</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="username"
-                    placeholder="Enter your username"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" required />
-                </div>
-                <div class="mb-3 form-password-toggle">
-                  <label class="form-label" for="password">Password</label>
-                  <div class="input-group input-group-merge">
-                    <input
-                      type="password"
-                      class="form-control"
-                      name="password"
-                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                      aria-describedby="password"
-                      required
-                    />
-                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                  </div>
-                </div>
-                <div class="mb-3">
                   <label for="username" class="form-label">Sebagai</label>
-                  <select class="form-control" name="level" id="" required>
+                  <select class="form-select" name="level" id="levelSelect" required>
                     <option value="">-- Pilih --</option>
                     <option value="4">Super Admin</option>
                     <option value="3">Admin</option>
                     <option value="2">Siswa</option>
-                    <option value="1">Customer</option>
-                    <option value="5">Industri</option>
+                    <!-- <option value="1">Customer</option>
+                    <option value="5">Industri</option> -->
                   </select>
                 </div>
-                <div class="mb-3">
-                  <label for="username" class="form-label">Foto Profile</label>
-                  <input type="file" class="form-control" name="photo" required>
+                <div id="content">
+
                 </div>
+
                 <div class="mb-3">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" required />

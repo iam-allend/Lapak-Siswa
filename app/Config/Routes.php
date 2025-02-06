@@ -15,6 +15,7 @@ $routes->get('/profile', 'Home::profile');
 
 $routes->get('register', 'Auth::register');
 $routes->post('auth/register', 'Auth::add_register');
+$routes->post('/get-content', 'Auth::getContent');
 
 $routes->get('login', 'Auth::index');
 $routes->post('auth/login', 'Auth::login'); // Proses login

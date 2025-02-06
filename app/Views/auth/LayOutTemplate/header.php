@@ -57,6 +57,7 @@
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Page CSS -->
     <!-- Page -->
