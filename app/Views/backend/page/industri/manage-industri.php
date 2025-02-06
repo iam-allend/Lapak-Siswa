@@ -27,7 +27,7 @@
                             <th>Username</th>
                             <th>Email</th>
                             <th>Tipe</th>
-                            <th>Superadmin</th>
+                            <th>Pengampu</th>
                             <th>Kerjasama</th>
                             <th>Selesai</th>
                             <th>Status</th>
@@ -52,9 +52,13 @@
                             <td><?= $industri['tgl_mulai_kerjasama'] ?></td>
                             <td><?= $industri['tgl_selesai_kerjasama'] ?></td>
                             <td>
-                                <span class="badge <?= $industri['status_registrasi'] == 1 ? 'bg-label-success' : 'bg-label-danger' ?> me-1">
-                                    <?= $industri['status_registrasi'] == 1 ? 'Registered' : 'Not Registered' ?>
-                                </span>
+                                <div class="m-0 avatar-group d-flex align-items-center me-3">
+                                    <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="pull-up" title="Tgl Daftar : <?= $industri['created_at'] ?>">
+                                        <span class="badge <?= $industri['status_registrasi'] == 1 ? 'bg-label-success' : 'bg-label-danger' ?> me-1">
+                                            <?= $industri['status_registrasi'] == 1 ? 'Registered' : 'Not Registered' ?>
+                                        </span>                                    
+                                    </a>
+                                </div>
                             </td>
                             <td>
                                 <a href="<?= base_url('manage-indper/edit/' . $industri['id_industri']) ?>" class="btn btn-outline-primary text-decoration-none">

@@ -99,7 +99,11 @@
                   <div>Manage Siswa</div>
               </a>
             </li>
-              
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Customer') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-customer" class="menu-link">
+                  <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                  <div>Manage Customer</div>
+              </a>
             </li>
             <!-- Menu lainnya -->
 

@@ -47,9 +47,13 @@
                             <td><?= $admin['email'] ?></td>
                             <td><?= $admin['gender'] ?></td>
                             <td>
-                                <span class="badge <?= $admin['status_registrasi'] == 1 ? 'bg-label-success' : 'bg-label-danger' ?> me-1">
-                                    <?= $admin['status_registrasi'] == 1 ? 'Registered' : 'Not Registered' ?>
-                                </span>
+                                <div class="m-0 avatar-group d-flex align-items-center me-3">
+                                    <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="pull-up" title="Tgl Daftar : <?= $admin['created_at'] ?>">
+                                        <span class="badge <?= $admin['status_registrasi'] == 1 ? 'bg-label-success' : 'bg-label-danger' ?> me-1">
+                                            <?= $admin['status_registrasi'] == 1 ? 'Registered' : 'Not Registered' ?>
+                                        </span>                                    
+                                    </a>
+                                </div>
                             </td>                      
                             <td>
                                 <a href="<?= base_url('manage-admin/edit/' . $admin['id_admin']) ?>" class="btn btn-outline-primary text-decoration-none">

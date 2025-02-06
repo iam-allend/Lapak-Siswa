@@ -33,7 +33,7 @@ class ManageIndPerController extends Controller
     public function create()
     {
         $data = [
-            'activePage' => 'Manage Industri',
+            'activePage' => 'Manage IndPer',
             'tittle' => 'Lapak Siswa | Industri',
             'navigasi' => 'Tambah Data Industri',
             'admins' => $this->adminModel->findAll(), // Ambil semua data admin
@@ -92,7 +92,7 @@ class ManageIndPerController extends Controller
         $data = [
             'industri' => $this->industriModel->find($id),
             'admins' => $this->adminModel->findAll(),
-            'activePage' => 'Manage Industri',
+            'activePage' => 'Manage IndPer',
             'tittle' => 'Lapak Siswa | Edit Industri',
             'navigasi' => 'Edit Data Industri'
         ];
