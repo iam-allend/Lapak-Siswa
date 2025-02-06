@@ -120,3 +120,97 @@ DEBUG - 2025-02-06 04:29:14 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-02-06 04:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-02-06 04:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-02-06 04:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-06 08:09:59 --> mysqli_sql_exception: Unknown column 'industri_perusahaan.id_admin' in 'on clause' in C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `industr...', 0)
+#1 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `industr...')
+#2 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `industr...')
+#3 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `industr...', Array, false)
+#4 C:\xampp\htdocs\Lapak-Siswa\app\Models\IndustriModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Lapak-Siswa\app\Controllers\ManageIndPerController.php(24): App\Models\IndustriModel->getIndustriWithAdmin()
+#6 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+#7 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#8 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Lapak-Siswa\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\Lapak-Siswa\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-02-06 08:09:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'industri_perusahaan.id_admin' in 'on clause'
+[Method: GET, Route: manage-indper]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `industri_perusahaan`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri_perusahaan`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri_perusahaan`.`id_admin`', [], false)
+ 2 APPPATH\Models\IndustriModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ManageIndPerController.php(24): App\Models\IndustriModel->getIndustriWithAdmin()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+CRITICAL - 2025-02-06 08:09:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'industri_perusahaan.id_admin' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `industri_perusahaan`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri_perusahaan`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri_perusahaan`.`id_admin`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `industri_perusahaan`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri_perusahaan`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri_perusahaan`.`id_admin`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `industri_perusahaan`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri_perusahaan`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri_perusahaan`.`id_admin`', [], false)
+ 4 APPPATH\Models\IndustriModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\ManageIndPerController.php(24): App\Models\IndustriModel->getIndustriWithAdmin()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+CRITICAL - 2025-02-06 08:09:59 --> [Caused by] mysqli_sql_exception: Unknown column 'industri_perusahaan.id_admin' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `industri_perusahaan`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri_perusahaan`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri_perusahaan`.`id_admin`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `industri_perusahaan`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri_perusahaan`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri_perusahaan`.`id_admin`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `industri_perusahaan`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri_perusahaan`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri_perusahaan`.`id_admin`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `industri_perusahaan`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri_perusahaan`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri_perusahaan`.`id_admin`', [], false)
+ 5 APPPATH\Models\IndustriModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\ManageIndPerController.php(24): App\Models\IndustriModel->getIndustriWithAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-02-06 08:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 08:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
