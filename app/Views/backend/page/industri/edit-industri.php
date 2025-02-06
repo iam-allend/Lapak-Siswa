@@ -78,7 +78,7 @@
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary" onclick="return confirm('Yakin ingin mengubah data ini?');">Update Industri</button>
-                    <a class="btn btn-outline-primary" href="<?= base_url()?>manage-industri">Kembali</a>
+                    <a class="btn btn-outline-primary" href="<?= base_url()?>manage-indper">Kembali</a>
                 </form>
             </div>
         </div>

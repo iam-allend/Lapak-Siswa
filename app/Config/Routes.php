@@ -54,6 +54,15 @@ $routes->get('dashboard', 'DashboardController::dashboard');
     $routes->post('manage-indper/update/(:num)', 'ManageIndPerController::update/$1');
     $routes->post('manage-indper/delete/(:num)', 'ManageIndPerController::delete/$1');
     $routes->get('manage-indper/delete/(:num)', 'ManageIndPerController::delete/$1');
+
+    // MANAGE INDUSTRI - Perusahaan
+    $routes->get('manage-customer/', 'ManageCustomerController::index');
+    $routes->get('manage-customer/create', 'ManageCustomerController::create');
+    $routes->post('manage-customer/store', 'ManageCustomerController::store');
+    $routes->get('manage-customer/edit/(:num)', 'ManageCustomerController::edit/$1');
+    $routes->post('manage-customer/update/(:num)', 'ManageCustomerController::update/$1');
+    $routes->post('manage-customer/delete/(:num)', 'ManageCustomerController::delete/$1');
+    $routes->get('manage-customer/delete/(:num)', 'ManageCustomerController::delete/$1');
     
 
 

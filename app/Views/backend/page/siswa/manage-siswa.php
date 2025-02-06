@@ -50,9 +50,13 @@
                             <td><?= $siswa['nama_admin'] ?></td> <!-- Anda mungkin perlu mengganti ini dengan nama admin -->
                             <td><?= $siswa['group_name'] ?></td> <!-- Anda mungkin perlu mengganti ini dengan nama kelompok -->
                             <td>
-                                <span class="badge <?= $siswa['status_registrasi'] == 1 ? 'bg-label-success' : 'bg-label-danger' ?> me-1">
-                                    <?= $siswa['status_registrasi'] == 1 ? 'Registered' : 'Not Registered' ?>
-                                </span>
+                                <div class="m-0 avatar-group d-flex align-items-center me-3">
+                                    <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="pull-up" title="Tgl Daftar : <?= $siswa['created_at'] ?>">
+                                        <span class="badge <?= $siswa['status_registrasi'] == 1 ? 'bg-label-success' : 'bg-label-danger' ?> me-1">
+                                            <?= $siswa['status_registrasi'] == 1 ? 'Registered' : 'Not Registered' ?>
+                                        </span>                                    
+                                    </a>
+                                </div>
                             </td>
                             <td>
                                 <a href="<?= base_url('manage-siswa/edit/' . $siswa['id_siswa']) ?>" class="btn btn-outline-primary text-decoration-none">
