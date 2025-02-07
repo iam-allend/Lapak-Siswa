@@ -37,13 +37,21 @@
                         <?php foreach ($admins as $admin): ?>
                         <tr>
                             <td>
-                                <div class="m-0 avatar-group d-flex align-items-center me-3">
-                                    <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="<?= $admin['full_name'] ?>">
+                                <div class="m-0 avatar-group d-flex align-items-center me-3 p-0">
+                                <?php if ($admin['url_image']): ?>
+                                    <a target="_blank" href="<?= base_url() ?><?= $admin['url_image']?>" class="avatar avatar-xs pull-up">
                                         <img src="<?= base_url() ?><?= $admin['url_image']?>" alt="Avatar" class="rounded-circle" />
                                     </a>
+                                <?php else: ?>
+                                    <span class="badge bg-label-danger">unSet</span>
+                                <?php endif; ?>
                                 </div>
                             </td>
-                            <td><?= $admin['username'] ?></td>
+                            <td>
+                                 <span data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="<?= $admin['full_name'] ?>">
+                                   <?= $admin['username'] ?></td>
+                               </span>
+                            </td>
                             <td><?= $admin['email'] ?></td>
                             <td><?= $admin['gender'] ?></td>
                             <td>
@@ -56,10 +64,10 @@
                                 </div>
                             </td>                      
                             <td>
-                                <a href="<?= base_url('manage-admin/edit/' . $admin['id_admin']) ?>" class="btn btn-outline-primary text-decoration-none">
+                                <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Edit" href="<?= base_url('manage-admin/edit/' . $admin['id_admin']) ?>" class="btn btn-outline-primary text-decoration-none">
                                     <i class='bx bxs-edit'></i>
                                 </a>
-                                <a href="<?= base_url('manage-admin/delete/' . $admin['id_admin']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                                <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Hapus" href="<?= base_url('manage-admin/delete/' . $admin['id_admin']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
                                     <i class='bx bxs-trash-alt'></i>
                                 </a>
                                 

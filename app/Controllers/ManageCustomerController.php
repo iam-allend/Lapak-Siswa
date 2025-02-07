@@ -33,6 +33,7 @@ class ManageCustomerController extends Controller
             'activePage' => 'Manage Customer',
             'tittle' => 'Lapak Siswa | Customer',
             'navigasi' => 'Tambah Data Customer',
+            'customers' => $this->customerModel->findAll(),
         ];
 
         return view('backend/page/customer/add-customer', $data);
@@ -51,11 +52,17 @@ class ManageCustomerController extends Controller
             'gender' => 'required',
             'alamat' => 'required',
             'saldo' => 'required|numeric',
+            // 'url_image' => 'uploaded[url_image]|is_image[url_image]|max_size[url_image,2048]',
         ]);
 
         if (!$validation) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
+
+        // Upload image
+        $file = $this->request->getFile('url_image');
+        $fileName = $file->getRandomName();
+        $file->move('img_user', $fileName);
 
         // Save customer data
         $this->customerModel->save([
@@ -68,6 +75,7 @@ class ManageCustomerController extends Controller
             'gender' => $this->request->getPost('gender'),
             'alamat' => $this->request->getPost('alamat'),
             'saldo' => $this->request->getPost('saldo'),
+            'url_image' => 'img_user/' . $fileName,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -95,6 +103,7 @@ class ManageCustomerController extends Controller
             'full_name' => 'min_length[3]',
             'username' => "min_length[5]|is_unique[customer.username,id_customer,{$id}]",
             'email' => "valid_email|min_length[6]|is_unique[customer.email,id_customer,{$id}]",
+            'url_image' => 'is_image[url_image]|max_size[url_image,2048]',
         ]);
 
         if (!$validation) {
@@ -132,6 +141,26 @@ class ManageCustomerController extends Controller
             $dataToUpdate['password'] = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
         }
 
+        // Cek jika ada file gambar yang diupload
+        $file = $this->request->getFile('url_image');
+        if ($file && $file->isValid()) {
+            // Path direktori untuk menyimpan gambar
+            $imgPath = 'img_user/';
+            
+            // Hapus gambar lama jika bukan gambar default
+            if ($customerData['url_image'] && $customerData['url_image'] != 'img_user/user.png') {
+                @unlink($customerData['url_image']);
+            }
+
+            // Simpan gambar baru
+            $fileName = $file->getRandomName();
+            $file->move($imgPath, $fileName);
+            $dataToUpdate['url_image'] = $imgPath . $fileName;
+        } else {
+            // Jika tidak ada gambar baru, pertahankan gambar lama
+            $dataToUpdate['url_image'] = $customerData['url_image'];
+        }
+
         // Update customer data
         $this->customerModel->update($id, $dataToUpdate + ['updated_at' => date('Y-m-d H:i:s')]);
 
@@ -142,8 +171,17 @@ class ManageCustomerController extends Controller
     // Menghapus customer
     public function delete($id)
     {
-        // Hapus customer dari database
+
+        $customer = $this->customerModel->find($id);
+        if ($customer && $customer['url_image']) {
+            $filePath = WRITEPATH . $customer['url_image'];
+            if (file_exists($filePath)) {
+                unlink($filePath); // Hapus file gambar dari server
+            }
+        }
+
         $this->customerModel->delete($id);
-        return redirect()->to('/manage-customer')->with('success', 'Customer deleted successfully');
+        $username = $this->request->getPost('username') ?: $customer['username'];
+        return redirect()->to('/manage-customer')->with('success', "Customer '{$username}' Delete successfully");
     }
 }

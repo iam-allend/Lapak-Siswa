@@ -22,7 +22,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Nama</th>
+                            <th>Foto</th>
                             <th>Username</th>
                             <th>Email</th>
                             <th>No. Telp</th>
@@ -35,18 +35,31 @@
                     <tbody class="table-border-bottom-0">
                         <?php foreach ($customers as $customer): ?>
                         <tr>
-                            <td><?= $customer['full_name'] ?></td>
-                            <td><?= $customer['username'] ?></td>
+                            <td>
+                                <div class="m-0 avatar-group d-flex align-items-center me-3 p-0">
+                                <?php if ($customer['url_image']): ?>
+                                    <a target="_blank" href="<?= base_url() ?><?= $customer['url_image']?>" class="avatar avatar-xs pull-up">
+                                        <img src="<?= base_url() ?><?= $customer['url_image']?>" alt="Avatar" class="rounded-circle" />
+                                    </a>
+                                <?php else: ?>
+                                    <span class="badge bg-label-danger">unSet</span>
+                                <?php endif; ?>
+                                </div>
+                            </td>
+                            <td>
+                               <span data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="<?= $customer['full_name'] ?>">
+                                   <?= $customer['username'] ?></td>
+                               </span>
                             <td><?= $customer['email'] ?></td>
                             <td><?= $customer['no_telp'] ?></td>
                             <td><?= $customer['gender'] ?></td>
                             <td><?= $customer['alamat'] ?></td>
-                            <td><?= number_format($customer['saldo'], 2) ?></td>
+                            <td>Rp. <?= number_format($customer['saldo'], 2) ?></td>
                             <td>
-                                <a href="<?= base_url('manage-customer/edit/' . $customer['id_customer']) ?>" class="btn btn-outline-primary text-decoration-none">
+                                <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Edit"  href="<?= base_url('manage-customer/edit/' . $customer['id_customer']) ?>" class="btn btn-outline-primary text-decoration-none">
                                     <i class='bx bxs-edit'></i>
                                 </a>
-                                <a href="<?= base_url('manage-customer/delete/' . $customer['id_customer']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                                <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Hapus" href="<?= base_url('manage-customer/delete/' . $customer['id_customer']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
                                     <i class='bx bxs-trash-alt'></i>
                                 </a>
                             </td>

@@ -57,7 +57,7 @@
                         <input type="date" class="form-control" name="tgl_selesai_kerjasama" value="<?= old('tgl_selesai_kerjasama') ?>" required>
                     </div>
                     <div class="mb-3">
-                        <label for="url_image" class="form-label">Gambar Profil</label>
+                        <label for="url_image" class="form-label">Foto Profil</label>
                         <input type="file" class="form-control" name="url_image" accept="image/*" required>
                     </div>
                     <div class="mb-3">

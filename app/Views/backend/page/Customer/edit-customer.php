@@ -17,7 +17,7 @@
                     </div>
                 <?php endif; ?>
 
-                <form action="<?= base_url('manage-customer/update/' . $customer['id_customer']) ?>" method="post">
+                <form action="<?= base_url('manage-customer/update/' . $customer['id_customer']) ?>" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="full_name" class="form-label">Nama Lengkap</label>
                         <input type="text" class="form-control" name="full_name" value="<?= old('full_name', $customer['full_name']) ?>" required>
@@ -52,6 +52,13 @@
                     <div class="mb-3">
                         <label for="saldo" class="form-label">Saldo</label>
                         <input type="number" class="form-control" name="saldo" value="<?= old('saldo', $customer['saldo']) ?>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="url_image" class="form-label">Foto Profil</label>
+                        <input type="file" class="form-control" name="url_image" accept="image/*">
+                        <?php if ($customer['url_image']): ?>
+                            <img src="<?= base_url($customer['url_image']) ?>" alt="Foto Profil" width="100" class="mt-2">
+                        <?php endif; ?>
                     </div>
                     <button type="submit" class="btn btn-primary">Update Customer</button>
                     <a class="btn btn-outline-primary" href="<?= base_url()?>manage-customer">Kembali</a>

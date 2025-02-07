@@ -37,15 +37,26 @@
                         <?php foreach ($siswas as $siswa): ?>
                         <tr>
                             <td>
-                                <div class="m-0 avatar-group d-flex align-items-center me-3">
-                                    <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="<?= $siswa['full_name'] ?>">
+                                <div class="m-0 avatar-group d-flex align-items-center me-3 p-0">
+                                <?php if ($siswa['url_image']): ?>
+                                    <a target="_blank" href="<?= base_url() ?><?= $siswa['url_image']?>" class="avatar avatar-xs pull-up">
                                         <img src="<?= base_url() ?><?= $siswa['url_image']?>" alt="Avatar" class="rounded-circle" />
                                     </a>
+                                <?php else: ?>
+                                    <span class="badge bg-label-danger">unSet</span>
+                                <?php endif; ?>
                                 </div>
                             </td>
-                            <td><?= $siswa['username'] ?></td>
+                            <td>
+                                <span data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="<?= $siswa['full_name'] ?>">
+                                   <?= $siswa['username'] ?></td>
+                               </span>
                             <td><?= $siswa['email'] ?></td>
-                            <td><?= $siswa['kelas'] ?></td>
+                            <td>
+                                <span data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="<?= $siswa['wali_kelas'] ?>">
+                                   <?= $siswa['kelas'] ?>
+                                </span>
+                            </td>
                             <td><?= $siswa['gender'] ?></td>
                             <td><?= $siswa['nama_admin'] ?></td> <!-- Anda mungkin perlu mengganti ini dengan nama admin -->
                             <td><?= $siswa['group_name'] ?></td> <!-- Anda mungkin perlu mengganti ini dengan nama kelompok -->
@@ -59,10 +70,10 @@
                                 </div>
                             </td>
                             <td>
-                                <a href="<?= base_url('manage-siswa/edit/' . $siswa['id_siswa']) ?>" class="btn btn-outline-primary text-decoration-none">
+                                <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Edit" href="<?= base_url('manage-siswa/edit/' . $siswa['id_siswa']) ?>" class="btn btn-outline-primary text-decoration-none">
                                     <i class='bx bxs-edit'></i>
                                 </a>
-                                <a href="<?= base_url('manage-siswa/delete/' . $siswa['id_siswa']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                                <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Hapus"  href="<?= base_url('manage-siswa/delete/' . $siswa['id_siswa']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
                                     <i class='bx bxs-trash-alt'></i>
                                 </a>
                             </td>

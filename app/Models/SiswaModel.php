@@ -16,7 +16,7 @@ class SiswaModel extends Model
     public function getSiswaWithGroupAndKelas()
     {
         return $this->db->table('siswa')
-            ->select('siswa.*, admin.group_name, kelas.nama as kelas, admin.full_name as nama_admin') // Ambil group_name dari admin dan nama kelas dari kelas
+            ->select('siswa.*, admin.group_name, kelas.nama as kelas, admin.full_name as nama_admin, kelas.wali_kelas') // Ambil group_name dari admin dan nama kelas dari kelas
             ->join('admin', 'admin.id_admin = siswa.id_admin', 'left') // Join dengan tabel admin
             ->join('kelas', 'kelas.id_kelas = siswa.id_kelas', 'left') // Join dengan tabel kelas
             ->get()

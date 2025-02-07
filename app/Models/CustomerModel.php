@@ -9,7 +9,7 @@ class CustomerModel extends Model
     protected $table = 'customer';
     protected $primaryKey = 'id_customer';
     protected $allowedFields = [
-        'id_level', 'full_name', 'username', 'email', 'password', 'no_telp', 'gender', 'alamat', 'saldo', 'updated_at', 'created_at'
+        'id_level', 'full_name', 'username', 'email', 'password', 'no_telp', 'gender', 'alamat', 'saldo', 'url_image', 'updated_at', 'created_at'
     ];
 
     public function getCustomerWithLevel()

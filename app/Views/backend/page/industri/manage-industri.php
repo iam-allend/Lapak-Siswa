@@ -23,11 +23,10 @@
                     <thead>
                         <tr>
                             <th>Profil</th>
-                            <th>Nama</th>
                             <th>Username</th>
                             <th>Email</th>
                             <th>Tipe</th>
-                            <th>Pengampu</th>
+                            <th>Penanggungjawab</th>
                             <th>Kerjasama</th>
                             <th>Selesai</th>
                             <th>Status</th>
@@ -38,14 +37,22 @@
                         <?php foreach ($industris as $industri): ?>
                         <tr>
                             <td>
-                                <div class="m-0 avatar-group d-flex align-items-center me-3">
-                                    <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="<?= $industri['nama'] ?>">
+                                <div class="m-0 avatar-group d-flex align-items-center me-3 p-0">
+                                <?php if ($industri['url_image']): ?>
+                                    <a target="_blank" href="<?= base_url() ?><?= $industri['url_image']?>" class="avatar avatar-xs pull-up">
                                         <img src="<?= base_url() ?><?= $industri['url_image']?>" alt="Avatar" class="rounded-circle" />
                                     </a>
+                                <?php else: ?>
+                                    <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up rounded w-100 p-0" title="<?= $industri['full_name'] ?>">
+                                        <span class="badge bg-label-danger">unSet</span>
+                                    </a>
+                                <?php endif; ?>
                                 </div>
                             </td>
-                            <td><?= $industri['nama'] ?></td>
-                            <td><?= $industri['username'] ?></td>
+                            <td> 
+                                <span data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="" title="<?= $industri['nama'] ?>">
+                                    <?= $industri['username'] ?></td>
+                                </span>
                             <td><?= $industri['email'] ?></td>
                             <td><?= $industri['tipe_indper'] ?></td>
                             <td><?= $industri['nama_admin'] ?></td>
@@ -61,10 +68,10 @@
                                 </div>
                             </td>
                             <td>
-                                <a href="<?= base_url('manage-indper/edit/' . $industri['id_industri']) ?>" class="btn btn-outline-primary text-decoration-none">
+                                <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Edit" href="<?= base_url('manage-indper/edit/' . $industri['id_industri']) ?>" class="btn btn-outline-primary text-decoration-none">
                                     <i class='bx bxs-edit'></i>
                                 </a>
-                                <a href="<?= base_url('manage-indper/delete/' . $industri['id_industri']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                                <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Hapus" href="<?= base_url('manage-indper/delete/' . $industri['id_industri']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
                                     <i class='bx bxs-trash-alt'></i>
                                 </a>
                             </td>
