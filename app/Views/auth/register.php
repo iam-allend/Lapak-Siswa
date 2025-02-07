@@ -79,9 +79,9 @@
                     <option value="">-- Pilih --</option>
                     <option value="4">Super Admin</option>
                     <option value="3">Admin</option>
-                    <option value="2">Siswa</option>
-                    <!-- <option value="1">Customer</option>
-                    <option value="5">Industri</option> -->
+                    <option value="1">Siswa</option>
+                    <option value="2">Customer</option>
+                    <option value="5">Collaborator</option>
                   </select>
                 </div>
                 <div id="content">

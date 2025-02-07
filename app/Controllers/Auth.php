@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\AdminModel;
 use App\Models\SiswaModel;
 use App\Models\KelasModel;
+use App\Models\CustomerModel;
+use App\Models\IndustriModel;
 use CodeIgniter\Controller;
 
 class Auth extends Controller
@@ -12,6 +14,8 @@ class Auth extends Controller
     protected $adminModel;
     protected $siswaModel;
     protected $kelasModel;
+    protected $customerModel;
+    protected $industriModel;
     protected $loginModel;
 
     public function index() {
@@ -46,10 +50,10 @@ class Auth extends Controller
                 case "3":
                     $content = view('auth/register-form/admin');
                     break;
-                case "2":
+                case "1":
                     $content = view('auth/register-form/siswa',$data);
                     break;
-                case "1":
+                case "2":
                     $content = view('auth/register-form/customer');
                     break;
                 case "5":
@@ -69,13 +73,12 @@ class Auth extends Controller
     public function add_register(){
         $this->adminModel = new AdminModel();
         $this->siswaModel = new SiswaModel();
+        $this->customerModel = new CustomerModel();
+        $this->industriModel = new IndustriModel();
 
         $level = $this->request->getPost('level'); 
         switch($level){
-            case "1": //customer
-                //
-                break;
-            case "2": //siswa
+            case "2": //customer
                 if (!$this->validate([
                     'photo' => [
                         'uploaded[photo]',
@@ -89,7 +92,53 @@ class Auth extends Controller
                 $username = $this->request->getPost('username');
                 $email = $this->request->getPost('email');
             
-                $existingUser = $this->adminModel->where('username', $username)->orWhere('email', $email)->first();
+                $existingUser = $this->customerModel->where('username', $username)->orWhere('email', $email)->first();
+                if ($existingUser) {
+                    if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_usn_email');
+                    } elseif ($existingUser['username'] === $username) {
+                        return redirect()->back()->with('alert', 'validate_username');
+                    } elseif ($existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_email');
+                    }
+                }
+            
+                $file = $this->request->getFile('photo');
+                $newName = $file->getRandomName();
+                $file->move(ROOTPATH . 'public/backend/img_customer', $newName);
+            
+                $password = $this->request->getPost('password');
+                $data = [
+                    'id_level' => $this->request->getPost('level'),
+                    'full_name' => $this->request->getPost('fullname'),
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    'gender' => $this->request->getPost('gender'),
+                    'alamat' => $this->request->getPost('alamat'),
+                    'no_telp' => $this->request->getPost('telp'),
+                    'url_image' => $newName,
+                    'status_registrasi' => false
+                ];
+                $this->customerModel->insert($data);
+                return redirect()->to(base_url('login'))->with('alert','register_sukses');
+
+                break;
+            case "1": //siswa
+                if (!$this->validate([
+                    'photo' => [
+                        'uploaded[photo]',
+                        'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'max_size[photo,4096]',
+                    ],
+                ])) {
+                    return redirect()->back()->with('error', 'Invalid file.');
+                }
+            
+                $username = $this->request->getPost('username');
+                $email = $this->request->getPost('email');
+            
+                $existingUser = $this->siswaModel->where('username', $username)->orWhere('email', $email)->first();
                 if ($existingUser) {
                     if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
                         return redirect()->back()->with('alert', 'validate_usn_email');
@@ -208,8 +257,50 @@ class Auth extends Controller
                 return redirect()->to(base_url('login'))->with('alert','register_sukses');
         
                 break;
-            case "5": //industri
-                //
+            case "5": //collaborator
+                if (!$this->validate([
+                    'photo' => [
+                        'uploaded[photo]',
+                        'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'max_size[photo,4096]',
+                    ],
+                ])) {
+                    return redirect()->back()->with('error', 'Invalid file.');
+                }
+            
+                $username = $this->request->getPost('username');
+                $email = $this->request->getPost('email');
+            
+                $existingUser = $this->industriModel->where('username', $username)->orWhere('email', $email)->first();
+                if ($existingUser) {
+                    if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_usn_email');
+                    } elseif ($existingUser['username'] === $username) {
+                        return redirect()->back()->with('alert', 'validate_username');
+                    } elseif ($existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_email');
+                    }
+                }
+            
+                $file = $this->request->getFile('photo');
+                $newName = $file->getRandomName();
+                $file->move(ROOTPATH . 'public/img_collaborator', $newName);
+            
+                $password = $this->request->getPost('password');
+                $data = [
+                    'id_level' => $this->request->getPost('level'),
+                    'nama' => $this->request->getPost('fullname'),
+                    'tipe_indper' => $this->request->getPost('jenis'),
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    'tgl_mulai_kerjasama' => $this->request->getPost('startDate'),
+                    'url_image' => $newName,
+                    'status_registrasi' => false
+                ];
+                $this->industriModel->insert($data);
+                return redirect()->to(base_url('login'))->with('alert','register_sukses');
+
                 break;
         }
     }
