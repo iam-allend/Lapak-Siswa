@@ -18,7 +18,7 @@
                   </select>
                 </div>
                 <div class="mb-3">
-                  <label for="username" class="form-label">Gender</label>
+                  <label for="username" class="form-label">Jenis Kelamin</label>
                   <select class="form-select" name="gender" id="" required>
                     <option value="">-- Pilih --</option>
                     <option value="Laki-Laki">Laki-Laki</option>

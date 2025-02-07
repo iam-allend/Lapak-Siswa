@@ -20,4 +20,12 @@ class CustomerModel extends Model
             ->get()
             ->getResultArray();
     }
+
+    public function getUser($usnEmail, $type = 'username')
+    {
+        return $this->select('id_customer, id_level, full_name, username, email, password, gender, url_image')
+                    ->where($type, $usnEmail)
+                    ->first();
+    }
+
 }

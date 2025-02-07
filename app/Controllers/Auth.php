@@ -308,24 +308,42 @@ class Auth extends Controller
     public function login()
     {
         $session = session();
-        $this->loginModel = new AdminModel();
+        $request = service('request');
 
-        $usnEmail = $this->request->getPost('email-username');
-        $password = $this->request->getPost('password');
+        $usnEmail = $request->getPost('email-username');
+        $password = $request->getPost('password');
 
         if (filter_var($usnEmail, FILTER_VALIDATE_EMAIL)) {
-            $user = $this->loginModel->getUser($usnEmail, 'email');
-            $errorMessage = "validate_email_login";
+            $column = 'email';
+            $errorMessage = 'validate_email_login';
         } else {
-            $user = $this->loginModel->getUser($usnEmail, 'username');
-            $errorMessage = "validate_usn_login";
+            $column = 'username';
+            $errorMessage = 'validate_usn_login';
+        }
+
+        $tables = [
+            'admin'              => new AdminModel(),
+            'customer'           => new CustomerModel(),
+            'siswa'              => new SiswaModel(),
+            'industri_perusahaan' => new IndustriModel(),
+        ];
+
+        $user = null;
+        $userTable = null;
+
+        foreach ($tables as $table => $model) {
+            $user = $model->getUser($usnEmail, $column);
+            if ($user) {
+                $userTable = $table;
+                break;
+            }
         }
 
         if (!$user) {
             return redirect()->to(base_url('login'))->with('alert', $errorMessage);
         }
 
-        if ($user['status_registrasi'] == 0) { 
+        if ($userTable !== 'customer' && isset($user['status_registrasi']) && $user['status_registrasi'] == 0) {
             return redirect()->to(base_url('login'))->with('alert', 'validate_status_account');
         }
 
@@ -334,29 +352,62 @@ class Auth extends Controller
         }
 
         $sessionData = [
-            'id_admin'   => $user['id_admin'],
-            'id_level'   => $user['admin_id_level'],
-            'nama_level' => $user['nama'],
-            'fullname'   => $user['full_name'],
-            'username'   => $user['username'],
-            'email'      => $user['email'],
-            'gender'     => $user['gender'],
-            'url_image'  => $user['url_image'],
-            'logged_in'  => true
+            'logged_in' => true,
+            'user_table' => $userTable, 
         ];
+
+        switch ($userTable) {
+            case 'admin':
+                $sessionData['id_admin']   = $user['id_admin'];
+                $sessionData['id_level']  = $user['id_level'];
+                $sessionData['fullname']  = $user['full_name'];
+                $sessionData['username']  = $user['username'];
+                $sessionData['email']     = $user['email'];
+                $sessionData['gender']    = $user['gender'];
+                $sessionData['url_image'] = $user['url_image'];
+                break;
+
+            case 'customer':
+                $sessionData['id_customer']   = $user['id_customer'];
+                $sessionData['id_level']  = $user['id_level']; 
+                $sessionData['fullname']  = $user['full_name'];
+                $sessionData['username']  = $user['username'];
+                $sessionData['email']     = $user['email'];
+                $sessionData['gender']    = $user['gender'];
+                $sessionData['url_image'] = $user['url_image'];
+                break;
+
+            case 'siswa':
+                $sessionData['id_siswa']   = $user['id_siswa'];
+                $sessionData['id_level']  = $user['id_level']; 
+                $sessionData['fullname']  = $user['full_name'];
+                $sessionData['username']  = $user['username'];
+                $sessionData['email']     = $user['email'];
+                $sessionData['gender']    = $user['gender'];
+                $sessionData['url_image'] = $user['url_image'];
+                break;
+
+            case 'industri_perusahaan':
+                $sessionData['id_industri']   = $user['id_industri'];
+                $sessionData['id_level']  = $user['id_level']; 
+                $sessionData['fullname']  = $user['nama'];
+                $sessionData['username']  = $user['username'];
+                $sessionData['email']     = $user['email'];
+                $sessionData['url_image'] = $user['url_image'];
+                break;
+        }
+
         $session->set($sessionData);
 
         $redirectRoutes = [
+            1 => '/',
+            2 => 'customer/dashboard',
             3 => 'dashboard',
             4 => 'dashboard',
-            2 => '/',
-            1 => 'customer/dashboard',
-            5 => 'industri/dashboard'
+            5 => 'industri/dashboard',
         ];
 
-        $redirectUrl = $redirectRoutes[$user['admin_id_level']] ?? 'login';
-
-        return redirect()->to(base_url($redirectUrl))->with('alert', 'login_sukses');
+        return redirect()->to(base_url($redirectRoutes[$sessionData['id_level']] ?? 'login'))->with('alert', 'login_sukses');
     }
     public function logout()
     {
