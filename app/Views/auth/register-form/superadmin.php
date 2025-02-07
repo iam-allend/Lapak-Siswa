@@ -1,19 +1,19 @@
                 <div class="mb-3">
-                  <label for="username" class="form-label">Full Name</label>
+                  <label for="username" class="form-label">Nama Lengkap</label>
                   <input
                     type="text"
                     class="form-control"
                     name="fullname"
-                    placeholder="Enter your name"
+                    placeholder="Masukan Nama Lengkap"
                     required
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="username" class="form-label">Gender</label>
-                  <select class="form-control" name="gender" id="" required>
+                  <label for="username" class="form-label">Jenis Kelamin</label>
+                  <select class="form-select" name="gender" id="" required>
                     <option value="">-- Pilih --</option>
-                    <option value="male">Laki-Laki</option>
-                    <option value="female">Perempuan</option>
+                    <option value="Laki-Laki">Laki-Laki</option>
+                    <option value="Perempuan">Perempuan</option>
                   </select>
                 </div>
                 <div class="mb-3">
@@ -22,13 +22,13 @@
                     type="text"
                     class="form-control"
                     name="username"
-                    placeholder="Enter your username"
+                    placeholder="Masukan username"
                     required
                   />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Masukan email" required />
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <label class="form-label" for="password">Password</label>
