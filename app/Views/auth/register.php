@@ -74,14 +74,14 @@
 
               <form class="mb-3" action="<?= base_url('auth/register')?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                  <label for="username" class="form-label">Sebagai</label>
+                  <label for="username" class="form-label">Daftar Sebagai</label>
                   <select class="form-select" name="level" id="levelSelect" required>
                     <option value="">-- Pilih --</option>
                     <option value="4">Super Admin</option>
                     <option value="3">Admin</option>
-                    <option value="2">Siswa</option>
-                    <!-- <option value="1">Customer</option>
-                    <option value="5">Industri</option> -->
+                    <option value="1">Siswa</option>
+                    <option value="2">Customer</option>
+                    <option value="5">Collaborator</option>
                   </select>
                 </div>
                 <div id="content">

@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\AdminModel;
 use App\Models\SiswaModel;
 use App\Models\KelasModel;
+use App\Models\CustomerModel;
+use App\Models\IndustriModel;
 use CodeIgniter\Controller;
 
 class Auth extends Controller
@@ -12,6 +14,8 @@ class Auth extends Controller
     protected $adminModel;
     protected $siswaModel;
     protected $kelasModel;
+    protected $customerModel;
+    protected $industriModel;
     protected $loginModel;
 
     public function index() {
@@ -46,10 +50,10 @@ class Auth extends Controller
                 case "3":
                     $content = view('auth/register-form/admin');
                     break;
-                case "2":
+                case "1":
                     $content = view('auth/register-form/siswa',$data);
                     break;
-                case "1":
+                case "2":
                     $content = view('auth/register-form/customer');
                     break;
                 case "5":
@@ -69,13 +73,12 @@ class Auth extends Controller
     public function add_register(){
         $this->adminModel = new AdminModel();
         $this->siswaModel = new SiswaModel();
+        $this->customerModel = new CustomerModel();
+        $this->industriModel = new IndustriModel();
 
         $level = $this->request->getPost('level'); 
         switch($level){
-            case "1": //customer
-                //
-                break;
-            case "2": //siswa
+            case "2": //customer
                 if (!$this->validate([
                     'photo' => [
                         'uploaded[photo]',
@@ -89,7 +92,53 @@ class Auth extends Controller
                 $username = $this->request->getPost('username');
                 $email = $this->request->getPost('email');
             
-                $existingUser = $this->adminModel->where('username', $username)->orWhere('email', $email)->first();
+                $existingUser = $this->customerModel->where('username', $username)->orWhere('email', $email)->first();
+                if ($existingUser) {
+                    if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_usn_email');
+                    } elseif ($existingUser['username'] === $username) {
+                        return redirect()->back()->with('alert', 'validate_username');
+                    } elseif ($existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_email');
+                    }
+                }
+            
+                $file = $this->request->getFile('photo');
+                $newName = $file->getRandomName();
+                $file->move(ROOTPATH . 'public/backend/img_customer', $newName);
+            
+                $password = $this->request->getPost('password');
+                $data = [
+                    'id_level' => $this->request->getPost('level'),
+                    'full_name' => $this->request->getPost('fullname'),
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    'gender' => $this->request->getPost('gender'),
+                    'alamat' => $this->request->getPost('alamat'),
+                    'no_telp' => $this->request->getPost('telp'),
+                    'url_image' => $newName,
+                    'status_registrasi' => false
+                ];
+                $this->customerModel->insert($data);
+                return redirect()->to(base_url('login'))->with('alert','register_sukses');
+
+                break;
+            case "1": //siswa
+                if (!$this->validate([
+                    'photo' => [
+                        'uploaded[photo]',
+                        'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'max_size[photo,4096]',
+                    ],
+                ])) {
+                    return redirect()->back()->with('error', 'Invalid file.');
+                }
+            
+                $username = $this->request->getPost('username');
+                $email = $this->request->getPost('email');
+            
+                $existingUser = $this->siswaModel->where('username', $username)->orWhere('email', $email)->first();
                 if ($existingUser) {
                     if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
                         return redirect()->back()->with('alert', 'validate_usn_email');
@@ -208,8 +257,50 @@ class Auth extends Controller
                 return redirect()->to(base_url('login'))->with('alert','register_sukses');
         
                 break;
-            case "5": //industri
-                //
+            case "5": //collaborator
+                if (!$this->validate([
+                    'photo' => [
+                        'uploaded[photo]',
+                        'mime_in[photo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'max_size[photo,4096]',
+                    ],
+                ])) {
+                    return redirect()->back()->with('error', 'Invalid file.');
+                }
+            
+                $username = $this->request->getPost('username');
+                $email = $this->request->getPost('email');
+            
+                $existingUser = $this->industriModel->where('username', $username)->orWhere('email', $email)->first();
+                if ($existingUser) {
+                    if ($existingUser['username'] === $username && $existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_usn_email');
+                    } elseif ($existingUser['username'] === $username) {
+                        return redirect()->back()->with('alert', 'validate_username');
+                    } elseif ($existingUser['email'] === $email) {
+                        return redirect()->back()->with('alert', 'validate_email');
+                    }
+                }
+            
+                $file = $this->request->getFile('photo');
+                $newName = $file->getRandomName();
+                $file->move(ROOTPATH . 'public/img_collaborator', $newName);
+            
+                $password = $this->request->getPost('password');
+                $data = [
+                    'id_level' => $this->request->getPost('level'),
+                    'nama' => $this->request->getPost('fullname'),
+                    'tipe_indper' => $this->request->getPost('jenis'),
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
+                    'tgl_mulai_kerjasama' => $this->request->getPost('startDate'),
+                    'url_image' => $newName,
+                    'status_registrasi' => false
+                ];
+                $this->industriModel->insert($data);
+                return redirect()->to(base_url('login'))->with('alert','register_sukses');
+
                 break;
         }
     }
@@ -217,24 +308,42 @@ class Auth extends Controller
     public function login()
     {
         $session = session();
-        $this->loginModel = new AdminModel();
+        $request = service('request');
 
-        $usnEmail = $this->request->getPost('email-username');
-        $password = $this->request->getPost('password');
+        $usnEmail = $request->getPost('email-username');
+        $password = $request->getPost('password');
 
         if (filter_var($usnEmail, FILTER_VALIDATE_EMAIL)) {
-            $user = $this->loginModel->getUser($usnEmail, 'email');
-            $errorMessage = "validate_email_login";
+            $column = 'email';
+            $errorMessage = 'validate_email_login';
         } else {
-            $user = $this->loginModel->getUser($usnEmail, 'username');
-            $errorMessage = "validate_usn_login";
+            $column = 'username';
+            $errorMessage = 'validate_usn_login';
+        }
+
+        $tables = [
+            'admin'              => new AdminModel(),
+            'customer'           => new CustomerModel(),
+            'siswa'              => new SiswaModel(),
+            'industri_perusahaan' => new IndustriModel(),
+        ];
+
+        $user = null;
+        $userTable = null;
+
+        foreach ($tables as $table => $model) {
+            $user = $model->getUser($usnEmail, $column);
+            if ($user) {
+                $userTable = $table;
+                break;
+            }
         }
 
         if (!$user) {
             return redirect()->to(base_url('login'))->with('alert', $errorMessage);
         }
 
-        if ($user['status_registrasi'] == 0) { 
+        if ($userTable !== 'customer' && isset($user['status_registrasi']) && $user['status_registrasi'] == 0) {
             return redirect()->to(base_url('login'))->with('alert', 'validate_status_account');
         }
 
@@ -243,29 +352,62 @@ class Auth extends Controller
         }
 
         $sessionData = [
-            'id_admin'   => $user['id_admin'],
-            'id_level'   => $user['admin_id_level'],
-            'nama_level' => $user['nama'],
-            'fullname'   => $user['full_name'],
-            'username'   => $user['username'],
-            'email'      => $user['email'],
-            'gender'     => $user['gender'],
-            'url_image'  => $user['url_image'],
-            'logged_in'  => true
+            'logged_in' => true,
+            'user_table' => $userTable, 
         ];
+
+        switch ($userTable) {
+            case 'admin':
+                $sessionData['id_admin']   = $user['id_admin'];
+                $sessionData['id_level']  = $user['id_level'];
+                $sessionData['fullname']  = $user['full_name'];
+                $sessionData['username']  = $user['username'];
+                $sessionData['email']     = $user['email'];
+                $sessionData['gender']    = $user['gender'];
+                $sessionData['url_image'] = $user['url_image'];
+                break;
+
+            case 'customer':
+                $sessionData['id_customer']   = $user['id_customer'];
+                $sessionData['id_level']  = $user['id_level']; 
+                $sessionData['fullname']  = $user['full_name'];
+                $sessionData['username']  = $user['username'];
+                $sessionData['email']     = $user['email'];
+                $sessionData['gender']    = $user['gender'];
+                $sessionData['url_image'] = $user['url_image'];
+                break;
+
+            case 'siswa':
+                $sessionData['id_siswa']   = $user['id_siswa'];
+                $sessionData['id_level']  = $user['id_level']; 
+                $sessionData['fullname']  = $user['full_name'];
+                $sessionData['username']  = $user['username'];
+                $sessionData['email']     = $user['email'];
+                $sessionData['gender']    = $user['gender'];
+                $sessionData['url_image'] = $user['url_image'];
+                break;
+
+            case 'industri_perusahaan':
+                $sessionData['id_industri']   = $user['id_industri'];
+                $sessionData['id_level']  = $user['id_level']; 
+                $sessionData['fullname']  = $user['nama'];
+                $sessionData['username']  = $user['username'];
+                $sessionData['email']     = $user['email'];
+                $sessionData['url_image'] = $user['url_image'];
+                break;
+        }
+
         $session->set($sessionData);
 
         $redirectRoutes = [
+            1 => '/',
+            2 => 'customer/dashboard',
             3 => 'dashboard',
             4 => 'dashboard',
-            2 => '/',
-            1 => 'customer/dashboard',
-            5 => 'industri/dashboard'
+            5 => 'industri/dashboard',
         ];
 
-        $redirectUrl = $redirectRoutes[$user['admin_id_level']] ?? 'login';
-
-        return redirect()->to(base_url($redirectUrl))->with('alert', 'login_sukses');
+        return redirect()->to(base_url($redirectRoutes[$sessionData['id_level']] ?? 'login'))->with('alert', 'login_sukses');
     }
     public function logout()
     {

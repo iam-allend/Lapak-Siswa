@@ -78,7 +78,7 @@
             <!-- Menu lainnya -->
 
             <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">MANAGE USER</span>
+              <span class="menu-header-text">DATA USER</span>
             </li>
             
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Admin') ? 'active' : '' ?>">
@@ -106,6 +106,44 @@
               </a>
             </li>
             <!-- Menu lainnya -->
+
+
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">DATA KELAS</span>
+            </li>
+            
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Kelas') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-kelas" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-layer'></i>
+                <div>Manage Kelas</div>
+              </a>
+            </li>
+
+
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">DATA PRODUCT</span>
+            </li>
+            
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Siswa') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-product-siswa" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-dock-top'></i>
+                <div>Product Siswa</div>
+              </a>
+            </li>
+
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Kategori Product') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-kategori-product" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-category'></i>
+                <div>Kategori Product</div>
+              </a>
+            </li>
+
+
+
+
+
+
+
 
             <!-- Layouts -->
             <li class="menu-item">

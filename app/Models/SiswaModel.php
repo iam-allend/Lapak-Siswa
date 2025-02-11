@@ -23,4 +23,10 @@ class SiswaModel extends Model
             ->getResultArray();
     }
 
+    public function getUser($usnEmail, $type = 'username')
+    {
+        return $this->select('id_siswa AS id_user, id_level, full_name, username, email, password, gender, url_image, status_registrasi')
+                    ->where($type, $usnEmail)
+                    ->first();
+    }
 }

@@ -65,6 +65,24 @@ $routes->get('dashboard', 'DashboardController::dashboard');
     $routes->post('manage-customer/delete/(:num)', 'ManageCustomerController::delete/$1');
     $routes->get('manage-customer/delete/(:num)', 'ManageCustomerController::delete/$1');
     
+    // MANAGE KELAS
+    $routes->get('manage-kelas/', 'ManageKelasController::index');
+    $routes->get('manage-kelas/create', 'ManageKelasController::create');
+    $routes->post('manage-kelas/store', 'ManageKelasController::store');
+    $routes->get('manage-kelas/edit/(:num)', 'ManageKelasController::edit/$1');
+    $routes->post('manage-kelas/update/(:num)', 'ManageKelasController::update/$1');
+    $routes->post('manage-kelas/delete/(:num)', 'ManageKelasController::delete/$1');
+    $routes->get('manage-kelas/delete/(:num)', 'ManageKelasController::delete/$1');
+
+    // MANAGE KATEGORI PRODUK
+    $routes->get('manage-kategori-product/', 'ManageKategoriProdukController::index');
+    $routes->get('manage-kategori-product/create', 'ManageKategoriProdukController::create');
+    $routes->post('manage-kategori-product/store', 'ManageKategoriProdukController::store');
+    $routes->get('manage-kategori-product/edit/(:num)', 'ManageKategoriProdukController::edit/$1');
+    $routes->post('manage-kategori-product/update/(:num)', 'ManageKategoriProdukController::update/$1');
+    $routes->post('manage-kategori-product/delete/(:num)', 'ManageKategoriProdukController::delete/$1');
+    $routes->get('manage-kategori-product/delete/(:num)', 'ManageKategoriProdukController::delete/$1');
+
 
 
 
