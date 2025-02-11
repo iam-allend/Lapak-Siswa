@@ -17,23 +17,18 @@
                     </div>
                 <?php endif; ?>
 
-                <form action="<?= base_url('manage-kelas/store') ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url('manage-kategori-product/store') ?>" method="post" enctype="multipart/form-data">
                     
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Kelas</label>
+                        <label for="nama" class="form-label">Nama Kategori</label>
                         <input type="text" class="form-control" name="nama" value="<?= old('nama') ?>" required>
                         <?php if (session()->getFlashdata('errors') && array_key_exists('nama', session()->getFlashdata('errors'))): ?>
                             <small class="text-danger"><?= session()->getFlashdata('errors')['nama'] ?></small>
                         <?php endif ?>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="wali_kelas" class="form-label">Wali Kelas</label>
-                        <input type="text" class="form-control" name="wali_kelas" value="<?= old('wali_kelas') ?>" required>
-                    </div>
                     
-                    <button type="submit" class="btn btn-primary" onclick="return confirm('Yakin ingin menambahkan data ini?');">Tambah Kelas</button>
-                    <a class="btn btn-outline-primary" href="<?= base_url()?>manage-kelas">Kembali</a>
+                    <button type="submit" class="btn btn-primary" onclick="return confirm('Yakin ingin menambahkan data ini?');">Tambah Kategori</button>
+                    <a class="btn btn-outline-primary" href="<?= base_url()?>manage-kategori-product">Kembali</a>
                 </form>
             </div>
         </div>

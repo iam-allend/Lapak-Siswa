@@ -56,7 +56,7 @@ $routes->get('dashboard', 'DashboardController::dashboard');
     $routes->post('manage-indper/delete/(:num)', 'ManageIndPerController::delete/$1');
     $routes->get('manage-indper/delete/(:num)', 'ManageIndPerController::delete/$1');
 
-    // MANAGE INDUSTRI - Perusahaan
+    // MANAGE CUSTOMER
     $routes->get('manage-customer/', 'ManageCustomerController::index');
     $routes->get('manage-customer/create', 'ManageCustomerController::create');
     $routes->post('manage-customer/store', 'ManageCustomerController::store');
@@ -75,13 +75,22 @@ $routes->get('dashboard', 'DashboardController::dashboard');
     $routes->get('manage-kelas/delete/(:num)', 'ManageKelasController::delete/$1');
 
     // MANAGE KATEGORI PRODUK
-    $routes->get('manage-kategori-product/', 'ManageKategoriProdukController::index');
-    $routes->get('manage-kategori-product/create', 'ManageKategoriProdukController::create');
-    $routes->post('manage-kategori-product/store', 'ManageKategoriProdukController::store');
-    $routes->get('manage-kategori-product/edit/(:num)', 'ManageKategoriProdukController::edit/$1');
-    $routes->post('manage-kategori-product/update/(:num)', 'ManageKategoriProdukController::update/$1');
-    $routes->post('manage-kategori-product/delete/(:num)', 'ManageKategoriProdukController::delete/$1');
-    $routes->get('manage-kategori-product/delete/(:num)', 'ManageKategoriProdukController::delete/$1');
+    $routes->get('manage-kategori-product/', 'ManageKategoriProductController::index');
+    $routes->get('manage-kategori-product/create', 'ManageKategoriProductController::create');
+    $routes->post('manage-kategori-product/store', 'ManageKategoriProductController::store');
+    $routes->get('manage-kategori-product/edit/(:num)', 'ManageKategoriProductController::edit/$1');
+    $routes->post('manage-kategori-product/update/(:num)', 'ManageKategoriProductController::update/$1');
+    $routes->post('manage-kategori-product/delete/(:num)', 'ManageKategoriProductController::delete/$1');
+    $routes->get('manage-kategori-product/delete/(:num)', 'ManageKategoriProductController::delete/$1');
+
+    // MANAGE KATEGORI PRODUK
+    $routes->get('manage-product-siswa/', 'ManageProductSiswaController::index');
+    $routes->get('manage-product-siswa/create', 'ManageProductSiswaController::create');
+    $routes->post('manage-product-siswa/store', 'ManageProductSiswaController::store');
+    $routes->get('manage-product-siswa/edit/(:num)', 'ManageProductSiswaController::edit/$1');
+    $routes->post('manage-product-siswa/update/(:num)', 'ManageProductSiswaController::update/$1');
+    $routes->post('manage-product-siswa/delete/(:num)', 'ManageProductSiswaController::delete/$1');
+    $routes->get('manage-product-siswa/delete/(:num)', 'ManageProductSiswaController::delete/$1');
 
 
 
