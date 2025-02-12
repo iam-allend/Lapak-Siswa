@@ -13,7 +13,7 @@
 
           <li data-transition="random" data-slotamount="10" data-masterspeed="1200" data-delay="5000">
             
-            <img src="https://i.pinimg.com/736x/74/e4/c9/74e4c9de1c60e42ae06bf150476cc953.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="100" data-bgpositionend="center center" />
+            <img src="https://static.vecteezy.com/system/resources/previews/008/935/667/non_2x/banner-web-template-luxury-style-golden-geometric-squares-overlapping-pattern-vector.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="100" data-bgpositionend="center center" />
 
 
             <div class="tp-caption slide_mask  sfl tp-resizeme "
@@ -37,7 +37,7 @@
               data-start="400"
               data-easing="easeInOutExpo"
               data-endspeed="450">
-              Si Kapten<BR> Platfrom penjualan produk Siswa
+              Lapak Siswa<BR> Platfrom penjualan produk Siswa
             </div>
 
             <div class="tp-caption slide-sub-heading sft"
@@ -47,7 +47,7 @@
               data-start="800"
               data-easing="easeOutExpo"
               data-endspeed="400">
-              SMK BISA SMK HEBAT<BR> Tingkatkan Kreatifitasmu Disini
+              Official website Penjualan<BR> Promosikan Produkmu di Lapak Siswa
             </div>
 
             <div class="tp-caption btn-slider sfb"
@@ -63,7 +63,7 @@
 
           <li data-transition="fade" data-slotamount="10" data-masterspeed="1200" data-delay="5000">
             <!--  BACKGROUND IMAGE -->
-            <img src="https://i.pinimg.com/736x/5d/12/86/5d1286a45fa084342ef99fa6835c9d3b.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="100" data-bgpositionend="center center" />
+            <img src="https://static.vecteezy.com/system/resources/previews/010/509/820/large_2x/abstract-elegant-golden-transparent-squares-pattern-overlapping-layer-with-lighting-effect-background-modern-luxury-style-vector.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="100" data-bgpositionend="center center" />
 
             <div class="tp-caption slide_mask  sfl tp-resizeme "
               data-x="0"
@@ -86,7 +86,7 @@
               data-start="400"
               data-easing="easeInOutExpo"
               data-endspeed="450">
-              Lapak Siswa<BR> anjay kelas
+              Lapak Siswa<BR> Platfrom Penjualan Produk Siswa
             </div>
 
             <div class="tp-caption slide-sub-heading sft"
@@ -96,7 +96,7 @@
               data-start="800"
               data-easing="easeOutExpo"
               data-endspeed="400">
-              bingung cik<BR> kata kata ne keri ya wkwk
+              Official website Penjualan<BR> SMK Negeri 10 Semarang
             </div>
 
             <div class="tp-caption btn-slider sfb"
@@ -135,8 +135,8 @@
       <div class="col-lg-8">
         <div class="about-text">
           <div class="section-title">
-            <span>Tentang Si Kapten</span>
-            <h2></h2>tak gawe lorem ipsum wae yaa
+            <span>Tentang Lapak Siswa</span>
+            <h2></h2>Website Penjualan Produk Karya Siswa SMK Negeri 10 Semarang
           </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita pariatur nam officia perferendis voluptatem totam. Harum, enim molestias! Incidunt, deleniti accusamus unde ut magni quae reiciendis ex provident modi.</p>
 
@@ -171,7 +171,7 @@
   <div class="container">
     <div class="section-title text-center">
       <span>Jenis Produk</span>
-      <h2>Bebeeapa produk  yang kami tawarkan</h2>
+      <h2>Beberapa produk  yang kami tawarkan</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
     </div>
     <div class="row">

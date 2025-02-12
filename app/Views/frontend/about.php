@@ -1,4 +1,4 @@
-<?php include("LayOutTemplate/header.php"); ?>
+<?php include("header.php"); ?>
 
 
 <section class="sub-bnr">
@@ -81,4 +81,4 @@
   </div>
 </section>
 
-<?php include("LayOutTemplate/footer.php"); ?>
+<?php include("footer.php"); ?>

@@ -1,0 +1,148 @@
+CRITICAL - 2025-02-12 03:16:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "frontend/contactus.php"
+[Method: GET, Route: contactus]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('frontend/contactus.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/contactus', [], true)
+ 3 APPPATH\Controllers\Home.php(33): view('frontend/contactus', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->contactus()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+CRITICAL - 2025-02-12 03:16:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "frontend/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('frontend/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/index', [], true)
+ 3 APPPATH\Controllers\Home.php(12): view('frontend/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+CRITICAL - 2025-02-12 03:17:42 --> ErrorException: include(frontend/LayOutTemplate/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH\Views\frontend\index.php on line 1.
+ 1 APPPATH\Views\frontend\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(frontend/LayOutTemplate/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php', 1)
+ 2 APPPATH\Views\frontend\index.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/index', [], true)
+ 6 APPPATH\Controllers\Home.php(12): view('frontend/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+CRITICAL - 2025-02-12 03:25:46 --> ErrorException: include(LayOutTemplate/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH\Views\frontend\index.php on line 1.
+ 1 APPPATH\Views\frontend\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(LayOutTemplate/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php', 1)
+ 2 APPPATH\Views\frontend\index.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/index', [], true)
+ 6 APPPATH\Controllers\Home.php(12): view('frontend/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+CRITICAL - 2025-02-12 03:25:46 --> ErrorException: include(LayOutTemplate/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH\Views\frontend\index.php on line 1.
+ 1 APPPATH\Views\frontend\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(LayOutTemplate/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php', 1)
+ 2 APPPATH\Views\frontend\index.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/index', [], true)
+ 6 APPPATH\Controllers\Home.php(12): view('frontend/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+CRITICAL - 2025-02-12 03:25:46 --> ErrorException: include(LayOutTemplate/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH\Views\frontend\index.php on line 1.
+ 1 APPPATH\Views\frontend\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(LayOutTemplate/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php', 1)
+ 2 APPPATH\Views\frontend\index.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/index', [], true)
+ 6 APPPATH\Controllers\Home.php(12): view('frontend/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+CRITICAL - 2025-02-12 03:25:47 --> ErrorException: include(LayOutTemplate/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH\Views\frontend\index.php on line 1.
+ 1 APPPATH\Views\frontend\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(LayOutTemplate/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php', 1)
+ 2 APPPATH\Views\frontend\index.php(1): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\frontend\\index.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/index', [], true)
+ 6 APPPATH\Controllers\Home.php(12): view('frontend/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-02-12 03:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 03:28:41 --> TypeError: CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\HTTP\SiteURI.php on line 407.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(381): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH\Helpers\url_helper.php(59): CodeIgniter\HTTP\SiteURI->baseUrl(null, null)
+ 3 APPPATH\Views\backend\layOutTemplate\sidebar.php(515): base_url(null)
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\backend\\layOutTemplate\\sidebar.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('backend/layOutTemplate/sidebar', null, true)
+ 7 APPPATH\Views\backend\page\dashboard.php(2): CodeIgniter\View\View->include('backend/layOutTemplate/sidebar')
+ 8 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Lapak-Siswa\\app\\Views\\backend\\page\\dashboard.php')
+ 9 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+10 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/dashboard', [], true)
+11 APPPATH\Controllers\DashboardController.php(16): view('backend/page/dashboard', [...])
+12 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->dashboard()
+13 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+14 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+18 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-02-12 03:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 03:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
