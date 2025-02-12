@@ -5,7 +5,7 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="d-flex justify-content-between">
             <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> <?= $navigasi ?></h4>
-            <a href="manage-product/create">
+            <a href="<?= base_url() ?>manage-product-siswa/create">
                 <button class="btn btn-primary"><i class='bx bx-plus'></i> Tambah</button>
             </a>
         </div>

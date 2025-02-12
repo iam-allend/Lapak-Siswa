@@ -15,7 +15,7 @@ class ProductSiswaModel extends Model
     public function getProductWithCategoryAndAdmin()
     {
         return $this->db->table('product_siswa')
-            ->select('product_siswa.*, kategori_product.nama, admin.full_name as nama_admin')
+            ->select('product_siswa.*, kategori_product.nama as nama_kategori, admin.full_name as nama_admin')
             ->join('kategori_product', 'kategori_product.id_kategori = product_siswa.id_kategori', 'left')
             ->join('admin', 'admin.id_admin = product_siswa.id_admin', 'left')
             ->get()

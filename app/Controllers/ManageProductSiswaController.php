@@ -43,14 +43,18 @@ class ManageProductSiswaController extends Controller
             'tittle' => 'Lapak Siswa | Tambah Produk',
             'navigasi' => 'Tambah Data Produk',
             'kategoris' => $this->kategoriProductModel->findAll(),
-            'admins' => $this->adminModel->findAll(),
+            // Fetch admins where id_level is 3
+            'admins' => $this->adminModel->where('id_level', 3)->findAll(), //Hanya mengambil role admin / id_level = 3
         ];
-        return view('backend/page/product-siswa/add-product', $data);
+        return view('backend/page/product-siswa/add-product-siswa', $data);
     }
+
 
     // Menyimpan data produk baru
     public function store()
     {
+        // dd($this->request->getPost());
+
         // Validasi input
         $validation = $this->validate([
             'product_name' => 'required|min_length[3]',
@@ -85,6 +89,7 @@ class ManageProductSiswaController extends Controller
             'updated_at' => date('Y-m-d H:i:s'),
         ];
 
+        // Simpan data produk ke database
         $productId = $this->productModel->insert($productData);
 
         // Simpan gambar produk
@@ -92,11 +97,11 @@ class ManageProductSiswaController extends Controller
         foreach ($images['images'] as $image) {
             if ($image->isValid() && !$image->hasMoved()) {
                 $newName = $image->getRandomName();
-                $image->move(WRITEPATH . 'uploads/img_product', $newName);
+                $image->move(WRITEPATH . 'img_product', $newName);
 
                 $this->urlImageProductModel->save([
-                    'id_product' => $productId,
-                    'url' => 'uploads/img_product-siswa/' . $newName,
+                    'id_product' => $productId, // Gunakan ID produk yang baru saja dibuat
+                    'url' => 'img_product/' . $newName,
                 ]);
             }
         }
@@ -162,11 +167,11 @@ class ManageProductSiswaController extends Controller
         foreach ($images['images'] as $image) {
             if ($image->isValid() && !$image->hasMoved()) {
                 $newName = $image->getRandomName();
-                $image->move(WRITEPATH . 'uploads/img_product', $newName);
+                $image->move(WRITEPATH . 'img_product', $newName);
 
                 $this->urlImageProductModel->save([
                     'id_product' => $id,
-                    'url' => 'uploads/img_product-siswa/' . $newName,
+                    'url' => 'img_product' . $newName,
                 ]);
             }
         }

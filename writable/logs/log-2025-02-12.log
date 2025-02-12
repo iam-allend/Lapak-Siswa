@@ -146,3 +146,743 @@ DEBUG - 2025-02-12 03:38:25 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-02-12 03:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-02-12 03:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-02-12 03:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 05:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 05:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 05:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 05:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 05:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:01:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/page/product-siswa/add-product.php"
+[Method: GET, Route: manage-product-siswa/create]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/page/product-siswa/add-product.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/add-product', [], true)
+ 3 APPPATH\Controllers\ManageProductSiswaController.php(48): view('backend/page/product-siswa/add-product', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:01:47 --> ErrorException: Undefined array key "nama_kategori"
+[Method: GET, Route: manage-product-siswa/create]
+in APPPATH\Views\backend\page\product-siswa\add-product-siswa.php on line 35.
+ 1 APPPATH\Views\backend\page\product-siswa\add-product-siswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php', 35)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/add-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(48): view('backend/page/product-siswa/add-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 06:25:26 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ur...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ur...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ur...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ur...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-12 06:25:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: manage-product-siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:25:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (0, \'uploads/img_product-siswa/1739341526_3ef5362a266ccc1bac62.png\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (0, \'uploads/img_product-siswa/1739341526_3ef5362a266ccc1bac62.png\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:25:26 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (0, \'uploads/img_product-siswa/1739341526_3ef5362a266ccc1bac62.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (0, \'uploads/img_product-siswa/1739341526_3ef5362a266ccc1bac62.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (0, \'uploads/img_product-siswa/1739341526_3ef5362a266ccc1bac62.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 06:28:16 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ur...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ur...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ur...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ur...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-12 06:28:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: manage-product-siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:28:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (2, \'uploads/img_product-siswa/1739341696_3c39952799617e5ec3a5.png\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (2, \'uploads/img_product-siswa/1739341696_3c39952799617e5ec3a5.png\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:28:16 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (2, \'uploads/img_product-siswa/1739341696_3c39952799617e5ec3a5.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (2, \'uploads/img_product-siswa/1739341696_3c39952799617e5ec3a5.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (2, \'uploads/img_product-siswa/1739341696_3c39952799617e5ec3a5.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:29:30 --> ErrorException: Undefined array key "nama_kategori"
+[Method: GET, Route: manage-product-siswa]
+in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 38.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(35): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:34:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/page/product-siswa/manage-product-siswa-siswa.php"
+[Method: GET, Route: manage-product-siswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/page/product-siswa/manage-product-siswa-siswa.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa-siswa', [], true)
+ 3 APPPATH\Controllers\ManageProductSiswaController.php(35): view('backend/page/product-siswa/manage-product-siswa-siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 06:35:36 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ur...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ur...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ur...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ur...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-12 06:35:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: manage-product-siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:35:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (3, \'img_product1739342136_12e2afdd778fac65ab15.png\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (3, \'img_product1739342136_12e2afdd778fac65ab15.png\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:35:36 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (3, \'img_product1739342136_12e2afdd778fac65ab15.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (3, \'img_product1739342136_12e2afdd778fac65ab15.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (3, \'img_product1739342136_12e2afdd778fac65ab15.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:40:00 --> ErrorException: Undefined array key "nama_kategori"
+[Method: GET, Route: manage-product-siswa/create]
+in APPPATH\Views\backend\page\product-siswa\add-product-siswa.php on line 35.
+ 1 APPPATH\Views\backend\page\product-siswa\add-product-siswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php', 35)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/add-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(49): view('backend/page/product-siswa/add-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:40:01 --> ErrorException: Undefined array key "nama_kategori"
+[Method: GET, Route: manage-product-siswa/create]
+in APPPATH\Views\backend\page\product-siswa\add-product-siswa.php on line 35.
+ 1 APPPATH\Views\backend\page\product-siswa\add-product-siswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php', 35)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/add-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(49): view('backend/page/product-siswa/add-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:40:02 --> ErrorException: Undefined array key "nama_kategori"
+[Method: GET, Route: manage-product-siswa/create]
+in APPPATH\Views\backend\page\product-siswa\add-product-siswa.php on line 35.
+ 1 APPPATH\Views\backend\page\product-siswa\add-product-siswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php', 35)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/add-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(49): view('backend/page/product-siswa/add-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:40:02 --> ErrorException: Undefined array key "nama_kategori"
+[Method: GET, Route: manage-product-siswa/create]
+in APPPATH\Views\backend\page\product-siswa\add-product-siswa.php on line 35.
+ 1 APPPATH\Views\backend\page\product-siswa\add-product-siswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php', 35)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/add-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(49): view('backend/page/product-siswa/add-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-12 06:44:36 --> ErrorException: Undefined array key "nama_kategori"
+[Method: GET, Route: manage-product-siswa/create]
+in APPPATH\Views\backend\page\product-siswa\add-product-siswa.php on line 35.
+ 1 APPPATH\Views\backend\page\product-siswa\add-product-siswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php', 35)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\product-siswa\\add-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/add-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(49): view('backend/page/product-siswa/add-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 06:45:39 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ur...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ur...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ur...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ur...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-12 06:45:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: manage-product-siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:45:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (4, \'img_product1739342739_ebf7ab143fb07fbb5c54.png\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (4, \'img_product1739342739_ebf7ab143fb07fbb5c54.png\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:45:39 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (4, \'img_product1739342739_ebf7ab143fb07fbb5c54.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (4, \'img_product1739342739_ebf7ab143fb07fbb5c54.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (4, \'img_product1739342739_ebf7ab143fb07fbb5c54.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageProductSiswaController.php(101): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 06:47:09 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ur...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ur...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ur...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ur...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageProductSiswaController.php(102): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-12 06:47:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: manage-product-siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageProductSiswaController.php(102): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:47:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (5, \'img_product/1739342829_c1943bdec93064c29d94.png\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (5, \'img_product/1739342829_c1943bdec93064c29d94.png\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageProductSiswaController.php(102): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:47:09 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (5, \'img_product/1739342829_c1943bdec93064c29d94.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (5, \'img_product/1739342829_c1943bdec93064c29d94.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (5, \'img_product/1739342829_c1943bdec93064c29d94.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageProductSiswaController.php(102): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 06:49:29 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ur...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ur...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ur...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ur...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageProductSiswaController.php(102): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-12 06:49:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: manage-product-siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageProductSiswaController.php(102): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:49:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (6, \'img_product/1739342969_bf7322a6895e201c1218.png\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (6, \'img_product/1739342969_bf7322a6895e201c1218.png\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageProductSiswaController.php(102): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:49:29 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (6, \'img_product/1739342969_bf7322a6895e201c1218.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (6, \'img_product/1739342969_bf7322a6895e201c1218.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (6, \'img_product/1739342969_bf7322a6895e201c1218.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageProductSiswaController.php(102): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 06:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 06:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 06:51:22 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ur...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ur...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ur...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ur...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageProductSiswaController.php(104): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-12 06:51:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: manage-product-siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageProductSiswaController.php(104): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:51:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (7, \'img_product/1739343082_5bb46d570b2b4ecdef0d.png\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (7, \'img_product/1739343082_5bb46d570b2b4ecdef0d.png\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageProductSiswaController.php(104): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 06:51:22 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (7, \'img_product/1739343082_5bb46d570b2b4ecdef0d.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (7, \'img_product/1739343082_5bb46d570b2b4ecdef0d.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (7, \'img_product/1739343082_5bb46d570b2b4ecdef0d.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageProductSiswaController.php(104): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 07:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 07:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-12 07:40:11 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ur...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ur...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ur...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ur...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageProductSiswaController.php(104): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-12 07:40:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: manage-product-siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageProductSiswaController.php(104): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 07:40:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (1, \'img_product/1739346011_0079a467da733c8c5860.png\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (1, \'img_product/1739346011_0079a467da733c8c5860.png\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageProductSiswaController.php(104): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-12 07:40:11 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (1, \'img_product/1739346011_0079a467da733c8c5860.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (1, \'img_product/1739346011_0079a467da733c8c5860.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (1, \'img_product/1739346011_0079a467da733c8c5860.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `url_image_product_siswa` (`id_product`, `url`) VALUES (:id_product:, :url:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageProductSiswaController.php(104): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-12 07:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 07:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 07:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 08:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 08:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-12 08:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
