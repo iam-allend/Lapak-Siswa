@@ -10,8 +10,16 @@ class UrlImageProductSiswaModel extends Model
     protected $primaryKey = 'id_url_image_product';
     protected $allowedFields = ['id_product', 'url'];
 
+    // public function getImagesByProductId($id_product)
+    // {
+    //     return $this->where('id_product', $id_product)->findAll();
+    // }
+    
     public function getImagesByProductId($id_product)
     {
-        return $this->where('id_product', $id_product)->findAll();
+        return $this->db->table('url_image_product_siswa')
+            ->where('id_product', $id_product)
+            ->get()
+            ->getResultArray();
     }
 }

@@ -83,15 +83,17 @@ $routes->get('dashboard', 'DashboardController::dashboard');
     $routes->post('manage-kategori-product/delete/(:num)', 'ManageKategoriProductController::delete/$1');
     $routes->get('manage-kategori-product/delete/(:num)', 'ManageKategoriProductController::delete/$1');
 
-    // MANAGE KATEGORI PRODUK
-    $routes->get('manage-product-siswa/', 'ManageProductSiswaController::index');
-    $routes->get('manage-product-siswa/create', 'ManageProductSiswaController::create');
-    $routes->post('manage-product-siswa/store', 'ManageProductSiswaController::store');
-    $routes->get('manage-product-siswa/edit/(:num)', 'ManageProductSiswaController::edit/$1');
-    $routes->post('manage-product-siswa/update/(:num)', 'ManageProductSiswaController::update/$1');
-    $routes->post('manage-product-siswa/delete/(:num)', 'ManageProductSiswaController::delete/$1');
-    $routes->get('manage-product-siswa/delete/(:num)', 'ManageProductSiswaController::delete/$1');
-
+    // MANAGE PRODUCT SISWA
+    $routes->group('manage-product-siswa', function ($routes) {
+        $routes->get('/', 'ManageProductSiswaController::index'); // Menampilkan daftar produk
+        $routes->get('create', 'ManageProductSiswaController::create'); // Menampilkan form tambah produk
+        $routes->post('store', 'ManageProductSiswaController::store'); // Menyimpan data produk baru
+        $routes->get('edit/(:num)', 'ManageProductSiswaController::edit/$1'); // Menampilkan form edit produk
+        $routes->post('update/(:num)', 'ManageProductSiswaController::update/$1'); // Menyimpan perubahan data produk
+        $routes->get('delete/(:num)', 'ManageProductSiswaController::delete/$1'); // Menghapus data produk
+        $routes->get('delete-image/(:num)', 'ManageProductSiswaController::deleteImage/$1'); // Menghapus gambar produk
+        $routes->get('detail/(:num)', 'ManageProductSiswaController::detail/$1'); // Menampilkan detail produk (opsional)
+    });
 
 
 
