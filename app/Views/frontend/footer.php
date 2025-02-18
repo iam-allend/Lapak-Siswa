@@ -1,685 +1,98 @@
-<footer class="footer-area pt-100">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-sm-6">
-        <div class="footer-widget">
-          <h3>About</h3>
-          <p>Lorem ipsum dolor sit amet, mattetur adipiscing elit, sed do.</p>
-          <div class="newsletter-area">
-            <h3>Alamat Kami</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4873.103006524203!2d110.39943937499694!3d-6.966424193034101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f4c8081bffaf%3A0xbb522f8061199b3!2sSMK%20Negeri%2010%20Semarang!5e1!3m2!1sid!2sid!4v1738172360659!5m2!1sid!2sid" width="280" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <!-- <form class="newsletter-form" data-toggle="validator" novalidate="true">
-              <input type="email" class="form-control" placeholder="Email" name="EMAIL" required="" autocomplete="off">
-              <button class="default-btn subscribe-btn disabled" type="submit" style="pointer-events: all; cursor: pointer;">
-                Kirim
-              </button>
-              <div id="validator-newsletter" class="form-result"></div>
-            </form> -->
-          </div>
-          <div class="footer-social">
-            <a href="" target="_blank" class="social-facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Newsletter</h5>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
 
-            <a href="" target="_blank" class="social-twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" target="_blank" class="social-twitter">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" target="_blank" class="social-twitter">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
 
-
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="footer-widget pl-35">
-          <h3>product</h3>
-          <ul>
-            <li>
-              <a href="service-details.html">it
-              </a>
-            </li>
-            <li>
-              <a href="service-details.html">mesin</a>
-            </li>
-            <li>
-              <a href="service-details.html">perlatan rumah susun</a>
-            </li>
-            <li>
-              <a href="service-details.html">semen gresik</a>
-            </li>
-            <li>
-              <a href="service-details.html">durian batang </a>
-            </li>
-            <li>
-              <a href="service-details.html">Water water</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="footer-widget pl-35">
-          <h3>More</h3>
-          <ul>
-            <li>
-              <a href="faq.html">FAQ</a>
-            </li>
-            <li>
-              <a href="service.html">Services</a>
-            </li>
-            <li>
-              <a href="team.html">Team</a>
-            </li>
-            <li>
-              <a href="privacy.html">Privacy &amp; Policy</a>
-            </li>
-            <li>
-              <a href="terms.html">Terms &amp; Conditions</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="footer-widget">
-          <h3>Contacts</h3>
-          <ul>
-            <li>
-              <a href="tel:">
-                <i class="fas fa-mobile-alt"></i>
-                +1 321 654 987
-              </a>
-            </li>
-            <li>
-              <a href="mailto:email@xpat.com">
-                <i class="fas fa-globe"></i>
-                email@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="mailto:hello@xpat.com">
-                <i class="far fa-envelope"></i>
-                hello@xpat.com
-              </a>
-            </li>
-            <li>
-              <a href="3">
-                <i class="fas fa-map-marker-alt"></i>
-                Tanah  Mas street,Semarang,IDN
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="/about">About Us</a>
-            </li>
-            <li>
-              <a href="/product">Produk</a>
-            </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
-            <a href="/contactus">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <div class="copyright-text">
-            <p>Reserved by <a href="" target="_blank">Taqim Design Team</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-
-<a id="scrollUp" href="#top" title="Scroll-Top" style="position: fixed; z-index: 2147483647; display: block;">
-  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 284.356 284.356" style="enable-background:new 0 0 284.356 284.356;" xml:space="preserve">
-    <g>
-      <path d="M0,284.356h284.356V0L0,284.356z M269.356,269.356H36.213L269.356,36.213V269.356z" />
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-      <g>
-      </g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-    <g>
-    </g>
-  </svg>
-
-</a>
-
-
-
-
-<div class="whatsapp_icon">
-  <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/767px-WhatsApp.svg.png" style="width: 90px;" alt="Hubungi Kami Di whatsapp"></a>
-</div>
-
-<!---
-			<a href="https://api.whatsapp.com/send?phone=919312812&text=Hello." class="float" target="_blank">
-<img src="img/whatsapp-button.png" class="img-fluid"/>
-</a>
-		---->
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.3.1.slim.min.js"></script>
-<script src=" <?= base_url('frontend/js/jquery-3.3.1.slim.min.js'); ?>"></script>
-<script src="js/popper.min.js"></script>
-<script src=" <?= base_url('frontend/js/popper.min.js'); ?>"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src=" <?= base_url('frontend/js/bootstrap.min.js'); ?>"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src=" <?= base_url('frontend/js/wow.min.js'); ?>"></script>
-<script src="<?= base_url('frontend/js/jquery-3.3.1.min.js'); ?>"></script>
-<script src="js/wow.min.js"></script>
-
-
-
-<script type="text/javascript" src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
-<script type="text/javascript" src=" <?= base_url('frontend/js/rev-slider/jquery.themepunch.revolution.min.js'); ?>"></script>
-<script type="text/javascript" src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src=" <?= base_url('frontend/js/rev-slider/jquery.themepunch.tools.min.js'); ?>"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-
-<script type="text/javascript" src="js/jquery.counterup.min.js"></script>
-<script type="text/javascript" src=" <?= base_url('frontend/js/jquery.counterup.min.js'); ?>"></script>
-<script type="text/javascript" src=" <?= base_url('frontend/js/jquery.waypoints.min.js'); ?>"></script>
-<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
-
-<script>
-  $(document).ready(function($) {
-    var $element = $('.counter');
-    if ($element.length > 0) {
-      $element.counterUp({
-        delay: 10,
-        time: 1000
-      });
-    }
-  });
-</script>
-
-<script>
-  $('.testimonial-slider').slick({
-    slidesToShow: 3,
-    dots: false,
-    arrows: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    prevArrow: '<i class="fas fa-chevron-left prev"></i>',
-    nextArrow: '<i class="fas fa-chevron-right next"></i>',
-    swipe: true,
-    swipeToSlide: true,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        // centerMode: true,
-      }
-    }, {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        dots: false,
-        infinite: true,
-
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      }
-    }]
-
-
-  });
-</script>
-
-<script>
-  $('.client-slider').slick({
-    slidesToShow: 6,
-    dots: false,
-    arrows: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    swipe: true,
-    swipeToSlide: true,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        // centerMode: true,
-      }
-    }, {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        dots: false,
-        infinite: true,
-
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        dots: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      }
-    }]
-
-
-  });
-</script>
-
-<script>
-  $('.project-slider').slick({
-    slidesToShow: 4,
-    dots: false,
-    arrows: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    swipe: true,
-    swipeToSlide: true,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        // centerMode: true,
-      }
-    }, {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        dots: false,
-        infinite: true,
-
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      }
-    }]
-
-
-  });
-</script>
-
-
-<script>
-  $('.ticker-slider').slick({
-    speed: 500,
-    arrows: false,
-    fade: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: '<i class="fas fa-chevron-left tab-prev"></i>',
-    nextArrow: '<i class="fas fa-chevron-right tab-next"></i>',
-    dots: false,
-  });
-</script>
-
-
-
-
-
-
-<script>
-  window.addEventListener('load', function() {
-    baguetteBox.run('.gallery');
-  });
-</script>
-
-<script src="js/wow.min.js"></script>
-<script>
-  new WOW().init();
-</script>
-
-
-
-<script>
-  $('.blog-slider').slick({
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    dots: true,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // centerMode: true,
-      }
-    }, {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 2,
-        dots: false,
-        infinite: true,
-
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      }
-    }]
-  });
-</script>
-
-
-
-
-
-<script>
-  $(document).ready(function() {
-    $(window).scroll(function() { //scroll--top---indicator---arrow-jquery----//
-      if ($(window).scrollTop() > 600) { //---position---600----px scroll-----//
-        $("#scrollUp").fadeIn();
-      } else {
-        $("#scrollUp").css("display", "none");
-      }
-    });
-  });
-</script>
-
-
-
-
-<script>
-  $(document).ready(function() {
-    $(window).scroll(function() {
-      if ($(window).scrollTop() < 90) { //-navbar-----scrolltop---fixed---jquery--/
-        $('#navigation').removeClass('navbar-scroll');
-      } else {
-        $('#navigation').addClass('navbar-scroll');
-      }
-    });
-
-  });
-</script>
-
-
-
-
-
-
-<script type="text/javascript">
-  jQuery(document).ready(function() {
-    // revolution slider
-    var revapi;
-    revapi = jQuery('#revolution-slider-half')
-      .revolution({
-        delay: 9000,
-        startwidth: 1200,
-        startheight: 630,
-        onHoverStop: "on",
-        thumbWidth: 100,
-        thumbHeight: 50,
-        thumbAmount: 3,
-        touchenabled: "on",
-        stopAtSlide: -1,
-        stopAfterLoops: -1,
-        touchenabled: "on",
-        navigationType: "none",
-        navigationArrows: "solo",
-        navigationStyle: "preview1",
-        touchenabled: "on",
-        onHoverStop: "on",
-        swipe_velocity: 0.7,
-        swipe_min_touches: 1,
-        swipe_max_touches: 1,
-        drag_block_vertical: false,
-        keyboardNavigation: "on",
-        navigationHAlign: "center",
-        navigationVAlign: "bottom",
-        navigationHOffset: 0,
-        navigationVOffset: 20,
-        soloArrowLeftHalign: "left",
-        soloArrowLeftValign: "center",
-        soloArrowLeftHOffset: 20,
-        soloArrowLeftVOffset: 0,
-        soloArrowRightHalign: "right",
-        soloArrowRightValign: "center",
-        soloArrowRightHOffset: 20,
-        soloArrowRightVOffset: 0,
-        dottedOverlay: "",
-        fullWidth: "on",
-        stopAfterLoops: 0,
-        stopAtSlide: 1,
-        shadow: 0
-      });
-
-    revapi = jQuery('#revolution-slider-full')
-      .revolution({
-        delay: 9000,
-        startwidth: 960,
-        startheight: 730,
-        onHoverStop: "on",
-        thumbWidth: 100,
-        thumbHeight: 50,
-        thumbAmount: 3,
-        touchenabled: "on",
-        stopAtSlide: -1,
-        stopAfterLoops: -1,
-        touchenabled: "on",
-        navigationType: "none",
-        navigationArrows: "solo",
-        navigationStyle: "preview1",
-        touchenabled: "on",
-        onHoverStop: "on",
-        swipe_velocity: 0.7,
-        swipe_min_touches: 1,
-        swipe_max_touches: 1,
-        drag_block_vertical: false,
-        keyboardNavigation: "on",
-        navigationHAlign: "center",
-        navigationVAlign: "bottom",
-        navigationHOffset: 0,
-        navigationVOffset: 20,
-        soloArrowLeftHalign: "left",
-        soloArrowLeftValign: "center",
-        soloArrowLeftHOffset: 20,
-        soloArrowLeftVOffset: 0,
-        soloArrowRightHalign: "right",
-        soloArrowRightValign: "center",
-        soloArrowRightHOffset: 20,
-        soloArrowRightVOffset: 0,
-        dottedOverlay: "",
-        fullWidth: "on",
-        fullScreen: "on",
-        stopAfterLoops: 0,
-        stopAtSlide: 1,
-        shadow: 0
-      });
-
-    // revolution slider ver 2
-    var revext = jQuery;
-    var revapi;
-    revext(document).ready(function() {
-      if (revext("#rev-commerce").revolution == undefined) {
-        revslider_showDoubleJqueryError("#rev-commerce");
-      } else {
-        revapi = revext("#rev-commerce").show().revolution({
-          sliderType: "standard",
-          jsFileLocation: "revolution/js/",
-          sliderLayout: "auto",
-          dottedOverlay: "none",
-          delay: 9000,
-          navigation: {
-            keyboardNavigation: "off",
-            keyboard_direction: "horizontal",
-            mouseScrollNavigation: "off",
-            mouseScrollReverse: "default",
-            onHoverStop: "on",
-            touch: {
-              touchenabled: "on",
-              swipe_threshold: 75,
-              swipe_min_touches: 50,
-              swipe_direction: "horizontal",
-              drag_block_vertical: false
-            },
-            arrows: {
-              style: "gyges",
-              enable: true,
-              hide_onmobile: false,
-              hide_onleave: false,
-              tmp: '',
-              left: {
-                h_align: "right",
-                v_align: "bottom",
-                h_offset: 160,
-                v_offset: 0
-              },
-              right: {
-                h_align: "right",
-                v_align: "bottom",
-                h_offset: 80,
-                v_offset: 0
-              }
-            }
-          },
-          responsiveLevels: [1240, 1024, 778, 480],
-          visibilityLevels: [1240, 1024, 778, 480],
-          gridwidth: [1200, 1024, 778, 480],
-          gridheight: [600, 600, 600, 600],
-          lazyType: "single",
-          parallax: {
-            type: "scroll",
-            origo: "slidercenter",
-            speed: 400,
-            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55],
-            type: "scroll",
-          },
-          shadow: 0,
-          spinner: "off",
-          stopLoop: "off",
-          stopAfterLoops: -1,
-          stopAtSlide: -1,
-          shuffle: "off",
-          autoHeight: "off",
-          disableProgressBar: "on",
-          hideThumbsOnMobile: "off",
-          hideSliderAtLimit: 0,
-          hideCaptionAtLimit: 0,
-          hideAllCaptionAtLilmit: 0,
-          debugMode: false,
-          fallbacks: {
-            simplifyAll: "off",
-            nextSlideOnWindowFocus: "off",
-            disableFocusListener: false,
-          }
-        });
-      }
-    });
-
-  });
-</script>
-
-
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
