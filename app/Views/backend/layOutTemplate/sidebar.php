@@ -36,7 +36,24 @@
                 </a>
             </li>
             
-            <!-- Menu lainnya -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">DATA TRANSAKSI</span>
+            </li>            
+            
+            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Order Product Siswa') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-order-product-siswa" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-git-compare' ></i>
+                <div>Order Product Siswa</div>
+              </a>
+            </li>
+            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-git-compare' ></i>
+                <div>Order Product IndPer</div>
+              </a>
+            </li>
+            
+            
 
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA USER</span>
@@ -57,7 +74,7 @@
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage IndPer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-indper" class="menu-link">
                   <i class='menu-icon tf-icons bx bxs-user-account'></i>
-                  <div>Industri - Perusahaan</div>
+                  <div>Manage IndPer</div>
               </a>
             </li>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Customer') ? 'active' : '' ?>">
@@ -81,14 +98,14 @@
 
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-product-siswa" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-box'></i>
+                <i class='menu-icon tf-icons bx bx bx-package'></i>
                 <div>Product Siswa</div>
               </a>
             </li>
 
             <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Product IndPer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-product-indper" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-box'></i>
+                <i class='menu-icon tf-icons bx bx bx-package'></i>
                 <div>Product IndPer</div>
               </a>
             </li>
