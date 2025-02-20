@@ -51,7 +51,7 @@ class ManageProductSiswaController extends Controller
     public function create()
     {
         $data = [
-            'activePage' => 'Manage Product',
+            'activePage' => 'Manage Product Siswa',
             'tittle' => 'Lapak Siswa | Tambah Produk',
             'navigasi' => 'Tambah Data Produk',
             'kategoris' => $this->kategoriProductModel->findAll(),
@@ -143,7 +143,7 @@ class ManageProductSiswaController extends Controller
             'admins' => $this->adminModel->findAll(),
             'images' => $this->urlImageProductModel->getImagesByProductId($id),
             'pajak' => $pajak,
-            'activePage' => 'Manage Product',
+            'activePage' => 'Manage Product Siswa',
             'tittle' => 'Lapak Siswa | Edit Produk',
             'navigasi' => 'Edit Data Produk'
         ];

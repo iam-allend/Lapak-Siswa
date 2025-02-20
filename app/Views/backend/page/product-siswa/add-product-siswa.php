@@ -57,30 +57,46 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="price" class="form-label">Harga (Rp)</label>
-                                <input type="number" class="form-control" name="price" id="price" value="<?= old('price') ?>" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="discount" class="form-label">Diskon (%)</label>
-                                <input type="number" class="form-control" name="discount" id="discount" value="<?= old('discount', 0) ?>">
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="mb-3">
-                                        <label for="price_final" class="form-label">Harga Akhir (Rp)</label>
-                                        <input type="number" class="form-control" name="price_final" id="price_final" value="<?= old('price_final') ?>" readonly required>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="pajak" class="form-label">Pajak</label>
-                                        <input type="text" class="form-control" name="pajak" id="pajak" value="<?= $pajak['besaran'] ?? 0 ?>%" readonly required>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="price" class="form-label">Harga (Rp)</label>
+                                    <input type="number" class="form-control" name="price" id="price" value="<?= old('price', $product['price'] ?? 0) ?>" required>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="discount" class="form-label">Diskon (%)</label>
+                                    <input type="number" class="form-control" name="discount" id="discount" value="<?= old('discount', $product['discount'] ?? 0) ?>">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Harga Akhir (Price - Discount) -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="price_final" class="form-label">Harga Akhir (Rp)</label>
+                                    <input type="number" class="form-control" name="price_final" id="price_final" value="<?= old('price_final') ?>" readonly required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pajak dan Uang Bersih -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="pajak" class="form-label">Pajak</label>
+                                    <input type="text" class="form-control" name="pajak" id="pajak" value="<?= $pajak['besaran'] ?? 0 ?>%" readonly required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="uang_bersih" class="form-label">Uang Bersih yang Diterima (Rp)</label>
+                                    <input type="text" class="form-control" name="uang_bersih" id="uang_bersih" value="Rp. 0" readonly>
+                                </div>
+                            </div>
+                        </div>
 
                             <div class="mb-3">
                                 <label for="weight" class="form-label">Berat (gram)</label>
@@ -88,6 +104,7 @@
                             </div>
 
                         </div>
+
                     </div>
 
                     <!-- Deskripsi & Gambar -->
@@ -135,24 +152,28 @@
     const discountInput = document.getElementById('discount');
     const priceFinalInput = document.getElementById('price_final');
     const pajakInput = document.getElementById('pajak');
+    const uangBersihInput = document.getElementById('uang_bersih');
 
-        function calculatePriceFinal() {
+        function calculateFinalPriceAndNetAmount() {
             const price = parseFloat(priceInput.value) || 0;
             const discount = parseFloat(discountInput.value) || 0;
             const pajak = parseFloat(pajakInput.value) || 0;
 
-            const subtotal = price - (price * (discount / 100));
-            const priceFinal = subtotal - (subtotal * (pajak / 100));
+            // Hitung harga akhir (price - discount)
+            const priceFinal = price - (price * (discount / 100));
+            priceFinalInput.value = priceFinal.toFixed(2);
 
-            priceFinalInput.value = priceFinal.toFixed(2); // Format ke 2 angka di belakang koma
+            // Hitung uang bersih (harga akhir - pajak)
+            const uangBersih = priceFinal - (priceFinal * (pajak / 100));
+            uangBersihInput.value = `Rp. ${uangBersih.toLocaleString('id-ID')}`;
         }
 
-        priceInput.addEventListener('input', calculatePriceFinal);
-        discountInput.addEventListener('input', calculatePriceFinal);
-        pajakInput.addEventListener('input', calculatePriceFinal);
+        priceInput.addEventListener('input', calculateFinalPriceAndNetAmount);
+        discountInput.addEventListener('input', calculateFinalPriceAndNetAmount);
+        pajakInput.addEventListener('input', calculateFinalPriceAndNetAmount);
 
-        // Hitung price_final saat halaman pertama kali dimuat
-        calculatePriceFinal();
+        // Hitung saat halaman pertama kali dimuat
+        calculateFinalPriceAndNetAmount();
     });
 </script>
 

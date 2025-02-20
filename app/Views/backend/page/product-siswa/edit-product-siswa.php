@@ -57,45 +57,51 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="price" class="form-label">Harga (Rp)</label>
-                                <input type="number" class="form-control" name="price" id="price" value="<?= old('price', $product['price']) ?>" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="discount" class="form-label">Diskon (%)</label>
-                                <input type="number" class="form-control" name="discount" id="discount" value="<?= old('discount', $product['discount']) ?>">
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label for="price_final" class="form-label">Harga Akhir (Rp)</label>
-                                        <input type="number" class="form-control" name="price_final" id="price_final" value="<?= old('price_final') ?>" readonly required>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label for="pajak" class="form-label">Pajak</label>
-                                                <input type="text" class="form-control" name="pajak" id="pajak" value="<?= $pajak['besaran'] ?? 0 ?>%" readonly required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label for="uang_bersih" class="form-label">Diterima (Rp)</label>
-                                                <input type="text" class="form-control" name="uang_bersih" id="uang_bersih" value="Rp. 0" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="price" class="form-label">Harga (Rp)</label>
+                                    <input type="number" class="form-control" name="price" id="price" value="<?= old('price', $product['price'] ?? 0) ?>" required>
                                 </div>
                             </div>
-
-                            <div class="mb-3">
-                                <label for="weight" class="form-label">Berat (gram)</label>
-                                <input type="number" class="form-control" name="weight" value="<?= old('weight', $product['weight']) ?>" required>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="discount" class="form-label">Diskon (%)</label>
+                                    <input type="number" class="form-control" name="discount" id="discount" value="<?= old('discount', $product['discount'] ?? 0) ?>">
+                                </div>
                             </div>
+                        </div>
+
+                        <!-- Harga Akhir (Price - Discount) -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="price_final" class="form-label">Harga Akhir (Rp)</label>
+                                    <input type="number" class="form-control" name="price_final" id="price_final" value="<?= old('price_final') ?>" readonly required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pajak dan Uang Bersih -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="pajak" class="form-label">Pajak</label>
+                                    <input type="text" class="form-control" name="pajak" id="pajak" value="<?= $pajak['besaran'] ?? 0 ?>%" readonly required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="uang_bersih" class="form-label">Uang Bersih yang Diterima (Rp)</label>
+                                    <input type="text" class="form-control" name="uang_bersih" id="uang_bersih" value="Rp. 0" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="weight" class="form-label">Berat (gram)</label>
+                            <input type="number" class="form-control" name="weight" value="<?= old('weight', $product['weight']) ?>" required>
+                        </div>
 
                         </div>
                     </div>
