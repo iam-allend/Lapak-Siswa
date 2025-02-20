@@ -41,7 +41,7 @@
                       aria-describedby="password"
                       required
                     />
-                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                    <!-- <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span> -->
                   </div>
                 </div>
                 <div class="mb-3">
