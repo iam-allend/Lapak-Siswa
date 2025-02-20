@@ -73,13 +73,13 @@
             </li>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage IndPer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-indper" class="menu-link">
-                  <i class='menu-icon tf-icons bx bxs-user-account'></i>
+                  <i class='menu-icon tf-icons bx bx-user-circle'></i>
                   <div>Manage IndPer</div>
               </a>
             </li>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Customer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-customer" class="menu-link">
-                  <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                  <i class='menu-icon tf-icons bx bx-user'></i>
                   <div>Manage Customer</div>
               </a>
             </li>

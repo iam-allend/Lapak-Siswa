@@ -44,7 +44,8 @@ class ManageSiswaController extends Controller
             'tittle' => 'Lapak Siswa | Siswa',
             'navigasi' => 'Tambah Data Siswa',
             'kelas' => $this->kelasModel->findAll(), // Ambil semua data kelas
-            'admins' => $this->adminModel->findAll(), // Ambil semua data admin
+            // 'admins' => $this->adminModel->findAll(), // Ambil semua data admin
+            'admins' => $this->adminModel->where('id_level', 3)->findAll(),
         ];
 
         return view('backend/page/siswa/add-siswa', $data);
@@ -99,7 +100,8 @@ class ManageSiswaController extends Controller
         $data = [
             'siswa' => $this->siswaModel->find($id),
             'kelas' => $this->kelasModel->findAll(),
-            'admins' => $this->adminModel->findAll(),
+            'admins' => $this->adminModel->where('id_level', 3)->findAll(),
+            // 'admins' => $this->adminModel->findAll(),
             'activePage' => 'Manage Siswa',
             'tittle' => 'Lapak Siswa | Edit Siswa',
             'navigasi' => 'Edit Data Siswa'
