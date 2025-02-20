@@ -31,6 +31,7 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="<?= base_url()?>backend\assets\vendor\css\my-style.css">
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -50,6 +51,42 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="<?= base_url()?>backend/assets/js/config.js"></script>
+ 
+ 
+    <style>
+      .menu-inner {
+        scroll-behavior: smooth; 
+        max-height: 90vh !important; /* Atur tinggi maksimum sesuai kebutuhan */
+        overflow-y: scroll !important; /* Membuat konten dapat di-scroll secara vertikal */
+      }
+      /* Styling scrollbar untuk WebKit (Chrome, Safari, Edge) */
+      .menu-inner::-webkit-scrollbar {
+          width: 1px !important;
+          background-color: black !important;
+          display: none !important;
+      }
+
+      .menu-inner::-webkit-scrollbar-track {
+          background: transparent;
+      }
+
+      .menu-inner::-webkit-scrollbar-thumb {
+          background: rgba(0, 0, 0, 0.2);
+          border-radius: 1px !important;
+          transition: background 0.3s ease; /* Efek transisi halus */
+      }
+
+      .menu-inner::-webkit-scrollbar-thumb:hover {
+          background: rgba(0, 0, 0, 0.4);
+      }
+
+      /* Styling scrollbar untuk Firefox */
+      .menu-inner {
+          /* scrollbar-width: thin; */
+          scrollbar-color: rgba(0, 0, 0, 0) transparent;
+          scrollbar-width: none !important;
+      }
+    </style>
   </head>
 
   <body>

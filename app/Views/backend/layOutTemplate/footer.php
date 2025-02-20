@@ -9,6 +9,8 @@
 
         <!-- Core JS -->
         <!-- build:js assets/vendor/js/core.js -->
+
+        <!-- <script src="backend/assets/vendor/js/my-js.js"></script> -->
         <script src="<?= base_url()?>backend/assets/vendor/libs/jquery/jquery.js"></script>
         <script src="<?= base_url()?>backend/assets/vendor/libs/popper/popper.js"></script>
         <script src="<?= base_url()?>backend/assets/vendor/js/bootstrap.js"></script>

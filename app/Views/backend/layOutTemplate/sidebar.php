@@ -1,3 +1,5 @@
+
+
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo <?= (isset($activePage) && $activePage == 'Dashboard') ? 'active' : '' ?>">
             <a href="<?= base_url('dashboard') ?>" class="app-brand-link">
@@ -17,7 +19,8 @@
 
           <div class="menu-inner-shadow"></div>
 
-          <ul class="menu-inner py-1 pt-4">
+          
+          <ul class="menu-inner pt-4 pb-5">
 
             <!-- Dashboard -->
             <li class="menu-item">
@@ -37,58 +40,73 @@
 
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA USER</span>
-            </li>
+            </li>            
             
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Admin') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-admin" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-account'></i>
+                <i class='menu-icon tf-icons bx bxs-user-badge' ></i>
                 <div>Manage Admin</div>
               </a>
             </li>
-
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Siswa') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-siswa" class="menu-link">
+                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <div>Manage Siswa</div>
+              </a>
+            </li>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage IndPer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-indper" class="menu-link">
                   <i class='menu-icon tf-icons bx bxs-user-account'></i>
                   <div>Industri - Perusahaan</div>
               </a>
             </li>
-
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Siswa') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-siswa" class="menu-link">
-                  <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                  <div>Manage Siswa</div>
-              </a>
-            </li>
-            
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Customer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-customer" class="menu-link">
                   <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                   <div>Manage Customer</div>
               </a>
             </li>
-            <!-- Menu lainnya -->
-
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">DATA KELAS</span>
-            </li>
-            
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Kelas') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-kelas" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-layer'></i>
-                <div>Manage Kelas</div>
+            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Keranjang Customer') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-keranjang-customer" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-cart-alt' ></i>
+                  <div>Keranjang Customer</div>
               </a>
             </li>
 
+            <!-- Menu lainnya -->
 
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA PRODUCT</span>
             </li>
-            
+
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-product-siswa" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-dock-top'></i>
+                <i class='menu-icon tf-icons bx bx-box'></i>
                 <div>Product Siswa</div>
+              </a>
+            </li>
+
+            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Product IndPer') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-product-indper" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-box'></i>
+                <div>Product IndPer</div>
+              </a>
+            </li>
+
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">KELENGKAPAN PRODUK</span>
+            </li>
+            
+            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Kelompok') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-group" class="menu-link">
+                <i class='menu-icon tf-icons bx bxs-user-account'></i>
+                <div>Manage Kelompok</div>
+              </a>
+            </li>            
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Kelas') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-kelas" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-layer'></i>
+                <div>Manage Kelas</div>
               </a>
             </li>
 
@@ -99,17 +117,28 @@
               </a>
             </li>
 
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">DATA SYSTEM</span>
+            </li>
+            
+            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Pajak') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-pajak" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-shape-square' ></i>
+                <div>Pajak Sistem</div>
+              </a>
+            </li>
+
           </ul>
         </aside>
         <!-- / Menu -->
 
 
-                        <!-- Layout container -->
-                        <div class="layout-page">
+        <!-- Layout container -->
+        <div class="layout-page">
           <!-- Navbar -->
 
           <nav
-            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme mt-4"
             id="layout-navbar">
             <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
               <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
