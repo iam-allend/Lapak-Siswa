@@ -1,5 +1,4 @@
 
-
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo <?= (isset($activePage) && $activePage == 'Dashboard') ? 'active' : '' ?>">
             <a href="<?= base_url('dashboard') ?>" class="app-brand-link">
@@ -138,7 +137,7 @@
               <span class="menu-header-text">DATA SYSTEM</span>
             </li>
             
-            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Pajak') ? 'active' : '' ?>">
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Pajak') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-pajak" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-shape-square' ></i>
                 <div>Pajak Sistem</div>

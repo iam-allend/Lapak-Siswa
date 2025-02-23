@@ -95,6 +95,15 @@ $routes->get('dashboard', 'DashboardController::dashboard');
         $routes->get('detail/(:num)', 'ManageProductSiswaController::detail/$1'); // Menampilkan detail produk (opsional)
     });
 
+    // MANAGE PAJAK
+    $routes->group('manage-pajak', function ($routes) {
+        $routes->get('/', 'PajakController::index');
+        $routes->get('create', 'PajakController::create');
+        $routes->post('store', 'PajakController::store');
+        $routes->get('edit/(:num)', 'PajakController::edit/$1');
+        $routes->post('update/(:num)', 'PajakController::update/$1');
+        $routes->get('delete/(:num)', 'PajakController::delete/$1');
+    });
 
 
 

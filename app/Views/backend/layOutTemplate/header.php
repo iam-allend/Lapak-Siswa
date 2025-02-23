@@ -31,7 +31,7 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/fonts/boxicons.css" />
-    <link rel="stylesheet" href="<?= base_url()?>backend\assets\vendor\css\my-style.css">
+    <!-- <link rel="stylesheet" href="backend\assets\vendor\css\my-style.css"> -->
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/css/core.css" class="template-customizer-core-css" />
