@@ -105,6 +105,17 @@ $routes->get('dashboard', 'DashboardController::dashboard');
         $routes->get('delete/(:num)', 'PajakController::delete/$1');
     });
 
+    // MANAGE PRDER PRODUCT SISWA
+    $routes->group('manage-order-product-siswa', function ($routes) {
+        $routes->get('/', 'ManageOrderProductSiswaController::index'); // Menampilkan daftar produk
+        $routes->get('create', 'ManageOrderProductSiswaController::create'); // Menampilkan form tambah produk
+        $routes->post('store', 'ManageOrderProductSiswaController::store'); // Menyimpan data produk baru
+        $routes->get('edit/(:num)', 'ManageOrderProductSiswaController::edit/$1'); // Menampilkan form edit produk
+        $routes->post('update/(:num)', 'ManageOrderProductSiswaController::update/$1'); // Menyimpan perubahan data produk
+        $routes->get('delete/(:num)', 'ManageOrderProductSiswaController::delete/$1'); // Menghapus data produk
+        $routes->get('delete-image/(:num)', 'ManageOrderProductSiswaController::deleteImage/$1'); // Menghapus gambar produk
+        $routes->get('detail/(:num)', 'ManageOrderProductSiswaController::detail/$1'); // Menampilkan detail produk (opsional)
+    });
 
 
 $routes->group('superadmin',function($routes){

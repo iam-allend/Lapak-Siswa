@@ -77,7 +77,7 @@
                         <a href="<?= base_url() ?>/contactus" class="nav-item nav-link">Contact</a>
 
                     </div>
-                    <a href="<?= base_url() ?>/profile" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
+                    <a href="<?= base_url() ?>login" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
                 </div>
             </nav>
         </div>
