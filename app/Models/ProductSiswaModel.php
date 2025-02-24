@@ -21,4 +21,5 @@ class ProductSiswaModel extends Model
             ->get()
             ->getResultArray();
     }
+    
 }

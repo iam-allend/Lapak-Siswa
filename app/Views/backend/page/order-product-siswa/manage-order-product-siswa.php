@@ -10,8 +10,14 @@
             </a>
         </div>
 
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger">
+                <?= session()->getFlashdata('error') ?>
+            </div>
+        <?php endif; ?>
+
         <?php if (session()->getFlashdata('success')): ?>
-            <div class="alert alert-primary">
+            <div class="alert alert-success">
                 <?= session()->getFlashdata('success') ?>
             </div>
         <?php endif; ?>
@@ -22,21 +28,19 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>ID Transaksi</th>
                             <th>Produk</th>
                             <th>Customer</th>
                             <th>Admin</th>
                             <th>Quantity</th>
                             <th>Total Harga</th>
                             <th>Status</th>
-                            <th>Tanggal</th>
+                            <th>Tgl Order</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
                         <?php foreach ($transactions as $transaction): ?>
                         <tr>
-                            <td>#<?= $transaction['id_transaksi'] ?></td>
                             <td>
                                 <?= $transaction['product_name'] ?> 
                                 <br><small>Harga: Rp <?= number_format($transaction['price_at_transaction'], 0) ?></small>
@@ -47,10 +51,10 @@
                             <td>Rp <?= number_format($transaction['total_price'], 0) ?></td>
                             <td>
                                 <span class="badge bg-<?= 
-                                    $transaction['status'] == 'selesai' ? 'success' : 
-                                    ($transaction['status'] == 'proses' ? 'warning' : 'danger') 
+                                    $transaction['status_order'] == 'selesai' ? 'success' : 
+                                    ($transaction['status_order'] == 'proses' ? 'warning' : 'danger') 
                                 ?>">
-                                    <?= ucfirst($transaction['status']) ?>
+                                    <?= ucfirst($transaction['status_order']) ?>
                                 </span>
                             </td>
                             <td><?= date('d M Y', strtotime($transaction['created_at'])) ?></td>

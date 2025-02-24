@@ -55,13 +55,12 @@ class ManageOrderProductSiswaController extends Controller
         return view('backend/page/order-product-siswa/add-order-product-siswa', $data);
     }
 
-    // Menyimpan transaksi baru
     public function store()
     {
+        // dd($this->request->getPost());
         // Validasi input
         $validation = $this->validate([
             'id_product' => 'required|numeric',
-            'id_admin' => 'required|numeric',
             'id_customer' => 'required|numeric',
             'quantity' => 'required|numeric|min_length[1]',
         ]);
@@ -70,47 +69,46 @@ class ManageOrderProductSiswaController extends Controller
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
-        // Ambil data produk dan customer
-        $product = $this->productModel->find($this->request->getPost('id_product'));
-        $customer = $this->customerModel->find($this->request->getPost('id_customer'));
+        try {
+            // Ambil data produk dan customer
+            $product = $this->productModel->find($this->request->getPost('id_product'));
+            $customer = $this->customerModel->find($this->request->getPost('id_customer'));
 
-        // Hitung total harga
-        $quantity = $this->request->getPost('quantity');
-        $totalPrice = $product['price_final'] * $quantity;
+            // Hitung total harga
+            $quantity = $this->request->getPost('quantity');
+            $totalPrice = $product['price_final'] * $quantity;
 
-        // Debug: Cek saldo customer dan total harga
-        dd([
-            'customer_saldo' => $customer['saldo'],
-            'total_price' => $totalPrice,
-            'is_saldo_cukup' => $customer['saldo'] >= $totalPrice
-        ]);
+            // Validasi saldo customer
+            if ($customer['saldo'] < $totalPrice) {
+                return redirect()->back()->withInput()->with('error', 'Saldo customer tidak mencukupi!');
+            }
 
-        // Validasi saldo customer
-        if ($customer['saldo'] < $totalPrice) {
-            return redirect()->back()->withInput()->with('error', 'Saldo customer tidak mencukupi!');
+            // Simpan transaksi
+            $transactionData = [
+                'id_product' => $this->request->getPost('id_product'),
+                'id_admin' => $this->request->getPost('id_admin'), // id_admin diambil dari input hidden
+                'id_customer' => $this->request->getPost('id_customer'),
+                'quantity' => $quantity,
+                'price_at_transaction' => $product['price_final'], // Simpan harga saat transaksi
+                'total_price' => $totalPrice,
+                'status_order' => 'proses',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ];
+
+            $this->transaksiModel->insert($transactionData);
+
+            // Kurangi saldo customer
+            $this->customerModel->update($customer['id_customer'], [
+                'saldo' => $customer['saldo'] - $totalPrice
+            ]);
+
+            return redirect()->to('/manage-order-product-siswa')->with('success', 'Transaksi berhasil ditambahkan!');
+
+        } catch (\Exception $e) {
+            // Tangkap error dan tampilkan pesan
+            return redirect()->back()->withInput()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
         }
-
-        // Simpan transaksi
-        $transactionData = [
-            'id_product' => $this->request->getPost('id_product'),
-            'id_admin' => $this->request->getPost('id_admin'),
-            'id_customer' => $this->request->getPost('id_customer'),
-            'quantity' => $quantity,
-            'price_at_transaction' => $product['price_final'], // Simpan harga saat transaksi
-            'total_price' => $totalPrice,
-            'status' => 'proses',
-            'created_at' => date('Y-m-d H:i:s'),
-            'updated_at' => date('Y-m-d H:i:s'),
-        ];
-
-        $this->transaksiModel->insert($transactionData);
-
-        // Kurangi saldo customer
-        $this->customerModel->update($customer['id_customer'], [
-            'saldo' => $customer['saldo'] - $totalPrice
-        ]);
-
-        return redirect()->to('/manage-transaksi-siswa')->with('success', 'Transaksi berhasil ditambahkan!');
     }
 
     // Menampilkan form edit status transaksi
@@ -153,7 +151,7 @@ class ManageOrderProductSiswaController extends Controller
         }
 
         $this->transaksiModel->update($id, [
-            'status' => $newStatus,
+            'status_order' => $newStatus,
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 

@@ -7,7 +7,7 @@ class OrderProductSiswaModel extends Model {
     protected $primaryKey = 'id_transaksi';
     protected $allowedFields = [
         'id_product', 'id_admin', 'id_customer', 'quantity', 
-        'price_at_transaction', 'total_price', 'status', 
+        'price_at_transaction', 'total_price', 'status_order', 
         'created_at', 'updated_at'
     ];
 
