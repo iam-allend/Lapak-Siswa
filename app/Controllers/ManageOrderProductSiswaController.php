@@ -112,17 +112,21 @@ class ManageOrderProductSiswaController extends Controller
     }
 
     // Menampilkan form edit status transaksi
-    public function edit($id)
-    {
-        $transaction = $this->transaksiModel->getTransactionsWithDetails($id);
-
+    public function edit($id) {
+        // Ambil data transaksi dengan JOIN ke tabel produk
+        $transaction = $this->transaksiModel->getTransactionWithDetails($id);
+    
+        if (!$transaction) {
+            return redirect()->to('/manage-order-product-siswa')->with('error', 'Transaksi tidak ditemukan!');
+        }
+    
         $data = [
-            'transaction' => $transaction,
+            'transaction' => $transaction, // Pastikan data ini memiliki key 'product_name'
             'activePage' => 'Edit Transaksi',
             'tittle' => 'Lapak Siswa | Edit Transaksi',
             'navigasi' => 'Edit Data Transaksi'
         ];
-
+    
         return view('backend/page/order-product-siswa/edit-order-product-siswa', $data);
     }
 

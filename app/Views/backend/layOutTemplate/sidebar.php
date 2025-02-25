@@ -19,7 +19,7 @@
           <div class="menu-inner-shadow"></div>
 
           
-          <ul class="menu-inner pt-4 pb-5">
+          <ul class="menu-inner pt-4 pb-5 overflow-y-auto" style="height: 80vh !important;">
 
             <!-- Dashboard -->
             <li class="menu-item">
