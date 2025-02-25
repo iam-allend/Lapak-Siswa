@@ -53,7 +53,7 @@
     <script src="<?= base_url()?>backend/assets/js/config.js"></script>
  
  
-    <style>
+    <!-- <style>
       .menu-inner {
         scroll-behavior: smooth; 
         max-height: 90vh !important; /* Atur tinggi maksimum sesuai kebutuhan */
@@ -86,7 +86,7 @@
           scrollbar-color: rgba(0, 0, 0, 0) transparent;
           scrollbar-width: none !important;
       }
-    </style>
+    </style> -->
   </head>
 
   <body>

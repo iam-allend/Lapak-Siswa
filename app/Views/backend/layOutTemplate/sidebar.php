@@ -1,5 +1,5 @@
 
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+<aside id="layout-menu" class="overflow-auto layout-menu menu-vertical menu bg-menu-theme" style="max-height: 100vh;">
           <div class="app-brand demo <?= (isset($activePage) && $activePage == 'Dashboard') ? 'active' : '' ?>">
             <a href="<?= base_url('dashboard') ?>" class="app-brand-link">
               <span class="app-brand-logo demo mt-3">
