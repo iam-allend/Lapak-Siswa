@@ -87,6 +87,9 @@
       }
     </style> -->
 </head>
+<script src="<?= base_url() ?>backend/assets/js/config.js"></script>
+
+</head>
 
 <body>
 

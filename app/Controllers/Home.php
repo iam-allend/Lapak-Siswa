@@ -32,4 +32,18 @@ class Home extends BaseController
         ];
         return view('frontend/contactus', $data);
     }
+    public function shop()
+    {
+        $data = [
+            'tittle' => 'Shop',
+        ];
+        return view('frontend/shop', $data);
+    }
+    public function detail()
+    {
+        $data = [
+            'tittle' => 'Detail Produk',
+        ];
+        return view('frontend/detail_produk', $data);
+    }
 }

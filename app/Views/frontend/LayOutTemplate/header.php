@@ -51,30 +51,30 @@
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="<?= base_url() ?>index.html" class="navbar-brand d-flex align-items-center text-center">
+                <a href="<?= base_url() ?>logo\logo-green.webp" class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="<?= base_url() ?>frontend/img/icon-deal.png" alt="Icon"
+                        <img class="img-fluid" src="<?= base_url() ?>logo\logo-green.webp" alt="Icon"
                             style="width: 30px; height: 30px;">
                     </div>
-                    <h1 class="m-0 text-primary">Lapak Siswa</h1>
+                    <h3 class="m-0 text-primary">Lapak Siswa</h3>
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="<?= base_url() ?>/" class="nav-item nav-link active">Home</a>
-                        <a href="<?= base_url() ?>/about" class="nav-item nav-link">About</a>
-                        <a href="<?= base_url() ?>/shop" class="nav-item nav-link">Produk</a>
+                        <a href="<?= base_url() ?>" class="nav-item nav-link active">Home</a>
+                        <a href="<?= base_url() ?>about" class="nav-item nav-link">About</a>
+                        <a href="<?= base_url() ?>shop" class="nav-item nav-link">Produk</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="/blog" class="dropdown-item">Blog</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">Mitra</a>
+                                <a href="<?= base_url() ?>blog" class="dropdown-item">Blog</a>
+                                <a href="<?= base_url() ?>testimonial" class="dropdown-item">Testimonial</a>
+                                <a href="<?= base_url() ?>404.html" class="dropdown-item">Mitra</a>
                             </div>
                         </div>
-                        <a href="<?= base_url() ?>/contactus" class="nav-item nav-link">Contact</a>
+                        <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
 
                     </div>
                     <a href="<?= base_url() ?>login" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
