@@ -8,9 +8,11 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'Home::index');
 
-$routes->get('/about', 'Home::about');
-$routes->get('/contactus', 'Home::contactus');
-$routes->get('/profile', 'Home::profile');
+$routes->get('about', 'Home::about');
+$routes->get('contactus', 'Home::contactus');
+$routes->get('profile', 'Home::profile');
+$routes->get('shop', 'Home::shop'); 
+$routes->get('detail', 'Home::detail'); 
 
 
 $routes->get('register', 'Auth::register');
@@ -21,8 +23,6 @@ $routes->get('login', 'Auth::index');
 $routes->post('auth/login', 'Auth::login'); // Proses login
 $routes->get('auth/logout', 'Auth::logout'); // Proses logout
 
-$routes->get('shop', 'Shop::index'); // Halaman shop untuk customer
-$routes->get('profile', 'Profile::index'); // Halaman profil untuk siswa
 // $routes->get('admin/dashboard', 'Admin::dashboard'); // Halaman dashboard untuk admin
 // $routes->get('superadmin/dashboard', 'SuperAdmin::dashboard'); // Halaman dashboard untuk superadmin
 
