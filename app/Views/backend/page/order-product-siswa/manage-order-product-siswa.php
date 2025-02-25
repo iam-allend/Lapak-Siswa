@@ -16,9 +16,9 @@
             </div>
         <?php endif; ?>
 
-        <?php if (session()->getFlashdata('success')): ?>
-            <div class="alert alert-success">
-                <?= session()->getFlashdata('success') ?>
+        <?php if (session()->getFlashdata('primary')): ?>
+            <div class="alert alert-primary">
+                <?= session()->getFlashdata('primary') ?>
             </div>
         <?php endif; ?>
 

@@ -51,7 +51,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label class="form-label">Status Transaksi</label>
-                                    <select class="form-select" name="status" required>
+                                    <select class="form-select" name="status_order" required>
                                         <option value="proses" <?= $transaction['status_order'] == 'proses' ? 'selected' : '' ?>>Proses</option>
                                         <option value="selesai" <?= $transaction['status_order'] == 'selesai' ? 'selected' : '' ?>>Selesai</option>
                                         <option value="belum dibayar" <?= $transaction['status_order'] == 'belum dibayar' ? 'selected' : '' ?>>Belum Dibayar</option>
