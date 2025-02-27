@@ -46,7 +46,7 @@
               </a>
             </li>
             <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
+              <a disabled href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
                 <div>Order Product IndPer</div>
               </a>
@@ -83,7 +83,7 @@
               </a>
             </li>
             <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Keranjang Customer') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-keranjang-customer" class="menu-link">
+              <a disabled href="<?= base_url() ?>manage-keranjang-customer" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-cart-alt' ></i>
                   <div>Keranjang Customer</div>
               </a>
@@ -103,7 +103,7 @@
             </li>
 
             <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Product IndPer') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-product-indper" class="menu-link">
+              <a disabled href="<?= base_url() ?>manage-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
                 <div>Product IndPer</div>
               </a>
@@ -114,7 +114,7 @@
             </li>
             
             <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Kelompok') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-group" class="menu-link">
+              <a disabled href="<?= base_url() ?>manage-group" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-account'></i>
                 <div>Manage Kelompok</div>
               </a>

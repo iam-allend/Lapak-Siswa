@@ -28,6 +28,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
+                            <th>Image</th>
                             <th>Produk</th>
                             <th>Customer</th>
                             <th>Hrg jml total</th>
@@ -38,6 +39,35 @@
                     <tbody class="table-border-bottom-0">
                         <?php foreach ($transactions as $transaction): ?>
                         <tr>
+                            <td>
+                                <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                    <?php
+                                    // Ambil 2 gambar pertama
+                                    $images = array_slice($transaction['images'], 0, 2);
+
+                                    // Tampilkan gambar
+                                    foreach ($images as $image) {
+                                        ?>
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Foto Produk">
+                                            <a target="_blank" href="<?= base_url($image['url']) ?>">
+                                                <img src="<?= base_url($image['url']) ?>" alt="Avatar" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <?php
+                                    }
+
+                                    // Tampilkan indikator jika ada lebih dari 2 gambar
+                                    if (count($transaction['images']) > 2) {
+                                        $remainingImages = count($transaction['images']) - 2;
+                                        ?>
+                                        <li class="avatar avatar-xs pull-up">
+                                            <span class="badge bg-label-primary">+<?= $remainingImages ?></span>
+                                        </li>
+                                        <?php
+                                    }
+                                    ?>
+                                </ul>
+                            </td>
                             <td>
                                 <span data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="" title="ID Transaksi : <?=$transaction['id_transaksi']?>">
                                     <?= $transaction['product_name'] ?> 
@@ -73,12 +103,23 @@
                                 </span>
                             </td>
                             <td>
-                                <a href="<?= base_url('manage-order-product-siswa/edit/' . $transaction['id_transaksi']) ?>" class="btn btn-outline-primary text-decoration-none">
-                                    <i class='bx bxs-edit'></i>
-                                </a>
-                                <a href="<?= base_url('manage-order-product-siswa/delete/' . $transaction['id_transaksi']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus transaksi ini? Saldo customer akan dikembalikan!');">
-                                    <i class='bx bxs-trash-alt'></i>
-                                </a>
+                                <?php if ($transaction['status_order'] !== 'selesai'): ?>
+                                    <!-- Tombol Edit dan Hapus aktif jika status bukan "selesai" -->
+                                    <a href="<?= base_url('manage-order-product-siswa/edit/' . $transaction['id_transaksi']) ?>" class="btn btn-outline-primary text-decoration-none">
+                                        <i class='bx bxs-edit'></i>
+                                    </a>
+                                    <a href="<?= base_url('manage-order-product-siswa/delete/' . $transaction['id_transaksi']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus transaksi ini? Saldo customer akan dikembalikan!');">
+                                        <i class='bx bxs-trash-alt'></i>
+                                    </a>
+                                <?php else: ?>
+                                    <!-- Tombol Edit dan Hapus dinonaktifkan jika status "selesai" -->
+                                    <button class="btn btn-outline-secondary text-decoration-none" disabled>
+                                        <i class='bx bxs-edit'></i>
+                                    </button>
+                                    <button class="btn btn-outline-secondary text-decoration-none" disabled>
+                                        <i class='bx bxs-trash-alt'></i>
+                                    </button>
+                                <?php endif; ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

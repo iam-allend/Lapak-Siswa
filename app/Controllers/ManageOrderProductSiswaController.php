@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\UrlImageProductSiswaModel;
 use App\Models\OrderProductSiswaModel;
 use App\Models\ProductSiswaModel;
 use App\Models\CustomerModel;
@@ -13,12 +14,14 @@ class ManageOrderProductSiswaController extends Controller
 {
     protected $transaksiModel;
     protected $productModel;
+    protected $urlImageProductModel;
     protected $customerModel;
     protected $adminModel;
     protected $keuanganModel;
 
     public function __construct()
     {
+        $this->urlImageProductModel = new UrlImageProductSiswaModel();
         $this->transaksiModel = new OrderProductSiswaModel();
         $this->productModel = new ProductSiswaModel();
         $this->customerModel = new CustomerModel();
@@ -30,10 +33,21 @@ class ManageOrderProductSiswaController extends Controller
     // Menampilkan daftar transaksi
     public function index()
     {
+        // Ambil semua transaksi beserta detailnya
         $transactions = $this->transaksiModel->getTransactionsWithDetails();
 
+        // Ambil gambar untuk setiap produk yang terkait dengan transaksi
+        foreach ($transactions as &$transaction) {
+            $product = $this->productModel->find($transaction['id_product']);
+            if ($product) {
+                $transaction['images'] = $this->urlImageProductModel->getImagesByProductId($product['id_product']);
+            } else {
+                $transaction['images'] = []; // Jika produk tidak ditemukan, set images kosong
+            }
+        }
+
         $data = [
-            'transactions' => $transactions,
+            'transactions' => $transactions, // Kirim data transaksi beserta gambar ke view
             'activePage' => 'Manage Order Product Siswa',
             'tittle' => 'Lapak Siswa | Kelola Transaksi',
             'navigasi' => 'Manage Order Product Siswa'
