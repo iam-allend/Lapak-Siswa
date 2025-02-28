@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2025 at 06:11 AM
+-- Generation Time: Feb 28, 2025 at 06:37 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -47,10 +47,10 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `id_level`, `full_name`, `username`, `email`, `password`, `gender`, `url_image`, `group_name`, `status_registrasi`, `created_at`, `updated_at`) VALUES
-(1, '4', 'Anur Mustakim', 'anurmustakim', 'anurmustakim@gmail.com', '$2y$10$ANyjFAVpTatnuqswqH5xFe862L24jqXiM2OlJGdaA53eGW4R2rAQW', 'male', 'img_user/1738312563_38b93fb8b6629ff5204b.png', 'ALLENT1', 1, '2025-01-29 19:10:45', '2025-02-02 23:42:24'),
-(5, '3', 'Mikatsum Runa', 'mikatsumruna', 'mikatsumruna1@gmail.com', '$2y$10$HEOEMNPX3T196KSCA63IjOw4hkNclTcJ3J2lVSoE5jVivPdLTOB92', 'female', 'img_user/1738573203_e5cf636123b36e929d0f.png', 'ALLENT2', 1, '2025-01-30 10:16:14', '2025-02-19 21:42:38'),
-(8, '3', 'Zikry Dwi Maulana', 'zikrydwi', 'zikrydwi@gmail.com', '$2y$10$rmEkpZiouNXxV7YU3flYqeCmFp.BGaGWX98LNBWppmpVMSN3AaL6K', 'male', 'img_user/1738313784_f42bfb508e121878d50f.png', 'ALLENT3', 0, '2025-01-31 08:56:24', '2025-02-02 23:42:37'),
-(9, '4', 'Super Admin', 'superadmin', 'superadmin@gmail.com', '123456789', 'male', 'img_user/1738563755_8ae5c5bdddabfb3ece53.png', 'ALLENT4', 1, '2025-01-31 21:08:55', '2025-02-02 23:22:35');
+(1, '4', 'Anur Mustakim', 'anurmustakim', 'anurmustakim@gmail.com', '$2y$10$ANyjFAVpTatnuqswqH5xFe862L24jqXiM2OlJGdaA53eGW4R2rAQW', 'male', 'img_user/1738312563_38b93fb8b6629ff5204b.png', 'Buana Production', 1, '2025-01-29 19:10:45', '2025-02-28 04:59:20'),
+(5, '3', 'Mikatsum Runa', 'mikatsumruna', 'mikatsumruna1@gmail.com', '$2y$10$HEOEMNPX3T196KSCA63IjOw4hkNclTcJ3J2lVSoE5jVivPdLTOB92', 'female', 'img_user/1738573203_e5cf636123b36e929d0f.png', 'Monocraft', 1, '2025-01-30 10:16:14', '2025-02-28 04:59:27'),
+(8, '3', 'Zikry Dwi Maulana', 'zikrydwi', 'zikrydwi@gmail.com', '$2y$10$rmEkpZiouNXxV7YU3flYqeCmFp.BGaGWX98LNBWppmpVMSN3AaL6K', 'male', 'img_user/1738313784_f42bfb508e121878d50f.png', 'Local Tshirt', 0, '2025-01-31 08:56:24', '2025-02-28 04:59:37'),
+(9, '4', 'Super Admin', 'superadmin', 'superadmin@gmail.com', '123456789', 'male', 'img_user/1738563755_8ae5c5bdddabfb3ece53.png', 'Dis Doom', 1, '2025-01-31 21:08:55', '2025-02-28 04:59:55');
 
 -- --------------------------------------------------------
 
@@ -79,8 +79,8 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id_customer`, `id_level`, `full_name`, `username`, `email`, `password`, `no_telp`, `gender`, `url_image`, `alamat`, `saldo`, `updated_at`, `created_at`) VALUES
-(3, 2, 'Anur Mustakim2', 'anurmustakim2', 'anurmustakim2@gmail.com', '$2y$10$aII2NTge/B1zSLiJsKeQkeNESMQoi4.mo3sGh2Gz6.Af0ssSwxZ2O', '08912344780', 'male', '', 'Batang, Subah, Adinuso, Dk. Damarsari', 300000, '2025-02-06 20:47:18', '2025-02-06 19:50:43'),
-(6, 2, 'Anur Mustakim3', 'anurmustakim3', 'anurmustakim3@gmail.com', '$2y$10$33uK55udaJHIqFDdclmVhuiH07wkpUrpMCPKv9oKx3HgSkU5oc2Au', '0891234478', 'male', 'img_user/1738900254_1536bed4421f9142c97e.png', 'Batang, Subah, Adinuso, Dk. Damarsari', 500000, '2025-02-06 20:50:54', '2025-02-06 20:50:54');
+(3, 2, 'Anur Mustakim2', 'anurmustakim2', 'anurmustakim2@gmail.com', '$2y$10$aII2NTge/B1zSLiJsKeQkeNESMQoi4.mo3sGh2Gz6.Af0ssSwxZ2O', '08912344780', 'male', '', 'Batang, Subah, Adinuso, Dk. Damarsari', 262000, '2025-02-24 08:46:50', '2025-02-06 19:50:43'),
+(6, 2, 'Anur Mustakim3', 'anurmustakim3', 'anurmustakim3@gmail.com', '$2y$10$33uK55udaJHIqFDdclmVhuiH07wkpUrpMCPKv9oKx3HgSkU5oc2Au', '0891234478', 'male', 'img_user/1738900254_1536bed4421f9142c97e.png', 'Batang, Subah, Adinuso, Dk. Damarsari', 427440, '2025-02-25 08:55:12', '2025-02-06 20:50:54');
 
 -- --------------------------------------------------------
 
@@ -171,6 +171,32 @@ INSERT INTO `kelas` (`id_kelas`, `nama`, `wali_kelas`, `created_at`, `updated_at
 (1, 'XII RPL 1', 'Supriyati S.Pd', '2025-02-11 11:54:22', NULL),
 (2, 'XII RPL 2', 'Supriyatno S.Pd', '2025-02-11 11:54:22', NULL),
 (4, 'X TKJ 2', 'Anur Mustakim2 S.Kom', '2025-02-11 12:09:13', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `keuangan`
+--
+
+CREATE TABLE `keuangan` (
+  `id_keuangan` int(11) NOT NULL,
+  `id_transaksi` int(11) DEFAULT NULL,
+  `jumlah` double DEFAULT NULL,
+  `jenis` enum('pendapatan','pengeluaran') DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
+  `asal` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `keuangan`
+--
+
+INSERT INTO `keuangan` (`id_keuangan`, `id_transaksi`, `jumlah`, `jenis`, `keterangan`, `asal`, `created_at`, `updated_at`) VALUES
+(1, 5, 34560, 'pendapatan', 'Transaksi produk siswa #5', '', '2025-02-25 01:30:43', '2025-02-25 08:30:43'),
+(2, 1, 38000, 'pendapatan', 'Transaksi produk siswa #1Produk 1 ', '', '2025-02-25 01:36:47', '2025-02-25 08:36:47'),
+(3, 6, 90000, 'pendapatan', 'Transaksi produk siswa #6 - Produk 3', '', '2025-02-25 01:52:39', '2025-02-25 08:52:39');
 
 -- --------------------------------------------------------
 
@@ -270,10 +296,10 @@ CREATE TABLE `product_siswa` (
 --
 
 INSERT INTO `product_siswa` (`id_product`, `id_admin`, `id_kategori`, `product_name`, `description`, `stock`, `price`, `price_final`, `weight`, `sell`, `expired`, `discount`, `status_registrasi`, `updated_at`, `created_at`) VALUES
-(1, 8, 1, 'Produk 1 ', 'Dbkajwbd kawjdbawj k', 400, 20000, 19000, 300, 10, '2026-11-26', 5, 1, '2025-02-12 21:20:05', '2025-02-12 00:40:11'),
-(2, 5, 1, 'Produk 3', 'adawdojpawo', 200, 30000, 30000, 1000, 5, '2028-07-01', 0, 0, '2025-02-12 15:58:54', '2025-02-12 00:41:21'),
-(5, 5, 2, 'Produk 4', 'eeww', 500, 40000, 20000, 700, 7, '2027-09-13', 50, 1, '2025-02-12 16:22:53', '2025-02-12 14:48:39'),
-(6, 5, 1, 'Digital Course', 'Produk Digital kelas online', 1000, 12000, 11520, 90, NULL, '2025-02-28', 4, 1, '2025-02-19 21:37:33', '2025-02-19 21:37:33');
+(1, 8, 1, 'Produk 1 ', 'ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam\n                                justo sed vero dolor duo.', 380, 20000, 19000, 300, 30, '2026-11-26', 5, 1, '2025-02-28 05:00:30', '2025-02-12 00:40:11'),
+(2, 5, 1, 'Produk 3', 'ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam\n                                justo sed vero dolor duo.', 197, 30000, 30000, 1000, 8, '2028-07-01', 0, 0, '2025-02-28 05:00:33', '2025-02-12 00:41:21'),
+(5, 5, 2, 'Produk 4', 'ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam\n                                justo sed vero dolor duo.', 500, 40000, 20000, 700, 7, '2027-09-13', 50, 1, '2025-02-28 05:00:38', '2025-02-12 14:48:39'),
+(6, 5, 1, 'Digital Course', 'ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam\n                                justo sed vero dolor duo.', 994, 12000, 11520, 90, 6, '2025-02-28', 4, 1, '2025-02-28 05:00:41', '2025-02-19 21:37:33');
 
 -- --------------------------------------------------------
 
@@ -337,11 +363,21 @@ CREATE TABLE `transaksi_siswa` (
   `id_admin` int(11) DEFAULT NULL,
   `id_customer` int(11) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
+  `price_at_transaction` double NOT NULL,
   `total_price` double DEFAULT NULL,
   `status_order` enum('belum dibayar','proses','selesai') DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `transaksi_siswa`
+--
+
+INSERT INTO `transaksi_siswa` (`id_transaksi`, `id_product`, `id_admin`, `id_customer`, `quantity`, `price_at_transaction`, `total_price`, `status_order`, `updated_at`, `created_at`) VALUES
+(1, 1, 8, 3, 2, 19000, 38000, 'selesai', '2025-02-25 01:36:47', '2025-02-24 01:46:50'),
+(5, 6, 5, 6, 3, 11520, 34560, 'proses', '2025-02-25 01:55:58', '2025-02-25 01:28:16'),
+(7, 1, 8, 6, 2, 19000, 38000, 'proses', '2025-02-25 01:55:12', '2025-02-25 01:55:12');
 
 -- --------------------------------------------------------
 
@@ -428,6 +464,12 @@ ALTER TABLE `kategori_product`
 --
 ALTER TABLE `kelas`
   ADD PRIMARY KEY (`id_kelas`);
+
+--
+-- Indexes for table `keuangan`
+--
+ALTER TABLE `keuangan`
+  ADD PRIMARY KEY (`id_keuangan`);
 
 --
 -- Indexes for table `level_user`
@@ -542,6 +584,12 @@ ALTER TABLE `kelas`
   MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `keuangan`
+--
+ALTER TABLE `keuangan`
+  MODIFY `id_keuangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `level_user`
 --
 ALTER TABLE `level_user`
@@ -564,6 +612,12 @@ ALTER TABLE `product_siswa`
 --
 ALTER TABLE `siswa`
   MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `transaksi_siswa`
+--
+ALTER TABLE `transaksi_siswa`
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `url_image_product_siswa`

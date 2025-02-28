@@ -122,7 +122,7 @@
                                     <small class="flex-fill text-center border-end py-2">
                                         <i class="fa fa-box text-primary me-2"></i><?= $product['stock'] ?> Stok</small>
                                     <small class="flex-fill text-center border-end py-2">
-                                        <i class="fa fa-save text-primary me-2"></i><?= $product['sell'] ?> Terjual</small>
+                                        <i class="fa fa-solid fa-tags text-primary me-2"></i><?= $product['sell'] ?> Terjual</small>
                                     <small class="flex-fill text-center py-2 btn btn-primary rounded-0">
                                         <i class="fa fa-solid fa-cart-plus me-2"></i>
                                         Keranjang</small>
