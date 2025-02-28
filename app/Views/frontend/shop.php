@@ -83,105 +83,53 @@
         <div class="tab-content">
             <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href="/detail"><img class="img-fluid"
-                                        src="https://img.freepik.com/free-psd/coffee-shop-drink-menu-promotion-social-media-instagram-post-banner-template-design_84443-975.jpg?uid=R114346057&ga=GA1.1.2030267003.1739926437&semt=ais_hybrid"
-                                        alt=""></a>
-                                <button
-                                    class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                    Beli</button>
-                                <div
-                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                    Kopi</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">Rp 15.000</h5>
-                                <a class="d-block h5 mb-2" href="">Kopi Klotok Mak Limah Biadab</a>
-                                <p><i class="fa fa-star text-primary me-2"></i><i
-                                        class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star-half text-primary me-2"></i>
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i
-                                        class="fa fa-box text-primary me-2"></i>18 Stok</small>
-                                <small class="flex-fill text-center border-end py-2"><i
-                                        class="fa fa-save text-primary me-2"></i>45 Terjual</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-star text-primary me-2"></i>18
-                                    Ulasan</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href="/detail"><img class="img-fluid"
-                                        src="https://img.freepik.com/free-psd/coffee-shop-drink-menu-promotion-social-media-instagram-post-banner-template-design_84443-975.jpg?uid=R114346057&ga=GA1.1.2030267003.1739926437&semt=ais_hybrid"
-                                        alt=""></a>
-                                <button
-                                    class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                    Beli</button>
-                                <div
-                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                    Kopi</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">Rp 15.000</h5>
-                                <a class="d-block h5 mb-2" href="">Kopi Klotok Mak Limah Biadab</a>
-                                <p><i class="fa fa-star text-primary me-2"></i><i
-                                        class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star-half text-primary me-2"></i>
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i
-                                        class="fa fa-box text-primary me-2"></i>18 Stok</small>
-                                <small class="flex-fill text-center border-end py-2"><i
-                                        class="fa fa-save text-primary me-2"></i>45 Terjual</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-star text-primary me-2"></i>18
-                                    Ulasan</small>
+                    
+                    <?php foreach ($products as $product): ?>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="property-item rounded overflow-hidden">
+                                <div class="position-relative overflow-hidden">
+                                    <?php if (!empty($product['images'])): ?>
+                                        <!-- Tampilkan gambar pertama sebagai gambar utama -->
+                                        <a href="detail">
+                                            <img class="img-fluid" src="<?= base_url($product['images'][0]['url']) ?>" alt="<?= $product['product_name'] ?>">
+                                        </a>
+                                    <?php else: ?>
+                                        <!-- Jika tidak ada gambar, tampilkan gambar default -->
+                                        <a href="detail">
+                                            <img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Gambar Default">
+                                        </a>
+                                    <?php endif; ?>
+                                    <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 pt-1 px-3 ms-3">
+                                        <?= $product['nama_kategori'] ?> <!-- Kategori diambil dari tabel kategori -->
+                                    </div>
+                                </div>
+                                <div class="p-4 pb-0 position-relative">
+                                    <div class="price d-flex nowrap mb-1">
+                                        <h5 class="text-primary me-2">Rp <?= number_format($product['price_final'], 0) ?></h5>
+                                        <?php if ($product['discount'] > 0): ?>
+                                            <!-- Tampilkan harga asli dan diskon jika diskon > 0 -->
+                                            <p><span class="text-decoration-line-through me-2">Rp <?= number_format($product['price'], 0) ?></span></p>
+                                            <p class="bg-warning px-1 py-0 fs-6 fw-bold textdecoration-italic rounded-1 me-2"><?= $product['discount'] ?>%</p>
+                                        <?php endif; ?>
+                                    </div>
+                                    <a class="d-block h5 mb-2" href=""><?= $product['product_name'] ?></a>
+                                    <p><?= substr($product['description'], 0, 100) ?>...</p> <!-- Deskripsi singkat -->
+                                    <small class="flex-fill text-center border-end pt-2">
+                                        Produsen : <?= $product['group_name'] ?> <!-- Group name dari tabel admin -->
+                                    </small>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-box text-primary me-2"></i><?= $product['stock'] ?> Stok</small>
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-save text-primary me-2"></i><?= $product['sell'] ?> Terjual</small>
+                                    <small class="flex-fill text-center py-2 btn btn-primary rounded-0">
+                                        <i class="fa fa-solid fa-cart-plus me-2"></i>
+                                        Keranjang</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                                <a href="/detail"><img class="img-fluid"
-                                        src="https://img.freepik.com/free-psd/coffee-shop-drink-menu-promotion-social-media-instagram-post-banner-template-design_84443-975.jpg?uid=R114346057&ga=GA1.1.2030267003.1739926437&semt=ais_hybrid"
-                                        alt=""></a>
-                                <button
-                                    class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                    Beli</button>
-                                <div
-                                    class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                    Kopi</div>
-                            </div>
-                            <div class="p-4 pb-0">
-                                <h5 class="text-primary mb-3">Rp 15.000</h5>
-                                <a class="d-block h5 mb-2" href="">Kopi Klotok Mak Limah Biadab</a>
-                                <p><i class="fa fa-star text-primary me-2"></i><i
-                                        class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star text-primary me-2"></i>
-                                    <i class="fa fa-star-half text-primary me-2"></i>
-                                </p>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i
-                                        class="fa fa-box text-primary me-2"></i>18 Stok</small>
-                                <small class="flex-fill text-center border-end py-2"><i
-                                        class="fa fa-save text-primary me-2"></i>45 Terjual</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-star text-primary me-2"></i>18
-                                    Ulasan</small>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
 
                     <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                         <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>

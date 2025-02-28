@@ -1,0 +1,96 @@
+DEBUG - 2025-02-28 03:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-28 04:43:23 --> mysqli_sql_exception: Table 'lapak-siswa.kategori' doesn't exist in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `product...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Models\ProductSiswaModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\Home.php(51): App\Models\ProductSiswaModel->getProductsWithDetails()
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->shop()
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#13 {main}
+CRITICAL - 2025-02-28 04:43:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.kategori' doesn't exist
+[Method: GET, Route: shop]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `product_siswa`.*, `kategori`.`nama` as `nama_kategori`, `admin`.`full_name` as `nama_admin`, `admin`.`group_name`
+FROM `product_siswa`
+LEFT JOIN `kategori` ON `kategori`.`id_kategori` = `product_siswa`.`id_kategori`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `product_siswa`.`id_admin`', [], false)
+ 2 APPPATH\Models\ProductSiswaModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(51): App\Models\ProductSiswaModel->getProductsWithDetails()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->shop()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-28 04:43:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.kategori' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product_siswa`.*, `kategori`.`nama` as `nama_kategori`, `admin`.`full_name` as `nama_admin`, `admin`.`group_name`
+FROM `product_siswa`
+LEFT JOIN `kategori` ON `kategori`.`id_kategori` = `product_siswa`.`id_kategori`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `product_siswa`.`id_admin`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product_siswa`.*, `kategori`.`nama` as `nama_kategori`, `admin`.`full_name` as `nama_admin`, `admin`.`group_name`
+FROM `product_siswa`
+LEFT JOIN `kategori` ON `kategori`.`id_kategori` = `product_siswa`.`id_kategori`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `product_siswa`.`id_admin`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `product_siswa`.*, `kategori`.`nama` as `nama_kategori`, `admin`.`full_name` as `nama_admin`, `admin`.`group_name`
+FROM `product_siswa`
+LEFT JOIN `kategori` ON `kategori`.`id_kategori` = `product_siswa`.`id_kategori`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `product_siswa`.`id_admin`', [], false)
+ 4 APPPATH\Models\ProductSiswaModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(51): App\Models\ProductSiswaModel->getProductsWithDetails()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->shop()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-28 04:43:23 --> [Caused by] mysqli_sql_exception: Table 'lapak-siswa.kategori' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `product_siswa`.*, `kategori`.`nama` as `nama_kategori`, `admin`.`full_name` as `nama_admin`, `admin`.`group_name`
+FROM `product_siswa`
+LEFT JOIN `kategori` ON `kategori`.`id_kategori` = `product_siswa`.`id_kategori`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `product_siswa`.`id_admin`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product_siswa`.*, `kategori`.`nama` as `nama_kategori`, `admin`.`full_name` as `nama_admin`, `admin`.`group_name`
+FROM `product_siswa`
+LEFT JOIN `kategori` ON `kategori`.`id_kategori` = `product_siswa`.`id_kategori`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `product_siswa`.`id_admin`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product_siswa`.*, `kategori`.`nama` as `nama_kategori`, `admin`.`full_name` as `nama_admin`, `admin`.`group_name`
+FROM `product_siswa`
+LEFT JOIN `kategori` ON `kategori`.`id_kategori` = `product_siswa`.`id_kategori`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `product_siswa`.`id_admin`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `product_siswa`.*, `kategori`.`nama` as `nama_kategori`, `admin`.`full_name` as `nama_admin`, `admin`.`group_name`
+FROM `product_siswa`
+LEFT JOIN `kategori` ON `kategori`.`id_kategori` = `product_siswa`.`id_kategori`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `product_siswa`.`id_admin`', [], false)
+ 5 APPPATH\Models\ProductSiswaModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(51): App\Models\ProductSiswaModel->getProductsWithDetails()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->shop()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-28 04:54:32 --> ParseError: syntax error, unexpected token "endforeach"
+[Method: GET, Route: shop]
+in APPPATH\Views\frontend\shop.php on line 124.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/shop', [], true)
+ 3 APPPATH\Controllers\Home.php(68): view('frontend/shop', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->shop()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
