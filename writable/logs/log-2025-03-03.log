@@ -190,3 +190,53 @@ DEBUG - 2025-03-03 06:39:04 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-03-03 06:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-03-03 06:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-03-03 06:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-03 07:07:22 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-03-03 07:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 07:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-03 07:08:25 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+WARNING - 2025-03-03 07:08:25 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
