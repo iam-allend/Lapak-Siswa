@@ -47,17 +47,10 @@
     <!-- Helpers -->
     <script src="<?= base_url() ?>backend/assets/vendor/js/helpers.js"></script>
 
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-<<<<<<< HEAD
     <script src="<?= base_url()?>backend/assets/js/config.js"></script>
  
- 
-=======
     <script src="<?= base_url() ?>backend/assets/js/config.js"></script>
 
-
->>>>>>> b893c30efbc691ee89dca97e7a3df9706530ec8d
     <!-- <style>
       .menu-inner {
         scroll-behavior: smooth; 
@@ -92,12 +85,8 @@
           scrollbar-width: none !important;
       }
     </style> -->
-<<<<<<< HEAD
-  
-=======
 </head>
 <script src="<?= base_url() ?>backend/assets/js/config.js"></script>
->>>>>>> b893c30efbc691ee89dca97e7a3df9706530ec8d
 
 </head>
 
@@ -105,12 +94,6 @@
 
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
-<<<<<<< HEAD
-      <div class="layout-container">
         <!-- Menu -->
         <?= $this->include('flashalert')?>
 
-=======
-        
-            <!-- Menu -->
->>>>>>> b893c30efbc691ee89dca97e7a3df9706530ec8d
