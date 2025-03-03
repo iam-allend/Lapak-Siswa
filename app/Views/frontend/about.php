@@ -15,7 +15,7 @@
             </nav>
         </div>
         <div class="col-md-6 animated fadeIn">
-            <img class="img-fluid" src="<?= base_url('frontend/img/lapaksiswa.png') ?>" alt="">
+            <img class="img-fluid" src="<?= base_url('logo/logo-text-green.webp') ?>" alt="">
         </div>
     </div>
 </div>
