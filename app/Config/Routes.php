@@ -13,7 +13,7 @@ $routes->get('contactus', 'Home::contactus');
 $routes->get('profile', 'Home::profile');
 $routes->get('shop', 'Home::shop'); 
 $routes->get('detail', 'Home::detail'); 
-
+$routes->get('cart', 'Home::cart'); 
 
 $routes->get('register', 'Auth::register');
 $routes->post('auth/register', 'Auth::add_register');
@@ -28,6 +28,9 @@ $routes->get('auth/logout', 'Auth::logout'); // Proses logout
 
 
 $routes->get('dashboard', 'DashboardController::dashboard');
+$routes->get('profile-admin', 'MyProfileController::index');
+$routes->post('update-profile-admin', 'MyProfileController::update');
+
 
 // MANAGE SISWA
     $routes->get('manage-siswa/', 'ManageSiswaController::index');

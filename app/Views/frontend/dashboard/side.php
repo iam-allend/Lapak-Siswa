@@ -86,7 +86,7 @@
             </li>
 
             <div class="btn-box w-100 mt-4 mb-1">
-                <a href="/" target="_blank" class="btn mb-2 btn-danger btn-lg btn-block">
+                <a href="<?= base_url('auth/logout')?>" class="btn mb-2 btn-danger btn-lg btn-block">
                     <i class="fe fe-log-out t fe-12 mx-2"></i><span class="small">Logout</span>
                 </a>
             </div>
