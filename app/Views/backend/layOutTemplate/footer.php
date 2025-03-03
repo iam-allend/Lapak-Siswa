@@ -18,6 +18,7 @@
 
         <script src="<?= base_url()?>backend/assets/vendor/js/menu.js"></script>
         <!-- endbuild -->
+        <script src="<?= base_url('backend/assets/js/pages-account-settings-account.js')?>"></script>
 
         <!-- Vendors JS -->
         <script src="<?= base_url()?>backend/assets/vendor/libs/apex-charts/apexcharts.js"></script>

@@ -28,6 +28,9 @@ $routes->get('auth/logout', 'Auth::logout'); // Proses logout
 
 
 $routes->get('dashboard', 'DashboardController::dashboard');
+$routes->get('profile-admin', 'MyProfileController::index');
+$routes->post('update-profile-admin', 'MyProfileController::update');
+
 
 // MANAGE SISWA
     $routes->get('manage-siswa/', 'ManageSiswaController::index');

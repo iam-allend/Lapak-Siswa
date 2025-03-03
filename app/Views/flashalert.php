@@ -15,6 +15,14 @@
             confirmButtonText: 'Oke',
         });
     </script>
+<?php elseif (session()->getFlashdata('alert') === 'profile-admin'): ?>
+    <script>
+        Swal.fire({
+            title: 'Profile berhasil di Update!',
+            icon: 'success',
+            confirmButtonText: 'Oke',
+        });
+    </script>
 <?php elseif (session()->getFlashdata('alert') === 'validate_usn_login'): ?>
     <script>
         Swal.fire({

@@ -23,7 +23,7 @@ class AdminModel extends Model
 
     public function getUser($usnEmail, $type = 'username')
     {
-        return $this->select('id_admin, id_level, full_name, username, email, password, gender, url_image, status_registrasi')
+        return $this->select('id_admin, id_level, full_name, username, email, password, gender, group_name, url_image, status_registrasi')
                     ->where($type, $usnEmail)
                     ->first();
     }
