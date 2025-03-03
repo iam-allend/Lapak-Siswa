@@ -76,7 +76,7 @@
                                 <div class="icon me-3" style="width: 45px; height: 45px;">
                                     <i class="fa fa-map-marker-alt text-primary"></i>
                                 </div>
-                                <span>123 Street, New York, USA</span>
+                                <span>Semarang, Indonesia</span>
                             </div>
                         </div>
                     </div>
@@ -106,9 +106,10 @@
             </div>
             <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <iframe class="position-relative rounded w-100 h-100"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3630783180824!2d110.39943937499694!3d-6.966424193034101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f4c8081bffaf%3A0xbb522f8061199b3!2sSMK%20Negeri%2010%20Semarang!5e0!3m2!1sid!2sid!4v1740027626334!5m2!1sid!2sid"
                     frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0"></iframe>
+                   
             </div>
             <div class="col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.5s">
