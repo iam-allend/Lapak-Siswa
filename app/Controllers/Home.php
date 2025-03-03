@@ -51,11 +51,7 @@ class Home extends BaseController
         $data = [
             'tittle' => 'Dashboard Profile',
         ];
-<<<<<<< HEAD
         return view('frontend/dashboard/profile', $data);
-=======
-        return view('frontend/dashboard/profilenew', $data);
->>>>>>> 928568ae9e74d4a682550a02b79558a01813fef6
     }
     public function contactus()
     {

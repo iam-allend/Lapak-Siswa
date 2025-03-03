@@ -78,6 +78,8 @@
                         <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
                     </div>
 
+                    <?php if(session('id_level') == 1){?>
+
                     <div class="dropdown">
                         <img src="<?= base_url('backend/img_siswa/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40">
                         <ul class="dropdown-menu dropdown-menu-end">
@@ -132,14 +134,9 @@
                         </ul>
 
                     </div>
-
-                    <!-- <a href="<?= base_url() ?>login" class="btn btn-primary px-3 d-none d-lg-flex">Login</a> -->
-                    <!-- <div class="align-items-center text-center">
-                        <a class="nav-link" href="" >
-                            <img src="<?= base_url('img_user/' . session('url_image'))?>" alt width="40" class="rounded-circle" />
-                        </a>
-                        <span style="font-size:small">gani maulana</span>
-                    </div> -->
+                    <?php }else{?>
+                    <a href="<?= base_url() ?>login" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
+                    <?php }?>
                 </div>
 
             </nav>
