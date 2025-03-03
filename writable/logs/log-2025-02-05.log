@@ -1,0 +1,987 @@
+DEBUG - 2025-02-05 08:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 08:24:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'lapak-siswa', 3306, '', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Models\AdminModel.php(26): CodeIgniter\BaseModel->first()
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\Auth.php(71): App\Models\AdminModel->getUser('superadmin')
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Models\AdminModel.php(26): CodeIgniter\BaseModel->first()
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\Auth.php(71): App\Models\AdminModel->getUser('superadmin')
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#14 {main}
+CRITICAL - 2025-02-05 08:24:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: auth/login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admin`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AdminModel.php(26): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(71): App\Models\AdminModel->getUser('superadmin')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 08:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 09:23:41 --> mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `industr...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `industr...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `industr...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `industr...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Models\IndustriModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageIndPerController.php(24): App\Models\IndustriModel->getIndustriWithAdmin()
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#13 {main}
+CRITICAL - 2025-02-05 09:23:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+[Method: GET, Route: manage-indper]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `industri`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri`.`id_admin`', [], false)
+ 2 APPPATH\Models\IndustriModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ManageIndPerController.php(24): App\Models\IndustriModel->getIndustriWithAdmin()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:23:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `industri`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri`.`id_admin`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `industri`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri`.`id_admin`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `industri`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri`.`id_admin`', [], false)
+ 4 APPPATH\Models\IndustriModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\ManageIndPerController.php(24): App\Models\IndustriModel->getIndustriWithAdmin()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:23:41 --> [Caused by] mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `industri`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri`.`id_admin`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `industri`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri`.`id_admin`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `industri`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri`.`id_admin`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `industri`.*, `admin`.`full_name` as `nama_admin`
+FROM `industri`
+LEFT JOIN `admin` ON `admin`.`id_admin` = `industri`.`id_admin`', [], false)
+ 5 APPPATH\Models\IndustriModel.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\ManageIndPerController.php(24): App\Models\IndustriModel->getIndustriWithAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 09:30:33 --> mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.userna...', Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.userna...', Array, NULL, 'username')
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', Array, Array, 'username')
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#17 {main}
+CRITICAL - 2025-02-05 09:30:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+[Method: POST, Route: manage-indper/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:30:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:30:33 --> [Caused by] mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 8 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+ERROR - 2025-02-05 09:31:05 --> mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.userna...', Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.userna...', Array, NULL, 'username')
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', Array, Array, 'username')
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#17 {main}
+CRITICAL - 2025-02-05 09:31:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+[Method: POST, Route: manage-indper/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:31:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:31:05 --> [Caused by] mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 8 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 09:31:14 --> mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.userna...', Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.userna...', Array, NULL, 'username')
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', Array, Array, 'username')
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#17 {main}
+CRITICAL - 2025-02-05 09:31:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+[Method: POST, Route: manage-indper/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:31:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:31:14 --> [Caused by] mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 8 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 09:32:01 --> mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.userna...', Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.userna...', Array, NULL, 'username')
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', Array, Array, 'username')
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#17 {main}
+CRITICAL - 2025-02-05 09:32:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+[Method: POST, Route: manage-indper/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 5 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:32:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 7 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:32:01 --> [Caused by] mysqli_sql_exception: Table 'lapak-siswa.industri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `industri`
+WHERE `username` = \'bulog\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `industri`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('bulog', 'industri.username', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('bulog', 'industri.username', [...], null, 'username')
+ 8 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('username', 'username', 'bulog', [...], [...], 'username')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\ManageIndPerController.php(50): CodeIgniter\Controller->validate([...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+ERROR - 2025-02-05 09:33:23 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`)) in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-05 09:33:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+[Method: POST, Route: manage-indper/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:33:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ncZ5otmafJedNk/SXH9.juQH7ifARSNA9DQ3ZqjJSYf2wa9vUvkpO\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748003_b7247d04bddfc7edf1d1.png\', \'1\', \'2025-02-05 09:33:23\', \'2025-02-05 09:33:23\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ncZ5otmafJedNk/SXH9.juQH7ifARSNA9DQ3ZqjJSYf2wa9vUvkpO\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748003_b7247d04bddfc7edf1d1.png\', \'1\', \'2025-02-05 09:33:23\', \'2025-02-05 09:33:23\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:33:23 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ncZ5otmafJedNk/SXH9.juQH7ifARSNA9DQ3ZqjJSYf2wa9vUvkpO\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748003_b7247d04bddfc7edf1d1.png\', \'1\', \'2025-02-05 09:33:23\', \'2025-02-05 09:33:23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ncZ5otmafJedNk/SXH9.juQH7ifARSNA9DQ3ZqjJSYf2wa9vUvkpO\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748003_b7247d04bddfc7edf1d1.png\', \'1\', \'2025-02-05 09:33:23\', \'2025-02-05 09:33:23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ncZ5otmafJedNk/SXH9.juQH7ifARSNA9DQ3ZqjJSYf2wa9vUvkpO\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748003_b7247d04bddfc7edf1d1.png\', \'1\', \'2025-02-05 09:33:23\', \'2025-02-05 09:33:23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+ERROR - 2025-02-05 09:34:15 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`)) in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-05 09:34:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+[Method: POST, Route: manage-indper/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:34:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ySkXugbhl2IU03luIDhtFeZZqO5YdxgDxbrMac2ShzuP.1TMPBiI.\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748055_c32332ff91ea8c80bb71.png\', \'1\', \'2025-02-05 09:34:15\', \'2025-02-05 09:34:15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ySkXugbhl2IU03luIDhtFeZZqO5YdxgDxbrMac2ShzuP.1TMPBiI.\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748055_c32332ff91ea8c80bb71.png\', \'1\', \'2025-02-05 09:34:15\', \'2025-02-05 09:34:15\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:34:15 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ySkXugbhl2IU03luIDhtFeZZqO5YdxgDxbrMac2ShzuP.1TMPBiI.\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748055_c32332ff91ea8c80bb71.png\', \'1\', \'2025-02-05 09:34:15\', \'2025-02-05 09:34:15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ySkXugbhl2IU03luIDhtFeZZqO5YdxgDxbrMac2ShzuP.1TMPBiI.\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748055_c32332ff91ea8c80bb71.png\', \'1\', \'2025-02-05 09:34:15\', \'2025-02-05 09:34:15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'5\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$ySkXugbhl2IU03luIDhtFeZZqO5YdxgDxbrMac2ShzuP.1TMPBiI.\', \'1111-11-11\', \'1112-11-11\', \'img_user/1738748055_c32332ff91ea8c80bb71.png\', \'1\', \'2025-02-05 09:34:15\', \'2025-02-05 09:34:15\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 09:35:55 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`)) in C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `in...', 0)
+#1 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `in...')
+#2 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `in...')
+#3 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `in...', Array, false)
+#4 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\app\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+#10 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+#11 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp 8.1.25\htdocs\SMKN-10-Semarang\SiKapTen\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp 8.1.25...')
+#16 {main}
+CRITICAL - 2025-02-05 09:35:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+[Method: POST, Route: manage-indper/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:35:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'1\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$Etexz3HDN1GbSUxjzecs9u8ObSQb3sxJtGVtNFT6veJOzb9tiriSy\', \'1111-11-11\', \'1111-11-11\', \'img_user/1738748155_5073e48b59040c84387a.png\', \'1\', \'2025-02-05 09:35:55\', \'2025-02-05 09:35:55\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'1\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$Etexz3HDN1GbSUxjzecs9u8ObSQb3sxJtGVtNFT6veJOzb9tiriSy\', \'1111-11-11\', \'1111-11-11\', \'img_user/1738748155_5073e48b59040c84387a.png\', \'1\', \'2025-02-05 09:35:55\', \'2025-02-05 09:35:55\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:35:55 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`lapak-siswa`.`industri_perusahaan`, CONSTRAINT `industri_perusahaan_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `super_admin` (`id_superadmin`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'1\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$Etexz3HDN1GbSUxjzecs9u8ObSQb3sxJtGVtNFT6veJOzb9tiriSy\', \'1111-11-11\', \'1111-11-11\', \'img_user/1738748155_5073e48b59040c84387a.png\', \'1\', \'2025-02-05 09:35:55\', \'2025-02-05 09:35:55\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'1\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$Etexz3HDN1GbSUxjzecs9u8ObSQb3sxJtGVtNFT6veJOzb9tiriSy\', \'1111-11-11\', \'1111-11-11\', \'img_user/1738748155_5073e48b59040c84387a.png\', \'1\', \'2025-02-05 09:35:55\', \'2025-02-05 09:35:55\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (\'1\', 2, \'Bulog 1\', \'Perusahaan\', \'bulog\', \'bulog@gmail.com\', \'$2y$10$Etexz3HDN1GbSUxjzecs9u8ObSQb3sxJtGVtNFT6veJOzb9tiriSy\', \'1111-11-11\', \'1111-11-11\', \'img_user/1738748155_5073e48b59040c84387a.png\', \'1\', \'2025-02-05 09:35:55\', \'2025-02-05 09:35:55\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `industri_perusahaan` (`id_admin`, `id_level`, `nama`, `tipe_indper`, `username`, `email`, `password`, `tgl_mulai_kerjasama`, `tgl_selesai_kerjasama`, `url_image`, `status_registrasi`, `created_at`, `updated_at`) VALUES (:id_admin:, :id_level:, :nama:, :tipe_indper:, :username:, :email:, :password:, :tgl_mulai_kerjasama:, :tgl_selesai_kerjasama:, :url_image:, :status_registrasi:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\ManageIndPerController.php(83): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 09:38:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/page/industri/manage-indper.php"
+[Method: GET, Route: manage-indper]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/page/industri/manage-indper.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/manage-indper', [], true)
+ 3 APPPATH\Controllers\ManageIndPerController.php(29): view('backend/page/industri/manage-indper', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 09:38:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/page/industri/manage-indper.php"
+[Method: GET, Route: manage-indper]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/page/industri/manage-indper.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/manage-indper', [], true)
+ 3 APPPATH\Controllers\ManageIndPerController.php(29): view('backend/page/industri/manage-indper', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:39:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/page/industri/manage-indper.php"
+[Method: GET, Route: manage-indper]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/page/industri/manage-indper.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/manage-indper', [], true)
+ 3 APPPATH\Controllers\ManageIndPerController.php(29): view('backend/page/industri/manage-indper', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:39:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/page/industri/manage-indper.php"
+[Method: GET, Route: manage-indper]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/page/industri/manage-indper.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/manage-indper', [], true)
+ 3 APPPATH\Controllers\ManageIndPerController.php(29): view('backend/page/industri/manage-indper', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/page/industri/manage-indper.php"
+[Method: GET, Route: manage-indper]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/page/industri/manage-indper.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/manage-indper', [], true)
+ 3 APPPATH\Controllers\ManageIndPerController.php(29): view('backend/page/industri/manage-indper', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+CRITICAL - 2025-02-05 09:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "backend/page/industri/manage-indper.php"
+[Method: GET, Route: manage-indper]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('backend/page/industri/manage-indper.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/manage-indper', [], true)
+ 3 APPPATH\Controllers\ManageIndPerController.php(29): view('backend/page/industri/manage-indper', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 09:52:53 --> ErrorException: Undefined array key "superadmin_name"
+[Method: GET, Route: manage-indper]
+in APPPATH\Views\backend\page\industri\manage-industri.php on line 51.
+ 1 APPPATH\Views\backend\page\industri\manage-industri.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "superadmin_name"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\manage-industri.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\manage-industri.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/manage-industri', [], true)
+ 5 APPPATH\Controllers\ManageIndPerController.php(29): view('backend/page/industri/manage-industri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 09:53:51 --> ErrorException: Undefined variable $siswa
+[Method: GET, Route: manage-indper/edit/0]
+in APPPATH\Views\backend\page\industri\edit-industri.php on line 21.
+ 1 APPPATH\Views\backend\page\industri\edit-industri.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $siswa', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/edit-industri', [], true)
+ 5 APPPATH\Controllers\ManageIndPerController.php(99): view('backend/page/industri/edit-industri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->edit('0')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 09:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 09:54:29 --> ErrorException: Undefined array key "superadmin_name"
+[Method: GET, Route: manage-indper/edit/0]
+in APPPATH\Views\backend\page\industri\edit-industri.php on line 52.
+ 1 APPPATH\Views\backend\page\industri\edit-industri.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "superadmin_name"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/edit-industri', [], true)
+ 5 APPPATH\Controllers\ManageIndPerController.php(99): view('backend/page/industri/edit-industri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->edit('0')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 09:54:59 --> ErrorException: Undefined array key "nama_admin"
+[Method: GET, Route: manage-indper/edit/0]
+in APPPATH\Views\backend\page\industri\edit-industri.php on line 52.
+ 1 APPPATH\Views\backend\page\industri\edit-industri.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_admin"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/edit-industri', [], true)
+ 5 APPPATH\Controllers\ManageIndPerController.php(99): view('backend/page/industri/edit-industri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->edit('0')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 09:55:00 --> ErrorException: Undefined array key "nama_admin"
+[Method: GET, Route: manage-indper/edit/0]
+in APPPATH\Views\backend\page\industri\edit-industri.php on line 52.
+ 1 APPPATH\Views\backend\page\industri\edit-industri.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_admin"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/edit-industri', [], true)
+ 5 APPPATH\Controllers\ManageIndPerController.php(99): view('backend/page/industri/edit-industri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->edit('0')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 09:55:08 --> ErrorException: Undefined array key "nama_admin"
+[Method: GET, Route: manage-indper/edit/0]
+in APPPATH\Views\backend\page\industri\edit-industri.php on line 52.
+ 1 APPPATH\Views\backend\page\industri\edit-industri.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_admin"', 'C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\app\\Views\\backend\\page\\industri\\edit-industri.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/industri/edit-industri', [], true)
+ 5 APPPATH\Controllers\ManageIndPerController.php(99): view('backend/page/industri/edit-industri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageIndPerController->edit('0')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageIndPerController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp 8.1.25\\htdocs\\SMKN-10-Semarang\\SiKapTen\\public\\index.php')
+DEBUG - 2025-02-05 09:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
