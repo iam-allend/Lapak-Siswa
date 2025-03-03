@@ -76,9 +76,70 @@
                             </div>
                         </div>
                         <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
+                    </div>
+
+                    <div class="dropdown">
+                        <img src="<?= base_url('backend/img_siswa/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40">
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                            <a class="dropdown-item" href="<?= base_url('profile')?>">
+                                <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="avatar avatar-online">
+                                    <img src="<?= base_url('backend/img_siswa/' . session('url_image'))?>" alt width="40" class="rounded-circle" />
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <span class="fw-semibold d-block"><?= session('fullname')?></span>
+                                    <small class="text-muted">Rp30.000</small>
+                                </div>
+                                </div>
+                            </a>
+                            </li>
+                            <li>
+                            <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="<?= base_url('profile')?>">
+                                <i class="bx bx-user me-2"></i>
+                                <span class="align-middle">My Profile</span>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bx bx-cog me-2"></i>
+                                <span class="align-middle">Settings</span>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="#">
+                                <span class="d-flex align-items-center align-middle">
+                                <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                                <span class="flex-grow-1 align-middle">Billing</span>
+                                <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                                </span>
+                            </a>
+                            </li>
+                            <li>
+                            <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="<?= base_url('auth/logout')?>">
+                                <i class="bx bx-power-off me-2"></i>
+                                <span class="align-middle">Log Out</span>
+                            </a>
+                            </li>
+                        </ul>
 
                     </div>
-                    <a href="<?= base_url() ?>login" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
+
+                    <!-- <a href="<?= base_url() ?>login" class="btn btn-primary px-3 d-none d-lg-flex">Login</a> -->
+                    <!-- <div class="align-items-center text-center">
+                        <a class="nav-link" href="" >
+                            <img src="<?= base_url('img_user/' . session('url_image'))?>" alt width="40" class="rounded-circle" />
+                        </a>
+                        <span style="font-size:small">gani maulana</span>
+                    </div> -->
                 </div>
 
             </nav>
