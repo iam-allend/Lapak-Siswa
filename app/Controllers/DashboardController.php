@@ -13,7 +13,7 @@ class DashboardController extends BaseController
             'tittle' => 'Lapak Siswa | Dashboard',
             // 'navigasi' => 'Edit Admin Data'
         ];
-        return view('backend/page/dashboard', $data);
+        return view('frontend/dashboard/profilenew', $data);
     }
 
 }
