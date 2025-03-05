@@ -1,6 +1,7 @@
 <?php include("LayOutTemplate/header.php"); ?>
+
 <!-- Header Start -->
-<div class="container-fluid header bg-white p-0">
+<!-- <div class="container-fluid header bg-white p-0">
     <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
         <div class="col-md-6 p-5 mt-lg-5">
             <h1 class="display-5 animated fadeIn mb-4">Produk</h1>
@@ -16,7 +17,7 @@
             <img class="img-fluid" src="<?= base_url('frontend/img/Ecommerce.png') ?>" alt="">
         </div>
     </div>
-</div>
+</div> -->
 <!-- Header End -->
 
 
@@ -132,9 +133,22 @@
                         </div>
                     <?php endforeach; ?>
 
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-primary py-3 px-5" href="<?= base_url() ?>shoptest">Lihat Selengkapnya</a>
-                    </div>
+                    <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&lt;</a>
+            </li>
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">&gt;</a>
+            </li>
+        </ul>
+    </nav>
                 </div>
             </div>
 
@@ -145,7 +159,7 @@
 
 
 <!-- Call to Action Start -->
-<div class="container-xxl py-5">
+<!-- <div class="container-xxl py-5">
     <div class="container">
         <div class="bg-light rounded p-3">
             <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
@@ -168,7 +182,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Call to Action End -->
 
 

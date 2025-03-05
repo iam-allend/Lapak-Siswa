@@ -513,3 +513,241 @@ DEBUG - 2025-03-03 07:06:49 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-03-03 07:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-03-03 07:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 >>>>>>> bd59ada878d91a78010c2076efac71d830785214
+DEBUG - 2025-03-03 21:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-03 21:21:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "frontend/dashboard/profilnew
+        .php"
+[Method: GET, Route: dashboard/]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('frontend/dashboard/profilnew
+        .php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('frontend/dashboard/profilnew
+        ', [], true)
+ 3 APPPATH\Controllers\DashboardController.php(16): view('frontend/dashboard/profilnew
+        ', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-03-03 21:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-03 21:46:18 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+WARNING - 2025-03-03 21:46:18 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-03-03 21:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-03 21:48:25 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+WARNING - 2025-03-03 21:48:25 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-03-03 21:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-03 21:49:15 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+WARNING - 2025-03-03 21:49:15 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-03-03 21:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-03 21:49:52 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+WARNING - 2025-03-03 21:49:52 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-03-03 21:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-03 21:50:18 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+WARNING - 2025-03-03 21:50:18 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-03-03 21:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-03 21:52:07 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+WARNING - 2025-03-03 21:52:07 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php on line 92.
+ 1 APPPATH\Views\backend\page\product-siswa\manage-product-siswa.php(92): number_format(null)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\app\\Views\\backend\\page\\product-siswa\\manage-product-siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/page/product-siswa/manage-product-siswa', [], true)
+ 5 APPPATH\Controllers\ManageProductSiswaController.php(47): view('backend/page/product-siswa/manage-product-siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ManageProductSiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageProductSiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
+DEBUG - 2025-03-03 21:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 21:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 22:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 22:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 22:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 22:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 22:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 22:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 22:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-03 23:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
