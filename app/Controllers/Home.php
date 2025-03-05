@@ -103,7 +103,7 @@ class Home extends BaseController
             'tittle' => 'Shop',
             'navigasi' => 'Produk Siswa'
         ];
-        return view('frontend/shop', $data);
+        return view('frontend/shoptest', $data);
     }
     public function detail()
     {
