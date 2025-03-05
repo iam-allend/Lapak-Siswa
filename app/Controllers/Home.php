@@ -46,10 +46,21 @@ class Home extends BaseController
         ];
         return view('frontend/about', $data);
     }
+    public function dashboard()
+    {
+        $data = [
+            'activePage' => 'Dashboard',
+            'tittle' => 'Lapak Siswa | Dashboard',
+            'navigasi' => 'Dashboard'
+        ];
+        return view('frontend/dashboard/dashboard', $data);
+    }
     public function profile()
     {
         $data = [
-            'tittle' => 'Dashboard Profile',
+            'activePage' => 'Profile',
+            'tittle' => 'Lapak Siswa | Profile',
+            'navigasi' => 'Profile'
         ];
         return view('frontend/dashboard/profile', $data);
     }
@@ -92,5 +103,24 @@ class Home extends BaseController
             'navigasi' => 'Keranjang'
         ];
         return view('frontend/dashboard/cart', $data);
+    }
+
+
+    public function shop1()
+    {
+        $products = $this->productModel->getProductsWithDetails();
+
+        // Ambil gambar untuk setiap produk
+        foreach ($products as &$product) {
+            $product['images'] = $this->urlImageProductSiswaModel->getImagesByProductId($product['id_product']);
+        }
+        
+        $data = [
+            'products' => $products,
+            'activePage' => 'Produk Siswa',
+            'tittle' => 'Shop',
+            'navigasi' => 'Produk Siswa'
+        ];
+        return view('frontend/shop', $data);
     }
 }
