@@ -88,13 +88,7 @@
                             <small class="w-fit d-flex nowrap flex-fill text-start p-0">
                             <i class="me-2 bi bi-tags"></i>30 <span class="ms-1 d-none d-md-block"> terjual</span></small>
                           </div>
-
-
-                        </div>
-
-
-                        <div class="card-footer pb-1 d-none d-lg-block">
-                          <p class="card-text"><small class="text-muted">Produsen : DW DWD</small></p>
+                          
                         </div>
                       </div>
                     </div>
@@ -108,8 +102,8 @@
             </div>
 
             <div class="col-12 col-lg-5 position-relative py-0">
-              <div class="main-checkout position-relative text-center text-md-start bg-white py-3">
-                <div class="checkout rounded-3 border p-2 p-md-4 py-1">
+              <div class="main-checkout position-relative text-center text-lg-start bg-white">
+                <div class="checkout rounded-3 border p-2 p-md-4 py-2 my-3">
                   <span class="fs-3 fw-bold">Pesanan Kamu</span> 
                   <p class="fs-5 text-primary">Total : Rp. 80.000, 00</p>
                   <hr>  

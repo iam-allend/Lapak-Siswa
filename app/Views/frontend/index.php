@@ -180,7 +180,7 @@
                 <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
                 <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
                 <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
-                <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="<?= base_url() ?>about">Read More</a>
             </div>
         </div>
     </div>
@@ -194,7 +194,7 @@
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                    <h1 class="mb-3">Property Listing</h1>
+                    <h1 class="mb-3">Produk Tersedia</h1>
                     <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
                         eirmod sit diam justo sed rebum.</p>
                 </div>
