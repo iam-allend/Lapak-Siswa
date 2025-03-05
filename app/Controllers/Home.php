@@ -89,6 +89,6 @@ class Home extends BaseController
         $data = [
             'tittle' => 'Keranjang',
         ];
-        return view('frontend/cart', $data);
+        return view('frontend/dashboard/cart', $data);
     }
 }

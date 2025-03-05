@@ -1,6 +1,6 @@
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-        <div class="app-brand demo <?= (isset($activePage) && $activePage == 'Dashboard') ? 'active' : '' ?>">
-            <a href="<?= base_url('dashboard') ?>" class="app-brand-link">
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+            <a href="<?= base_url('home') ?>" class="app-brand-link">
               <span class="app-brand-logo demo mt-3">
                 <img width="130" src="<?= base_url('logo/logo-text-green.webp') ?>" alt="">
               </span>
@@ -26,120 +26,12 @@
                   <div data-i18n="Analytics">Home</div>
                 </a>
             </li>
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Dashboard') ? 'active' : '' ?>">
-                <a href="<?= base_url('dashboard') ?>" class="menu-link">
-                    <i class='menu-icon tf-icons bx bx-tachometer'></i>
-                    <div data-i18n="Analytics">Dashboard</div>
+
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Keranjang') ? 'active' : '' ?>">
+                <a href="<?= base_url('keranjang') ?>" class="menu-link">
+                    <i class='menu-icon tf-icons bx bx-cart-alt'></i>
+                    <div data-i18n="Analytics">Keranjang</div>
                 </a>
-            </li>
-            
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">DATA TRANSAKSI</span>
-            </li>            
-            
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product Siswa') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-order-product-siswa" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-git-compare' ></i>
-                <div>Order Product Siswa</div>
-              </a>
-            </li>
-            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
-              <a disabled href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-git-compare' ></i>
-                <div>Order Product IndPer</div>
-              </a>
-            </li>
-            
-            
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">DATA USER</span>
-            </li>            
-            
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Admin') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-admin" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-badge' ></i>
-                <div>Manage Admin</div>
-              </a>
-            </li>
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Siswa') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-siswa" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div>Manage Siswa</div>
-              </a>
-            </li>
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage IndPer') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-indper" class="menu-link">
-                  <i class='menu-icon tf-icons bx bx-user-circle'></i>
-                  <div>Manage IndPer</div>
-              </a>
-            </li>
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Customer') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-customer" class="menu-link">
-                  <i class='menu-icon tf-icons bx bx-user'></i>
-                  <div>Manage Customer</div>
-              </a>
-            </li>
-            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Keranjang Customer') ? 'active' : '' ?>">
-              <a disabled href="<?= base_url() ?>manage-keranjang-customer" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-cart-alt' ></i>
-                  <div>Keranjang Customer</div>
-              </a>
-            </li>
-
-            <!-- Menu lainnya -->
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">DATA PRODUCT</span>
-            </li>
-
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Siswa') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-product-siswa" class="menu-link">
-                <i class='menu-icon tf-icons bx bx bx-package'></i>
-                <div>Product Siswa</div>
-              </a>
-            </li>
-
-            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Product IndPer') ? 'active' : '' ?>">
-              <a disabled href="<?= base_url() ?>manage-product-indper" class="menu-link">
-                <i class='menu-icon tf-icons bx bx bx-package'></i>
-                <div>Product IndPer</div>
-              </a>
-            </li>
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">KELENGKAPAN PRODUK</span>
-            </li>
-            
-            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Kelompok') ? 'active' : '' ?>">
-              <a disabled href="<?= base_url() ?>manage-group" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-account'></i>
-                <div>Manage Kelompok</div>
-              </a>
-            </li>            
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Kelas') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-kelas" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-layer'></i>
-                <div>Manage Kelas</div>
-              </a>
-            </li>
-
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Kategori Product') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-kategori-product" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-category'></i>
-                <div>Kategori Product</div>
-              </a>
-            </li>
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">DATA SYSTEM</span>
-            </li>
-            
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Pajak') ? 'active' : '' ?>">
-              <a href="<?= base_url() ?>manage-pajak" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-shape-square' ></i>
-                <div>Pajak Sistem</div>
-              </a>
             </li>
 
           </ul>
