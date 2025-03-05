@@ -27,6 +27,13 @@
                 </a>
             </li>
 
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Profile') ? 'active' : '' ?>">
+                <a href="<?= base_url('profile') ?>" class="menu-link">
+                    <i class='menu-icon tf-icons bx bx-user'></i>
+                    <div data-i18n="Analytics">Profile</div>
+                </a>
+            </li>
+
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Keranjang') ? 'active' : '' ?>">
                 <a href="<?= base_url('keranjang') ?>" class="menu-link">
                     <i class='menu-icon tf-icons bx bx-cart-alt'></i>
