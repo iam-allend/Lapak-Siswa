@@ -88,15 +88,13 @@
                             <small class="w-fit d-flex nowrap flex-fill text-start p-0">
                             <i class="me-2 bi bi-tags"></i>30 <span class="ms-1 d-none d-md-block"> terjual</span></small>
                           </div>
-                          
+
                         </div>
                       </div>
                     </div>
 
                   </div>
                 </div>
-                
-
 
               </div>
             </div>
@@ -112,7 +110,6 @@
               </div>
             </div>
             
-
           </div>
           <!--/ Horizontal -->
 
