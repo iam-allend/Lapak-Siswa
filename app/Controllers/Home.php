@@ -88,6 +88,23 @@ class Home extends BaseController
         ];
         return view('frontend/shop', $data);
     }
+    public function shoptest()
+    {
+        $products = $this->productModel->getProductsWithDetails();
+
+        // Ambil gambar untuk setiap produk
+        foreach ($products as &$product) {
+            $product['images'] = $this->urlImageProductSiswaModel->getImagesByProductId($product['id_product']);
+        }
+        
+        $data = [
+            'products' => $products,
+            'activePage' => 'Produk Siswa',
+            'tittle' => 'Shop',
+            'navigasi' => 'Produk Siswa'
+        ];
+        return view('frontend/shop', $data);
+    }
     public function detail()
     {
         $data = [
