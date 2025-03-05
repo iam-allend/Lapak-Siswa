@@ -13,7 +13,7 @@ $routes->get('contactus', 'Home::contactus');
 $routes->get('profile', 'Home::profile');
 $routes->get('shop', 'Home::shop'); 
 $routes->get('detail', 'Home::detail'); 
-$routes->get('cart', 'Home::cart'); 
+$routes->get('keranjang', 'Home::cart'); 
 
 $routes->get('register', 'Auth::register');
 $routes->post('auth/register', 'Auth::add_register');

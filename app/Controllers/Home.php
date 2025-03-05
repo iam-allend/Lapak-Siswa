@@ -87,7 +87,9 @@ class Home extends BaseController
     public function cart()
     {
         $data = [
-            'tittle' => 'Keranjang',
+            'activePage' => 'Keranjang',
+            'tittle' => 'Lapak Siswa | Keranjang',
+            'navigasi' => 'Keranjang'
         ];
         return view('frontend/dashboard/cart', $data);
     }
