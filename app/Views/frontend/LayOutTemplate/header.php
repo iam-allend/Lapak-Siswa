@@ -50,10 +50,7 @@
 
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
-
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4"  id="navbar">
-
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
                 <a href="<?= base_url() ?>logo\logo-green.webp"
                     class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
@@ -143,7 +140,6 @@
                 </div>
 
             </nav>
-
             <nav class="navbar navbar-bottom navbar-light">
                 <div class="navbar-nav w-100 d-flex flex-row">
                     <a href="<?= base_url() ?>" class="nav-item nav-link">
@@ -169,11 +165,6 @@
                 </div>
             </nav>
             <script src="<?= base_url() ?>frontend/js/hd.js"></script>
-        </div>
-
-        <!-- Navbar End -->
-         
-
         </div>
 
         <!-- Navbar End -->
