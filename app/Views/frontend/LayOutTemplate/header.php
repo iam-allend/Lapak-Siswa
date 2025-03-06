@@ -50,6 +50,9 @@
 
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
+
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4"  id="navbar">
+
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
                 <a href="<?= base_url() ?>logo\logo-green.webp"
                     class="navbar-brand d-flex align-items-center text-center">
@@ -140,6 +143,38 @@
                 </div>
 
             </nav>
+
+            <nav class="navbar navbar-bottom navbar-light">
+                <div class="navbar-nav w-100 d-flex flex-row">
+                    <a href="<?= base_url() ?>" class="nav-item nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="<?= base_url() ?>kategori" class="nav-item nav-link">
+                        <i class="fas fa-list"></i>
+                        <span>Kategori</span>
+                    </a>
+                    <a href="<?= base_url() ?>tas" class="nav-item nav-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Tas</span>
+                    </a>
+                    <a href="<?= base_url() ?>wishlist" class="nav-item nav-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                    </a>
+                    <a href="<?= base_url() ?>akun" class="nav-item nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>Akun</span>
+                    </a>
+                </div>
+            </nav>
+            <script src="<?= base_url() ?>frontend/js/hd.js"></script>
         </div>
 
         <!-- Navbar End -->
+         
+
+        </div>
+
+        <!-- Navbar End -->
+
