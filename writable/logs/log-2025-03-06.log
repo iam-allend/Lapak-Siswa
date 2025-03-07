@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ERROR - 2025-03-06 06:43:07 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\SMKN-10-Semarang\Lapak-Siswa\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
 Stack trace:
 #0 C:\xampp\htdocs\SMKN-10-Semarang\Lapak-Siswa\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'lapak-siswa', 3306, '', 0)
@@ -157,3 +158,12 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\SMKN-10-Semarang\\Lapak-Siswa\\public\\index.php')
 DEBUG - 2025-03-06 07:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-03-06 08:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-06 08:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-06 09:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-06 09:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-06 11:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-06 11:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-06 11:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 0b9b077d2090b339bca64d30a3bdebcaed3ad7ef
