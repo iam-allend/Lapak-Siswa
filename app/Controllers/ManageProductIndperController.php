@@ -120,7 +120,8 @@ class ManageProductIndperController extends Controller
             }
         }
 
-        return redirect()->to('/manage-product-indper')->with('success', 'Produk berhasil ditambahkan');
+        $productName = $this->request->getPost('product_name') ?: $productData['product_name'];
+        return redirect()->to('/manage-product-indper')->with('primary', "Produk '{$productName}' berhasil ditambahkan");
     }
 
     // Menampilkan form untuk mengedit produk
@@ -199,12 +200,23 @@ class ManageProductIndperController extends Controller
             }
         }
 
-        return redirect()->to('/manage-product-indper')->with('success', 'Produk berhasil diperbarui');
+        $productName = $this->request->getPost('product_name') ?: $productData['product_name'];
+        return redirect()->to('/manage-product-indper')->with('primary', "Produk '{$productName} berhasil diperbarui'");
     }
 
     // Menghapus produk
     public function delete($id)
     {
+        // Ambil data produk sebelum dihapus
+        $product = $this->productModel->find($id);
+
+        // Jika produk tidak ditemukan
+        if (!$product) {
+            return redirect()->to('/manage-product-indper')->with('error', 'Produk tidak ditemukan');
+        }
+
+        $productName = $product['product_name']; // Simpan nama produk
+
         // Hapus gambar terkait
         $images = $this->urlImageProductModel->where('id_product', $id)->findAll();
         foreach ($images as $image) {
@@ -218,7 +230,8 @@ class ManageProductIndperController extends Controller
         // Hapus data produk
         $this->productModel->delete($id);
 
-        return redirect()->to('/manage-product-indper')->with('success', 'Produk berhasil dihapus');
+        // Tampilkan pesan sukses dengan nama produk
+        return redirect()->to('/manage-product-indper')->with('primary', "Produk '{$productName}' berhasil dihapus");
     }
 
     // Menghapus gambar produk
@@ -229,6 +242,6 @@ class ManageProductIndperController extends Controller
             unlink(FCPATH . $image['url']);
         }
         $this->urlImageProductModel->delete($imageId);
-        return redirect()->back()->with('success', 'Gambar berhasil dihapus');
+        return redirect()->back()->with('primary', 'Gambar berhasil dihapus');
     }
 }

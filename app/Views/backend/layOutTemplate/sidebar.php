@@ -100,7 +100,7 @@
               </a>
             </li>
 
-            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Product IndPer') ? 'active' : '' ?>">
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Industri/Perusahaan') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
                 <div>Product IndPer</div>

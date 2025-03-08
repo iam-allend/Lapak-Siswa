@@ -10,9 +10,9 @@
             </a>
         </div>
 
-        <?php if (session()->getFlashdata('success')): ?>
+        <?php if (session()->getFlashdata('primary')): ?>
             <div class="alert alert-primary">
-                <?= session()->getFlashdata('success') ?>
+                <?= session()->getFlashdata('primary') ?>
             </div>
         <?php endif; ?>
 
@@ -25,7 +25,7 @@
                             <th>Gambar</th>
                             <th>Nama Produk</th>
                             <th>Kategori</th>
-                            <th>Industri/Perusahaan</th>
+                            <th>Ind/Per</th>
                             <th>Stok</th>
                             <th>Terjual</th>
                             <th>Berat</th>
@@ -47,7 +47,7 @@
                                     // Tampilkan gambar
                                     foreach ($images as $image) {
                                         ?>
-                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Foto Produk">
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Klik untuk lihat">
                                             <a target="_blank" href="<?= base_url($image['url']) ?>">
                                                 <img src="<?= base_url($image['url']) ?>" alt="Avatar" class="rounded-circle">
                                             </a>
@@ -71,7 +71,7 @@
                                 <div class="d-flex flex-nowrap">
                                     <div class="m-0 avatar-group d-flex align-items-center me-2">
                                         <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="" title="Registrasi : <?= $product['created_at']?> | Status : <?= $product['status_registrasi'] == 1 ? 'Aktif' : 'Non-Aktif' ?>">
-                                            <span class="badge badge-center rounded-circle <?= $product['status_registrasi'] == 1 ? 'bg-label-success' : 'bg-label-danger' ?> me-1">
+                                            <span class="badge badge-center rounded-circle <?= $product['status_registrasi'] == 1 ? 'bg-label-primary' : 'bg-label-danger' ?> me-1">
                                                 <?= $product['status_registrasi'] == 1 ? 'Y' : 'N' ?>
                                             </span>
                                         </a>

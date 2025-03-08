@@ -127,7 +127,7 @@ class ManageProductSiswaController extends Controller
             }
         }
 
-        return redirect()->to('/manage-product-siswa')->with('success', 'Produk berhasil ditambahkan');
+        return redirect()->to('/manage-product-siswa')->with('primary', 'Produk berhasil ditambahkan');
     }
 
     // Menampilkan form untuk mengedit produk
@@ -213,7 +213,7 @@ class ManageProductSiswaController extends Controller
             }
         }
 
-        return redirect()->to('/manage-product-siswa')->with('success', 'Produk berhasil diperbarui');
+        return redirect()->to('/manage-product-siswa')->with('primary', 'Produk berhasil diperbarui');
     }
 
     // Menghapus produk
@@ -230,7 +230,7 @@ class ManageProductSiswaController extends Controller
 
         // Hapus data produk
         $this->productModel->delete($id);
-        return redirect()->to('/manage-product-siswa')->with('success', 'Produk berhasil dihapus');
+        return redirect()->to('/manage-product-siswa')->with('primary', 'Produk berhasil dihapus');
     }
 
     public function deleteImage($imageId)
@@ -240,7 +240,7 @@ class ManageProductSiswaController extends Controller
             unlink(FCPATH . $image['url']);
         }
         $this->urlImageProductModel->delete($imageId);
-        return redirect()->back()->with('success', 'Gambar berhasil dihapus');
+        return redirect()->back()->with('primary', 'Gambar berhasil dihapus');
     }
     
 }
