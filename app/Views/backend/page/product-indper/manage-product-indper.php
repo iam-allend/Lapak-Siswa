@@ -5,7 +5,7 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="d-flex justify-content-between">
             <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> <?= $navigasi ?></h4>
-            <a href="<?= base_url() ?>manage-product-siswa/create">
+            <a href="<?= base_url() ?>manage-product-indper/create">
                 <button class="btn btn-primary"><i class='bx bx-plus'></i> Tambah</button>
             </a>
         </div>
@@ -25,7 +25,7 @@
                             <th>Gambar</th>
                             <th>Nama Produk</th>
                             <th>Kategori</th>
-                            <th>Admin</th>
+                            <th>Ind/Per</th>
                             <th>Stok</th>
                             <th>Terjual</th>
                             <th>Berat</th>
@@ -47,7 +47,7 @@
                                     // Tampilkan gambar
                                     foreach ($images as $image) {
                                         ?>
-                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Foto Produk">
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Klik untuk lihat">
                                             <a target="_blank" href="<?= base_url($image['url']) ?>">
                                                 <img src="<?= base_url($image['url']) ?>" alt="Avatar" class="rounded-circle">
                                             </a>
@@ -82,12 +82,9 @@
                                         </a>
                                     </div>
                                 </div>
-
-
-
                             </td>
                             <td><?= $product['nama_kategori'] ?></td>
-                            <td><?= $product['nama_admin'] ?></td>
+                            <td><?= $product['nama_industri'] ?></td>
                             <td><?= $product['stock'] ?></td>
                             <td><?= number_format($product['sell']) ?></td>
                             <td><?= $product['weight'] ?></td>
@@ -95,10 +92,10 @@
                             <td><?= $product['discount']?>%</td>
                             <td>Rp. <?= number_format($product['price_final'], 2) ?></td>                      
                             <td>
-                                <a href="<?= base_url('manage-product-siswa/edit/' . $product['id_product']) ?>" class="btn btn-outline-primary text-decoration-none">
+                                <a href="<?= base_url('manage-product-indper/edit/' . $product['id_product']) ?>" class="btn btn-outline-primary text-decoration-none">
                                     <i class='bx bxs-edit'></i>
                                 </a>
-                                <a href="<?= base_url('manage-product-siswa/delete/' . $product['id_product']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
+                                <a href="<?= base_url('manage-product-indper/delete/' . $product['id_product']) ?>" class="btn btn-outline-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini?');">
                                     <i class='bx bxs-trash-alt'></i>
                                 </a>
                             </td>

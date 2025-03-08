@@ -16,6 +16,7 @@ $routes->get('detail', 'Home::detail');
 $routes->get('cart', 'Home::cart');
 $routes->get('shoptest', 'Home::shoptest'); 
 $routes->get('keranjang', 'Home::cart'); 
+$routes->get('blog', 'Home::blog'); 
 
 $routes->get('register', 'Auth::register');
 $routes->post('auth/register', 'Auth::add_register');
@@ -120,6 +121,16 @@ $routes->post('update-profile-admin', 'MyProfileController::update');
         $routes->get('delete/(:num)', 'ManageOrderProductSiswaController::delete/$1'); // Menghapus data produk
         $routes->get('delete-image/(:num)', 'ManageOrderProductSiswaController::deleteImage/$1'); // Menghapus gambar produk
         $routes->get('detail/(:num)', 'ManageOrderProductSiswaController::detail/$1'); // Menampilkan detail produk (opsional)
+    });
+
+    $routes->group('manage-product-indper', function ($routes) {
+        $routes->get('/', 'ManageProductIndperController::index');
+        $routes->get('create', 'ManageProductIndperController::create');
+        $routes->post('store', 'ManageProductIndperController::store');
+        $routes->get('edit/(:num)', 'ManageProductIndperController::edit/$1');
+        $routes->post('update/(:num)', 'ManageProductIndperController::update/$1');
+        $routes->get('delete/(:num)', 'ManageProductIndperController::delete/$1');
+        $routes->get('delete-image/(:num)', 'ManageProductIndperController::deleteImage/$1');
     });
 
 

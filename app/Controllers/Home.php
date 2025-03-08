@@ -121,4 +121,14 @@ class Home extends BaseController
         ];
         return view('frontend/dashboard/cart', $data);
     }
+
+    public function blog()
+    {
+        $data = [
+            'activePage' => 'blog',
+            'tittle' => 'Lapak Siswa | blog',
+            'navigasi' => 'blog'
+        ];
+        return view('frontend/blog', $data);
+    }
 }

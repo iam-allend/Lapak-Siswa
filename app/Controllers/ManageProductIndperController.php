@@ -2,27 +2,27 @@
 
 namespace App\Controllers;
 
-use App\Models\ProductSiswaModel;
-use App\Models\UrlImageProductSiswaModel;
+use App\Models\ProductIndperModel;
+use App\Models\UrlImageProductIndperModel;
 use App\Models\KategoriProductModel;
 use App\Models\PajakModel;
-use App\Models\AdminModel;
+use App\Models\IndustriModel;
 use CodeIgniter\Controller;
 
-class ManageProductSiswaController extends Controller
+class ManageProductIndperController extends Controller
 {
     protected $productModel;
     protected $urlImageProductModel;
     protected $kategoriProductModel;
-    protected $adminModel;
+    protected $industriModel;
     protected $pajakModel;
 
     public function __construct()
     {
-        $this->productModel = new ProductSiswaModel();
-        $this->urlImageProductModel = new UrlImageProductSiswaModel();
+        $this->productModel = new ProductIndperModel();
+        $this->urlImageProductModel = new UrlImageProductIndperModel();
         $this->kategoriProductModel = new KategoriProductModel();
-        $this->adminModel = new AdminModel();
+        $this->industriModel = new IndustriModel();
         $this->pajakModel = new PajakModel();
     }
 
@@ -30,7 +30,7 @@ class ManageProductSiswaController extends Controller
     public function index()
     {
         // Ambil semua produk
-        $products = $this->productModel->getProductWithCategoryAndAdmin();
+        $products = $this->productModel->getProductWithCategoryAndIndustri();
 
         // Ambil gambar untuk setiap produk
         foreach ($products as &$product) {
@@ -38,29 +38,28 @@ class ManageProductSiswaController extends Controller
         }
 
         $data = [
-            'products' => $products, // Kirim data produk beserta gambar ke view
-            'activePage' => 'Manage Product Siswa',
-            'tittle' => 'Lapak Siswa | Kelola Produk Siswa',
-            'navigasi' => 'Manage Product Siswa Data'
+            'products' => $products,
+            'activePage' => 'Manage Product Industri/Perusahaan',
+            'tittle' => 'Lapak Industri/Perusahaan | Kelola Produk',
+            'navigasi' => 'Manage Product Industri/Perusahaan Data'
         ];
 
-        return view('backend/page/product-siswa/manage-product-siswa', $data);
+        return view('backend/page/product-indper/manage-product-indper', $data);
     }
 
     // Menampilkan form untuk menambah produk
     public function create()
     {
         $data = [
-            'activePage' => 'Manage Product Siswa',
-            'tittle' => 'Lapak Siswa | Tambah Produk',
+            'activePage' => 'Manage Product Industri/Perusahaan',
+            'tittle' => 'Lapak Industri/Perusahaan | Tambah Produk',
             'navigasi' => 'Tambah Data Produk',
             'kategoris' => $this->kategoriProductModel->findAll(),
-            'admins' => $this->adminModel->where('id_level', 3)->findAll(),
-            'pajak' => $this->pajakModel->where('id_level', 3)->first() // Ambil pajak untuk level admin 3
+            'industris' => $this->industriModel->findAll(),
+            'pajak' => $this->pajakModel->where('id_level', 5)->first() // Ambil pajak untuk level industri (id_level = 5)
         ];
-        return view('backend/page/product-siswa/add-product-siswa', $data);
+        return view('backend/page/product-indper/add-product-indper', $data);
     }
-
 
     // Menyimpan data produk baru
     public function store()
@@ -69,13 +68,13 @@ class ManageProductSiswaController extends Controller
         $validation = $this->validate([
             'product_name' => 'required|min_length[3]',
             'id_kategori' => 'required',
-            'id_admin' => 'required',
+            'id_industri' => 'required',
             'description' => 'required',
             'stock' => 'required|numeric',
             'price' => 'required|numeric',
             'weight' => 'required|numeric',
             'discount' => 'numeric',
-            'expired' => 'permit_empty|valid_date', // Opsional, format tanggal valid
+            'expired' => 'permit_empty|valid_date',
             'images.*' => 'uploaded[images]|is_image[images]|max_size[images,2048]',
         ]);
 
@@ -89,13 +88,7 @@ class ManageProductSiswaController extends Controller
         $priceFinal = $price - ($price * ($discount / 100));
 
         $productData = [
-            // Data lainnya...
-            'price_final' => $priceFinal,
-        ];
-
-        // Simpan data produk
-        $productData = [
-            'id_admin' => $this->request->getPost('id_admin'),
+            'id_industri' => $this->request->getPost('id_industri'),
             'id_kategori' => $this->request->getPost('id_kategori'),
             'product_name' => $this->request->getPost('product_name'),
             'description' => $this->request->getPost('description'),
@@ -103,7 +96,7 @@ class ManageProductSiswaController extends Controller
             'price' => $price,
             'price_final' => $priceFinal,
             'weight' => $this->request->getPost('weight'),
-            'expired' => $this->request->getPost('expired') ?: null, // Jika expired kosong, set ke null
+            'expired' => $this->request->getPost('expired') ?: null,
             'discount' => $discount,
             'status_registrasi' => $this->request->getPost('status_registrasi'),
             'created_at' => date('Y-m-d H:i:s'),
@@ -127,43 +120,43 @@ class ManageProductSiswaController extends Controller
             }
         }
 
-        return redirect()->to('/manage-product-siswa')->with('primary', 'Produk berhasil ditambahkan');
+        $productName = $this->request->getPost('product_name') ?: $productData['product_name'];
+        return redirect()->to('/manage-product-indper')->with('primary', "Produk '{$productName}' berhasil ditambahkan");
     }
 
     // Menampilkan form untuk mengedit produk
     public function edit($id)
     {
         $product = $this->productModel->find($id);
-        $admin = $this->adminModel->find($product['id_admin']);
-        $pajak = $this->pajakModel->where('id_level', $admin['id_level'])->first();
+        $industri = $this->industriModel->find($product['id_industri']);
+        $pajak = $this->pajakModel->where('id_level', $industri['id_level'])->first();
 
         $data = [
             'product' => $product,
             'kategoris' => $this->kategoriProductModel->findAll(),
-            'admins' => $this->adminModel->findAll(),
+            'industris' => $this->industriModel->findAll(),
             'images' => $this->urlImageProductModel->getImagesByProductId($id),
             'pajak' => $pajak,
-            'activePage' => 'Manage Product Siswa',
-            'tittle' => 'Lapak Siswa | Edit Produk',
+            'activePage' => 'Manage Product Industri/Perusahaan',
+            'tittle' => 'Lapak Industri/Perusahaan | Edit Produk',
             'navigasi' => 'Edit Data Produk'
         ];
-        return view('backend/page/product-siswa/edit-product-siswa', $data);
+        return view('backend/page/product-indper/edit-product-indper', $data);
     }
 
+    // Memperbarui data produk
     public function update($id)
     {
-        // dd($this->request->getPost()); // Debug data yang dikirim dari form
-        
         // Validasi input
         $validation = $this->validate([
-            'product_name' => 'required|min_length[3]',
-            'id_kategori' => 'required',
-            'id_admin' => 'required',
-            'description' => 'required',
-            'stock' => 'required|numeric',
-            'price' => 'required|numeric',
-            'weight' => 'required|numeric',
-            'expired' => 'permit_empty|valid_date', // Opsional, format tanggal valid
+            'product_name' => 'min_length[3]',
+            // 'id_kategori' => 'required',
+            // 'id_industri' => 'required',
+            // 'description' => 'required',
+            // 'stock' => 'required|numeric',
+            // 'price' => 'required|numeric',
+            // 'weight' => 'required|numeric',
+            'expired' => 'permit_empty|valid_date',
             'images.*' => 'is_image[images]|max_size[images,2048]',
         ]);
 
@@ -177,13 +170,7 @@ class ManageProductSiswaController extends Controller
         $priceFinal = $price - ($price * ($discount / 100));
 
         $productData = [
-            // Data lainnya...
-            'price_final' => $priceFinal,
-        ];
-
-        // Update data produk
-        $productData = [
-            'id_admin' => $this->request->getPost('id_admin'),
+            'id_industri' => $this->request->getPost('id_industri'),
             'id_kategori' => $this->request->getPost('id_kategori'),
             'product_name' => $this->request->getPost('product_name'),
             'description' => $this->request->getPost('description'),
@@ -191,7 +178,7 @@ class ManageProductSiswaController extends Controller
             'price' => $price,
             'price_final' => $priceFinal,
             'weight' => $this->request->getPost('weight'),
-            'expired' => $this->request->getPost('expired') ?: null, // Jika expired kosong, set ke null
+            'expired' => $this->request->getPost('expired') ?: null,
             'discount' => $discount,
             'status_registrasi' => $this->request->getPost('status_registrasi'),
             'updated_at' => date('Y-m-d H:i:s'),
@@ -213,26 +200,41 @@ class ManageProductSiswaController extends Controller
             }
         }
 
-        return redirect()->to('/manage-product-siswa')->with('primary', 'Produk berhasil diperbarui');
+        $productName = $this->request->getPost('product_name') ?: $productData['product_name'];
+        return redirect()->to('/manage-product-indper')->with('primary', "Produk '{$productName} berhasil diperbarui'");
     }
 
     // Menghapus produk
     public function delete($id)
     {
-       // Hapus gambar terkait
+        // Ambil data produk sebelum dihapus
+        $product = $this->productModel->find($id);
+
+        // Jika produk tidak ditemukan
+        if (!$product) {
+            return redirect()->to('/manage-product-indper')->with('error', 'Produk tidak ditemukan');
+        }
+
+        $productName = $product['product_name']; // Simpan nama produk
+
+        // Hapus gambar terkait
         $images = $this->urlImageProductModel->where('id_product', $id)->findAll();
         foreach ($images as $image) {
-            $filePath = FCPATH . $image['url']; // Gunakan FCPATH untuk path lengkap
+            $filePath = FCPATH . $image['url']; // Path lengkap ke file gambar
             if (file_exists($filePath)) {
-                unlink($filePath);
+                unlink($filePath); // Hapus file gambar dari server
             }
+            $this->urlImageProductModel->delete($image['id_url_image_product']); // Hapus record gambar dari database
         }
 
         // Hapus data produk
         $this->productModel->delete($id);
-        return redirect()->to('/manage-product-siswa')->with('primary', 'Produk berhasil dihapus');
+
+        // Tampilkan pesan sukses dengan nama produk
+        return redirect()->to('/manage-product-indper')->with('primary', "Produk '{$productName}' berhasil dihapus");
     }
 
+    // Menghapus gambar produk
     public function deleteImage($imageId)
     {
         $image = $this->urlImageProductModel->find($imageId);
@@ -242,6 +244,4 @@ class ManageProductSiswaController extends Controller
         $this->urlImageProductModel->delete($imageId);
         return redirect()->back()->with('primary', 'Gambar berhasil dihapus');
     }
-    
 }
-
