@@ -41,17 +41,18 @@
               <div class="row data-cart" style="overflow-y: auto; max-height: 70vh; ">
 
                 <!-- perulangan produk cart disini -->
+                 <?php foreach($cart as $value){?>
                 <div class="col-12">
                   <div class="card mb-3">
 
                     <div class="row g-0">
                       <div class="col-5 col-sm-4">
-                        <img class="card-img card-img-left" src="<?= base_url()?>backend/assets/img/elements/12.jpg" alt="Card image" />
+                        <img class="card-img card-img-left" src="<?= base_url($value['images'][0]['url']) ?>" alt="Card image" />
                       </div>
                       <div class="col-7 col-sm-8">
 
                         <div class="card-body p-3 pb-2 pt-3 pt-sm-4 position-relative">
-                          <p class="card-title fs-5 pt-0 mb-1 fw-bold">Nama Produk</p>
+                          <p class="card-title fs-5 pt-0 mb-1 fw-bold"><?= $value['product_name']?></p>
                           <p class="card-text position-absolute top-0 end-0"><span class="bg-warning px-2 py-1 text-white rounded-1">-15%</span></p>
                           
                           <div class="row px-3">
@@ -62,7 +63,7 @@
                               <span class="form-control border-0 px-2 text-center">x</span>
                             </div>
                             <div class="p-0 m-0 col-3 col-sm-4">
-                              <input type="number" class="form-control border-1 rounded-2" value="2">
+                              <input type="number" class="form-control border-1 rounded-2" value="<?= $value['quantity']?>">
                             </div>
                           </div>
 
@@ -95,6 +96,7 @@
 
                   </div>
                 </div>
+                <?php }?>
 
               </div>
             </div>

@@ -79,3 +79,68 @@
     
 })(jQuery);
 
+function addToCart(productId, userId, quantity) {
+    if (!productId || !userId || !quantity) {
+        Swal.fire({
+            title: 'Error!',
+            text: 'Gagal mengambil data produk',
+            icon: 'error'
+        });
+        return;
+    }
+
+    $.ajax({
+        url: '/cart/add_to_cart', 
+        method: 'POST',
+        data: {
+            product_id: productId,
+            user_id: userId,
+            quantity: quantity
+        },
+        success: function(response) {
+            if (response.status === 'success') {
+                Swal.fire({
+                    title: 'Success!',
+                    text: response.message, 
+                    icon: 'success'
+                });
+
+                $('#cart-count').text(response.cart_count);
+            } else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: response.message || 'Gagal menambahkan produk.',
+                    icon: 'error'
+                });
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error("Error response: " + xhr.responseText);
+            Swal.fire({
+                title: 'Error!',
+                text: 'Gagal menambahkan produk.',
+                icon: 'error'
+            });
+        }
+    });
+}
+
+function updateCartCount() {
+    $.ajax({
+        url: "/cart/getCartCount", 
+        method: "GET",
+        dataType: "json",
+        success: function(response) {
+            $("#cart-count, .cart-count").text(response.count); 
+        },
+        error: function(xhr, status, error) {
+            console.error("Error fetching cart count:", error);
+        }
+    });
+}
+
+setInterval(updateCartCount, 100);
+
+$(document).ready(function() {
+    updateCartCount();
+});

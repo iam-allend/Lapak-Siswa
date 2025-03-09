@@ -98,7 +98,6 @@
 
 <!-- Template Javascript -->
 <script src="<?= base_url() ?>frontend/js/main.js"></script>
-<script src="<?= base_url() ?>frontend/js/main.js"></script>
 </body>
 
 </html>

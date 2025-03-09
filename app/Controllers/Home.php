@@ -112,15 +112,6 @@ class Home extends BaseController
         ];
         return view('frontend/detail_produk', $data);
     }
-    public function cart()
-    {
-        $data = [
-            'activePage' => 'Keranjang',
-            'tittle' => 'Lapak Siswa | Keranjang',
-            'navigasi' => 'Keranjang'
-        ];
-        return view('frontend/dashboard/cart', $data);
-    }
 
     public function blog()
     {

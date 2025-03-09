@@ -15,6 +15,22 @@
             confirmButtonText: 'Oke',
         });
     </script>
+<?php elseif (session()->getFlashdata('alert') === 'add_cart'): ?>
+    <script>
+        Swal.fire({
+            title: 'berhasil menambah produk!',
+            icon: 'success',
+            confirmButtonText: 'Oke',
+        });
+    </script>
+<?php elseif (session()->getFlashdata('alert') === 'add_cart_failed'): ?>
+    <script>
+        Swal.fire({
+            title: 'gagal menambah produk!',
+            icon: 'error',
+            confirmButtonText: 'Oke',
+        });
+    </script>
 <?php elseif (session()->getFlashdata('alert') === 'profile-admin'): ?>
     <script>
         Swal.fire({

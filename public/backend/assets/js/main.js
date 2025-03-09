@@ -120,3 +120,22 @@ let menu, animate;
   window.Helpers.setCollapsed(true, false);
 })();
 
+function updateCartCount() {
+  $.ajax({
+      url: "/cart/getCartCount", 
+      method: "GET",
+      dataType: "json",
+      success: function(response) {
+          $("#cart-count, .cart-count").text(response.count); 
+      },
+      error: function(xhr, status, error) {
+          console.error("Error fetching cart count:", error);
+      }
+  });
+}
+
+setInterval(updateCartCount, 100);
+
+$(document).ready(function() {
+  updateCartCount();
+});

@@ -13,9 +13,12 @@ $routes->get('contactus', 'Home::contactus');
 $routes->get('profile', 'Home::profile');
 $routes->get('shop', 'Home::shop'); 
 $routes->get('detail', 'Home::detail'); 
-$routes->get('cart', 'Home::cart');
+
+$routes->get('cart', 'CartController::index');
+$routes->post('cart/add_to_cart', 'CartController::add_cart');
+$routes->get('cart/getCartCount', 'CartController::getCartCount');
+
 $routes->get('shoptest', 'Home::shoptest'); 
-$routes->get('keranjang', 'Home::cart'); 
 $routes->get('blog', 'Home::blog'); 
 
 $routes->get('register', 'Auth::register');

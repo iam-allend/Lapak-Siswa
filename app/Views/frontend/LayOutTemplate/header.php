@@ -34,6 +34,15 @@
     <!-- Template Stylesheet -->
     <link href="<?= base_url() ?>frontend/css/style.css" rel="stylesheet">
     <link href="<?= base_url() ?>frontend/css/style.css" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.9/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.9/dist/sweetalert2.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -78,17 +87,17 @@
                         <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
                     </div>
 
-                    <?php if(session('id_level') == 1){?>
+                    <?php if(!session('id_level') == 0){?>
 
                     <div class="dropdown">
-                        <img src="<?= base_url('backend/img_siswa/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40">
+                        <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40">
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                             <a class="dropdown-item" href="<?= base_url('profile')?>">
                                 <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
-                                    <img src="<?= base_url('backend/img_siswa/' . session('url_image'))?>" alt width="40" class="rounded-circle" />
+                                    <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" alt width="40" class="rounded-circle" />
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
@@ -108,20 +117,15 @@
                             </a>
                             </li>
                             <li>
-                            <a class="dropdown-item" href="#">
-                                <i class="bx bx-cog me-2"></i>
-                                <span class="align-middle">Settings</span>
-                            </a>
-                            </li>
-                            <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="<?= base_url('cart')?>">                                
                                 <span class="d-flex align-items-center align-middle">
-                                <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                                <span class="flex-grow-1 align-middle">Billing</span>
-                                <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                                <i class="flex-shrink-0 bx bx-cart me-2"></i>
+                                <span class="flex-grow-1 align-middle">Keranjang</span>
+                                <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20 cart-count"></span>
                                 </span>
                             </a>
                             </li>
+                            
                             <li>
                             <div class="dropdown-divider"></div>
                             </li>
