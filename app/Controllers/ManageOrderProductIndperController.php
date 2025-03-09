@@ -8,6 +8,7 @@ use App\Models\IndustriModel;
 use App\Models\CustomerModel;
 use App\Models\KeuanganModel;
 use CodeIgniter\Controller;
+use App\Models\UrlImageProductIndperModel;
 
 class ManageOrderProductIndperController extends Controller
 {
@@ -16,6 +17,7 @@ class ManageOrderProductIndperController extends Controller
     protected $industriModel;
     protected $customerModel;
     protected $keuanganModel;
+    protected $urlImageProductModel;
 
     public function __construct()
     {
@@ -24,18 +26,32 @@ class ManageOrderProductIndperController extends Controller
         $this->industriModel = new IndustriModel();
         $this->customerModel = new CustomerModel();
         $this->keuanganModel = new KeuanganModel();
+        $this->urlImageProductModel = new UrlImageProductIndperModel();
     }
 
     // Menampilkan daftar transaksi
+    // Di ManageTransaksiIndperController
     public function index()
     {
+        // Ambil semua transaksi beserta detailnya
         $transactions = $this->transaksiModel->getTransactionsWithDetails();
 
+        // Ambil gambar untuk setiap produk yang terkait dengan transaksi
+        foreach ($transactions as &$transaction) {
+            $product = $this->productModel->find($transaction['id_product']);
+            if ($product) {
+                // Ambil gambar produk dari tabel url_image_product_indper
+                $transaction['images'] = $this->urlImageProductModel->getImagesByProductId($product['id_product']);
+            } else {
+                $transaction['images'] = []; // Jika produk tidak ditemukan, set images kosong
+            }
+        }
+
         $data = [
-            'transactions' => $transactions,
+            'transactions' => $transactions, // Kirim data transaksi beserta gambar ke view
             'activePage' => 'Manage Order Product IndPer',
-            'tittle' => 'Lapak Industri/Perusahaan | Kelola Order',
-            'navigasi' => 'Manage Order Data'
+            'tittle' => 'Lapak Industri/Perusahaan | Kelola Transaksi',
+            'navigasi' => 'Manage Transaksi Data'
         ];
 
         return view('backend/page/order-product-indper/manage-order-product-indper', $data);
