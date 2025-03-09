@@ -137,6 +137,16 @@ $routes->post('update-profile-admin', 'MyProfileController::update');
     });
 
 
+    $routes->group('manage-order-product-indper', function ($routes) {
+        $routes->get('/', 'ManageOrderProductIndperController::index');
+        $routes->get('create', 'ManageOrderProductIndperController::create');
+        $routes->post('store', 'ManageOrderProductIndperController::store');
+        $routes->get('edit/(:num)', 'ManageOrderProductIndperController::edit/$1');
+        $routes->post('update/(:num)', 'ManageOrderProductIndperController::update/$1');
+        $routes->get('delete/(:num)', 'ManageOrderProductIndperController::delete/$1');
+    });
+
+
 $routes->group('superadmin',function($routes){
 
 });

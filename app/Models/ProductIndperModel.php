@@ -31,4 +31,14 @@ class ProductIndperModel extends Model
             ->get()
             ->getResultArray();
     }
+
+    // Di ProductIndperModel
+    public function getProductsWithIndustri()
+    {
+        return $this->db->table('product_industri_perusahaan')
+            ->select('product_industri_perusahaan.*, industri_perusahaan.nama as nama_industri')
+            ->join('industri_perusahaan', 'industri_perusahaan.id_industri = product_industri_perusahaan.id_industri', 'left')
+            ->get()
+            ->getResultArray();
+    }
 }
