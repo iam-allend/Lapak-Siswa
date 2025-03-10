@@ -43,7 +43,7 @@
                 <div>Order Product Siswa</div>
               </a>
             </li>
-            <li class="menu-item disabled <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
                 <div>Order Product IndPer</div>

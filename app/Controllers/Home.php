@@ -122,4 +122,14 @@ class Home extends BaseController
         ];
         return view('frontend/blog', $data);
     }
+
+    public function mitra()
+    {
+        $data = [
+            'activePage' => 'mitra',
+            'tittle' => 'Lapak Siswa | mitra',
+            'navigasi' => 'mitra'
+        ];
+        return view('frontend/mitra', $data);
+    }
 }

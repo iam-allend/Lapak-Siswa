@@ -81,7 +81,7 @@
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="<?= base_url() ?>blog" class="dropdown-item">Blog</a>
                                 <a href="<?= base_url() ?>testimonial" class="dropdown-item">Testimonial</a>
-                                <a href="<?= base_url() ?>404.html" class="dropdown-item">Mitra</a>
+                                <a href="<?= base_url() ?>mitra" class="dropdown-item">Mitra</a>
                             </div>
                         </div>
                         <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
@@ -90,14 +90,14 @@
                     <?php if(!session('id_level') == 0){?>
 
                     <div class="dropdown">
-                        <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40">
+                        <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40" height="40">
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                             <a class="dropdown-item" href="<?= base_url('profile')?>">
                                 <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
-                                    <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" alt width="40" class="rounded-circle" />
+                                    <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" alt width="40" height="40" class="rounded-circle" />
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">

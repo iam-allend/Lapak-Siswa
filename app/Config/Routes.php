@@ -20,6 +20,7 @@ $routes->get('cart/getCartCount', 'CartController::getCartCount');
 
 $routes->get('shoptest', 'Home::shoptest'); 
 $routes->get('blog', 'Home::blog'); 
+$routes->get('mitra', 'Home::mitra'); 
 
 $routes->get('register', 'Auth::register');
 $routes->post('auth/register', 'Auth::add_register');
@@ -134,6 +135,16 @@ $routes->post('update-profile-admin', 'MyProfileController::update');
         $routes->post('update/(:num)', 'ManageProductIndperController::update/$1');
         $routes->get('delete/(:num)', 'ManageProductIndperController::delete/$1');
         $routes->get('delete-image/(:num)', 'ManageProductIndperController::deleteImage/$1');
+    });
+
+
+    $routes->group('manage-order-product-indper', function ($routes) {
+        $routes->get('/', 'ManageOrderProductIndperController::index');
+        $routes->get('create', 'ManageOrderProductIndperController::create');
+        $routes->post('store', 'ManageOrderProductIndperController::store');
+        $routes->get('edit/(:num)', 'ManageOrderProductIndperController::edit/$1');
+        $routes->post('update/(:num)', 'ManageOrderProductIndperController::update/$1');
+        $routes->get('delete/(:num)', 'ManageOrderProductIndperController::delete/$1');
     });
 
 

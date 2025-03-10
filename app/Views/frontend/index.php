@@ -264,7 +264,7 @@
                 <?php endforeach; ?>
 
                     <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                        <a class="btn btn-primary py-3 px-5" href="<?= base_url() ?>shoptest">Browse More Property</a>
                     </div>
                 </div>
             </div>
