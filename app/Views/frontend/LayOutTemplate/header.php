@@ -81,7 +81,7 @@
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="<?= base_url() ?>blog" class="dropdown-item">Blog</a>
                                 <a href="<?= base_url() ?>testimonial" class="dropdown-item">Testimonial</a>
-                                <a href="<?= base_url() ?>404.html" class="dropdown-item">Mitra</a>
+                                <a href="<?= base_url() ?>mitra" class="dropdown-item">Mitra</a>
                             </div>
                         </div>
                         <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
