@@ -364,6 +364,7 @@ class Auth extends Controller
                 $sessionData['username']  = $user['username'];
                 $sessionData['email']     = $user['email'];
                 $sessionData['gender']    = $user['gender'];
+                $sessionData['group_name'] = $user['group_name'];
                 $sessionData['url_image'] = $user['url_image'];
                 break;
 
@@ -402,7 +403,6 @@ class Auth extends Controller
         $redirectRoutes = [
             1 => '/',
             2 => 'profile',
-            2 => 'customer/dashboard',
             3 => 'dashboard',
             4 => 'dashboard',
             5 => 'industri/dashboard',

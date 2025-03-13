@@ -6,13 +6,14 @@
             <h1 class="display-5 animated fadeIn mb-4">Produk</h1>
             <nav aria-label="breadcrumb animated fadeIn">
                 <ol class="breadcrumb text-uppercase">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
                     <li class="breadcrumb-item text-body active" aria-current="page">Produk</li>
+                    
                 </ol>
             </nav>
         </div>
         <div class="col-md-6 animated fadeIn">
-            <img class="img-fluid" src="<?= base_url('frontend/img/lapaksiswa.png') ?>" alt="">
+            <img class="img-fluid" src="<?= base_url('frontend/img/Ecommerce.png') ?>" alt="">
         </div>
     </div>
 </div>
@@ -20,23 +21,23 @@
 
 
 <!-- Search Start -->
-<div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+<div class="container-fluid bg-primary mb-5 wow fadeIn mt-5" data-wow-delay="0.1s" style="padding: 35px;">
     <div class="container">
         <div class="row g-2">
             <div class="col-md-10">
                 <div class="row g-2">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <input type="text" class="form-control border-0 py-3" placeholder="Search Keyword">
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <select class="form-select border-0 py-3">
                             <option selected>Property Type</option>
                             <option value="1">Property Type 1</option>
                             <option value="2">Property Type 2</option>
                             <option value="3">Property Type 3</option>
                         </select>
-                    </div>
-                    <div class="col-md-4">
+                    </div> -->
+                    <div class="col-md-6">
                         <select class="form-select border-0 py-3">
                             <option selected>Location</option>
                             <option value="1">Location 1</option>
@@ -61,7 +62,7 @@
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                    <h1 class="mb-3">Property Listing</h1>
+                    <h1 class="mb-3">Produk Kami</h1>
                     <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
                         eirmod sit diam justo sed rebum.</p>
                 </div>
@@ -132,7 +133,7 @@
                     <?php endforeach; ?>
 
                     <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                        <a class="btn btn-primary py-3 px-5" href="<?= base_url() ?>shoptest">Lihat Selengkapnya</a>
                     </div>
                 </div>
             </div>

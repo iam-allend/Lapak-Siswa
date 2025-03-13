@@ -14,6 +14,13 @@ $routes->get('profile', 'Home::profile');
 $routes->get('shop', 'Home::shop'); 
 $routes->get('detail', 'Home::detail'); 
 
+$routes->get('cart', 'CartController::index');
+$routes->post('cart/add_to_cart', 'CartController::add_cart');
+$routes->get('cart/getCartCount', 'CartController::getCartCount');
+
+$routes->get('shoptest', 'Home::shoptest'); 
+$routes->get('blog', 'Home::blog'); 
+$routes->get('mitra', 'Home::mitra'); 
 
 $routes->get('register', 'Auth::register');
 $routes->post('auth/register', 'Auth::add_register');
@@ -28,6 +35,9 @@ $routes->get('auth/logout', 'Auth::logout'); // Proses logout
 
 
 $routes->get('dashboard', 'DashboardController::dashboard');
+$routes->get('profile-admin', 'MyProfileController::index');
+$routes->post('update-profile-admin', 'MyProfileController::update');
+
 
 // MANAGE SISWA
     $routes->get('manage-siswa/', 'ManageSiswaController::index');
@@ -115,6 +125,26 @@ $routes->get('dashboard', 'DashboardController::dashboard');
         $routes->get('delete/(:num)', 'ManageOrderProductSiswaController::delete/$1'); // Menghapus data produk
         $routes->get('delete-image/(:num)', 'ManageOrderProductSiswaController::deleteImage/$1'); // Menghapus gambar produk
         $routes->get('detail/(:num)', 'ManageOrderProductSiswaController::detail/$1'); // Menampilkan detail produk (opsional)
+    });
+
+    $routes->group('manage-product-indper', function ($routes) {
+        $routes->get('/', 'ManageProductIndperController::index');
+        $routes->get('create', 'ManageProductIndperController::create');
+        $routes->post('store', 'ManageProductIndperController::store');
+        $routes->get('edit/(:num)', 'ManageProductIndperController::edit/$1');
+        $routes->post('update/(:num)', 'ManageProductIndperController::update/$1');
+        $routes->get('delete/(:num)', 'ManageProductIndperController::delete/$1');
+        $routes->get('delete-image/(:num)', 'ManageProductIndperController::deleteImage/$1');
+    });
+
+
+    $routes->group('manage-order-product-indper', function ($routes) {
+        $routes->get('/', 'ManageOrderProductIndperController::index');
+        $routes->get('create', 'ManageOrderProductIndperController::create');
+        $routes->post('store', 'ManageOrderProductIndperController::store');
+        $routes->get('edit/(:num)', 'ManageOrderProductIndperController::edit/$1');
+        $routes->post('update/(:num)', 'ManageOrderProductIndperController::update/$1');
+        $routes->get('delete/(:num)', 'ManageOrderProductIndperController::delete/$1');
     });
 
 

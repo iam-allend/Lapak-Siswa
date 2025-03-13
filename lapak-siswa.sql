@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2025 at 06:37 AM
+-- Generation Time: Mar 08, 2025 at 07:56 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -51,6 +51,21 @@ INSERT INTO `admin` (`id_admin`, `id_level`, `full_name`, `username`, `email`, `
 (5, '3', 'Mikatsum Runa', 'mikatsumruna', 'mikatsumruna1@gmail.com', '$2y$10$HEOEMNPX3T196KSCA63IjOw4hkNclTcJ3J2lVSoE5jVivPdLTOB92', 'female', 'img_user/1738573203_e5cf636123b36e929d0f.png', 'Monocraft', 1, '2025-01-30 10:16:14', '2025-02-28 04:59:27'),
 (8, '3', 'Zikry Dwi Maulana', 'zikrydwi', 'zikrydwi@gmail.com', '$2y$10$rmEkpZiouNXxV7YU3flYqeCmFp.BGaGWX98LNBWppmpVMSN3AaL6K', 'male', 'img_user/1738313784_f42bfb508e121878d50f.png', 'Local Tshirt', 0, '2025-01-31 08:56:24', '2025-02-28 04:59:37'),
 (9, '4', 'Super Admin', 'superadmin', 'superadmin@gmail.com', '123456789', 'male', 'img_user/1738563755_8ae5c5bdddabfb3ece53.png', 'Dis Doom', 1, '2025-01-31 21:08:55', '2025-02-28 04:59:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `cart_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -219,7 +234,7 @@ INSERT INTO `level_user` (`id_level`, `nama`) VALUES
 (3, 'Admin'),
 (4, 'Super Admin'),
 (5, 'Industri'),
-(6, 'Kerjasama');
+(6, 'umkm');
 
 -- --------------------------------------------------------
 
@@ -239,8 +254,8 @@ CREATE TABLE `pajak` (
 
 INSERT INTO `pajak` (`id_pajak`, `id_level`, `besaran`) VALUES
 (1, 3, 10),
-(2, 5, 10),
-(3, 6, 5);
+(2, 5, 5),
+(3, 6, 10);
 
 -- --------------------------------------------------------
 
@@ -258,7 +273,7 @@ CREATE TABLE `product_industri_perusahaan` (
   `price` double DEFAULT NULL,
   `price_final` double DEFAULT NULL,
   `weight` double DEFAULT NULL,
-  `sell` tinyint(1) DEFAULT NULL,
+  `sell` int(11) DEFAULT NULL,
   `discount` double DEFAULT NULL,
   `status_registrasi` tinyint(1) DEFAULT NULL,
   `kategori` varchar(255) DEFAULT NULL,
@@ -266,6 +281,13 @@ CREATE TABLE `product_industri_perusahaan` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `product_industri_perusahaan`
+--
+
+INSERT INTO `product_industri_perusahaan` (`id_product`, `id_industri`, `id_kategori`, `product_name`, `description`, `stock`, `price`, `price_final`, `weight`, `sell`, `discount`, `status_registrasi`, `kategori`, `expired`, `updated_at`, `created_at`) VALUES
+(8, 1, 1, 'Produk Industri Sample 001', 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet ', 250, 40000, 38000, 400, NULL, 5, 0, NULL, '2025-03-15', '2025-03-07 22:13:28', '2025-03-07 22:13:28');
 
 -- --------------------------------------------------------
 
@@ -391,6 +413,14 @@ CREATE TABLE `url_image_product_indper` (
   `url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `url_image_product_indper`
+--
+
+INSERT INTO `url_image_product_indper` (`id_url_image_product`, `id_product`, `url`) VALUES
+(1, 0, 'img_product/1741408754_51557e871ab8e488b6b1.png'),
+(7, 8, 'img_product/1741410808_ae21215df9f77eff4c93.png');
+
 -- --------------------------------------------------------
 
 --
@@ -427,6 +457,14 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`),
   ADD UNIQUE KEY `username` (`username`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`cart_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `customer`
@@ -554,6 +592,12 @@ ALTER TABLE `admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
@@ -602,6 +646,12 @@ ALTER TABLE `pajak`
   MODIFY `id_pajak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `product_industri_perusahaan`
+--
+ALTER TABLE `product_industri_perusahaan`
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT for table `product_siswa`
 --
 ALTER TABLE `product_siswa`
@@ -620,6 +670,12 @@ ALTER TABLE `transaksi_siswa`
   MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `url_image_product_indper`
+--
+ALTER TABLE `url_image_product_indper`
+  MODIFY `id_url_image_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `url_image_product_siswa`
 --
 ALTER TABLE `url_image_product_siswa`
@@ -628,6 +684,13 @@ ALTER TABLE `url_image_product_siswa`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `customer` (`id_customer`),
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product_siswa` (`id_product`);
 
 --
 -- Constraints for table `customer`

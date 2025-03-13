@@ -10,9 +10,9 @@
             </a>
         </div>
 
-        <?php if (session()->getFlashdata('success')): ?>
+        <?php if (session()->getFlashdata('primary')): ?>
             <div class="alert alert-primary">
-                <?= session()->getFlashdata('success') ?>
+                <?= session()->getFlashdata('primary') ?>
             </div>
         <?php endif; ?>
 
@@ -71,7 +71,7 @@
                                 <div class="d-flex flex-nowrap">
                                     <div class="m-0 avatar-group d-flex align-items-center me-2">
                                         <a data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="" title="Registrasi : <?= $product['created_at']?> | Status : <?= $product['status_registrasi'] == 1 ? 'Aktif' : 'Non-Aktif' ?>">
-                                            <span class="badge badge-center rounded-circle <?= $product['status_registrasi'] == 1 ? 'bg-label-success' : 'bg-label-danger' ?> me-1">
+                                            <span class="badge badge-center rounded-circle <?= $product['status_registrasi'] == 1 ? 'bg-label-primary' : 'bg-label-danger' ?> me-1">
                                                 <?= $product['status_registrasi'] == 1 ? 'Y' : 'N' ?>
                                             </span>
                                         </a>

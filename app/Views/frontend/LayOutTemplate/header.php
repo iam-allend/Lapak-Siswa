@@ -34,6 +34,15 @@
     <!-- Template Stylesheet -->
     <link href="<?= base_url() ?>frontend/css/style.css" rel="stylesheet">
     <link href="<?= base_url() ?>frontend/css/style.css" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.9/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.9/dist/sweetalert2.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -50,7 +59,7 @@
 
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4"  id="navbar">
                 <a href="<?= base_url() ?>logo\logo-green.webp"
                     class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
@@ -72,16 +81,94 @@
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="<?= base_url() ?>blog" class="dropdown-item">Blog</a>
                                 <a href="<?= base_url() ?>testimonial" class="dropdown-item">Testimonial</a>
-                                <a href="<?= base_url() ?>404.html" class="dropdown-item">Mitra</a>
+                                <a href="<?= base_url() ?>mitra" class="dropdown-item">Mitra</a>
                             </div>
                         </div>
                         <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
+                    </div>
+
+                    <?php if(!session('id_level') == 0){?>
+
+                    <div class="dropdown">
+                        <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40" height="40">
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                            <a class="dropdown-item" href="<?= base_url('profile')?>">
+                                <div class="d-flex">
+                                <div class="flex-shrink-0 me-3">
+                                    <div class="avatar avatar-online">
+                                    <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" alt width="40" height="40" class="rounded-circle" />
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <span class="fw-semibold d-block"><?= session('fullname')?></span>
+                                    <small class="text-muted">Rp30.000</small>
+                                </div>
+                                </div>
+                            </a>
+                            </li>
+                            <li>
+                            <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="<?= base_url('profile')?>">
+                                <i class="bx bx-user me-2"></i>
+                                <span class="align-middle">My Profile</span>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="<?= base_url('cart')?>">                                
+                                <span class="d-flex align-items-center align-middle">
+                                <i class="flex-shrink-0 bx bx-cart me-2"></i>
+                                <span class="flex-grow-1 align-middle">Keranjang</span>
+                                <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20 cart-count"></span>
+                                </span>
+                            </a>
+                            </li>
+                            
+                            <li>
+                            <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="<?= base_url('auth/logout')?>">
+                                <i class="bx bx-power-off me-2"></i>
+                                <span class="align-middle">Log Out</span>
+                            </a>
+                            </li>
+                        </ul>
 
                     </div>
+                    <?php }else{?>
                     <a href="<?= base_url() ?>login" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
+                    <?php }?>
                 </div>
 
             </nav>
+            <nav class="navbar navbar-bottom navbar-light">
+                <div class="navbar-nav w-100 d-flex flex-row">
+                    <a href="<?= base_url() ?>" class="nav-item nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="<?= base_url() ?>kategori" class="nav-item nav-link">
+                        <i class="fas fa-list"></i>
+                        <span>Kategori</span>
+                    </a>
+                    <a href="<?= base_url() ?>tas" class="nav-item nav-link">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Tas</span>
+                    </a>
+                    <a href="<?= base_url() ?>wishlist" class="nav-item nav-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                    </a>
+                    <a href="<?= base_url() ?>akun" class="nav-item nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>Akun</span>
+                    </a>
+                </div>
+            </nav>
+            <script src="<?= base_url() ?>frontend/js/hd.js"></script>
         </div>
 
         <!-- Navbar End -->

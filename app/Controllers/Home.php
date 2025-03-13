@@ -46,10 +46,21 @@ class Home extends BaseController
         ];
         return view('frontend/about', $data);
     }
+    public function dashboard()
+    {
+        $data = [
+            'activePage' => 'Dashboard',
+            'tittle' => 'Lapak Siswa | Dashboard',
+            'navigasi' => 'Dashboard'
+        ];
+        return view('frontend/dashboard/dashboard', $data);
+    }
     public function profile()
     {
         $data = [
-            'tittle' => 'Dashboard Profile',
+            'activePage' => 'Profile',
+            'tittle' => 'Lapak Siswa | Profile',
+            'navigasi' => 'Profile'
         ];
         return view('frontend/dashboard/profile', $data);
     }
@@ -77,6 +88,23 @@ class Home extends BaseController
         ];
         return view('frontend/shop', $data);
     }
+    public function shoptest()
+    {
+        $products = $this->productModel->getProductsWithDetails();
+
+        // Ambil gambar untuk setiap produk
+        foreach ($products as &$product) {
+            $product['images'] = $this->urlImageProductSiswaModel->getImagesByProductId($product['id_product']);
+        }
+        
+        $data = [
+            'products' => $products,
+            'activePage' => 'Produk Siswa',
+            'tittle' => 'Shop',
+            'navigasi' => 'Produk Siswa'
+        ];
+        return view('frontend/shoptest', $data);
+    }
     public function detail()
     {
         $data = [
@@ -84,11 +112,24 @@ class Home extends BaseController
         ];
         return view('frontend/detail_produk', $data);
     }
-    public function cart()
+
+    public function blog()
     {
         $data = [
-            'tittle' => 'Keranjang',
+            'activePage' => 'blog',
+            'tittle' => 'Lapak Siswa | blog',
+            'navigasi' => 'blog'
         ];
-        return view('frontend/cart', $data);
+        return view('frontend/blog', $data);
+    }
+
+    public function mitra()
+    {
+        $data = [
+            'activePage' => 'mitra',
+            'tittle' => 'Lapak Siswa | mitra',
+            'navigasi' => 'mitra'
+        ];
+        return view('frontend/mitra', $data);
     }
 }
