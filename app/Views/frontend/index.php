@@ -13,7 +13,7 @@
         <div class="col-md-6 animated fadeIn">
             <div class="owl-carousel header-carousel">
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="<?= base_url() ?m>frontend/img/carousel-1.jpg" alt="">
+                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/carousel-1.jpg" alt="">
                 </div>
                 <div class="owl-carousel-item">
                     <img class="img-fluid" src="<?= base_url() ?>frontend/img/carousel-2.jpg" alt="">
