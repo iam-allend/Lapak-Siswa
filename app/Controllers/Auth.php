@@ -401,8 +401,8 @@ class Auth extends Controller
         $session->set($sessionData);
 
         $redirectRoutes = [
-            1 => '/',
-            2 => '/',
+            1 => 'profile',
+            2 => 'profile',
             3 => 'dashboard',
             4 => 'dashboard',
             5 => 'industri/dashboard',
