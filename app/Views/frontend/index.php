@@ -273,14 +273,7 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-<!-- Property List End -->5" href="">Browse More Property</a>
-                    </div>
-                </div>
-            </div>
->>>>>>> b893c30efbc691ee89dca97e7a3df9706530ec8d
-(0, 185, 142, .3)">
-=======
+
 <!-- Property List End -->
 
 <!-- Call to Action Start -->
@@ -288,7 +281,6 @@
     <div class="container">
         <div class="bg-light rounded p-3">
             <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
->>>>>>> 68848d46296880504498d064f07961ca4c91554f
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <img class="img-fluid rounded w-100" src="<?= base_url() ?>frontend/img/call-to-action.jpg"

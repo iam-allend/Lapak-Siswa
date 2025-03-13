@@ -132,4 +132,14 @@ class Home extends BaseController
         ];
         return view('frontend/mitra', $data);
     }
+
+    public function testimonial()
+    {
+        $data = [
+            'activePage' => 'testimonial',
+            'tittle' => 'Lapak Siswa | testimonial',
+            'navigasi' => 'testionial'
+        ];
+        return view('frontend/testimonial', $data);
+    }
 }
