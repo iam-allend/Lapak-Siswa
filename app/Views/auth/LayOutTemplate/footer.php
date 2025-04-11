@@ -8,6 +8,7 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Main JS -->
     <script src="<?= base_url('backend/assets/js/main.js')?>"></script>

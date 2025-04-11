@@ -33,7 +33,9 @@
                             <th>Customer</th>
                             <th>Hrg jml total</th>
                             <th>Tgl Order-Status</th>
+                            <?php if(session('id_level') != 1){?>
                             <th>Actions</th>
+                            <?php }?>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
@@ -102,6 +104,7 @@
                                         <?= ucfirst($transaction['status_order']) ?>
                                 </span>
                             </td>
+                            <?php if(session('id_level') != 1){?>
                             <td>
                                 <?php if ($transaction['status_order'] !== 'selesai'): ?>
                                     <!-- Tombol Edit dan Hapus aktif jika status bukan "selesai" -->
@@ -121,6 +124,7 @@
                                     </button>
                                 <?php endif; ?>
                             </td>
+                            <?php }?>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>

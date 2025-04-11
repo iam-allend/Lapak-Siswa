@@ -45,7 +45,6 @@
     <!--=============== SWEETALERT ===============-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/fonts/boxicons.css" />
