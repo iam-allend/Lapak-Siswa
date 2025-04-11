@@ -402,7 +402,7 @@ class Auth extends Controller
 
         $redirectRoutes = [
             1 => 'profile',
-            2 => 'profile',
+            2 => '/',
             3 => 'dashboard',
             4 => 'dashboard',
             5 => 'industri/dashboard',

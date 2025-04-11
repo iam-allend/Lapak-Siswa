@@ -35,7 +35,7 @@
             </li>
 
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Keranjang') ? 'active' : '' ?>">
-                <a href="<?= base_url('keranjang') ?>" class="menu-link">
+                <a href="<?= base_url('cart') ?>" class="menu-link">
                     <i class='menu-icon tf-icons bx bx-cart-alt'></i>
                     <div data-i18n="Analytics">Keranjang</div>
                 </a>

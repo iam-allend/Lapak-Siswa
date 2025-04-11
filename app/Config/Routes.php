@@ -168,3 +168,18 @@ $routes->group('customer',function($routes){
 $routes->group('industri',function($routes){
     $routes->get('dashboard', 'Industri::index'); // Halaman shop untuk customer
 });
+
+
+
+$routes->group('manage-deposit', function($routes) {
+    $routes->get('/', 'ManageDepositController::index');
+    $routes->get('create', 'ManageDepositController::create');
+    $routes->post('store', 'ManageDepositController::store');
+    $routes->get('edit/(:num)', 'ManageDepositController::edit/$1');
+    $routes->post('update/(:num)', 'ManageDepositController::update/$1');
+    $routes->get('delete/(:num)', 'ManageDepositController::delete/$1');
+    $routes->get('view/(:num)', 'ManageDepositController::view/$1');
+    
+    // API untuk get data customer (jika diperlukan)
+    $routes->get('get-customer/(:num)', 'ManageDepositController::getCustomer/$1');
+});

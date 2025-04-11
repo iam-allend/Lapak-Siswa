@@ -36,7 +36,12 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA TRANSAKSI</span>
             </li>            
-            
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Deposit') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-deposit" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-git-compare' ></i>
+                <div>Data Deposit</div>
+              </a>
+            </li>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-order-product-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
@@ -49,7 +54,7 @@
                 <div>Order Product IndPer</div>
               </a>
             </li>
-            
+
             
 
             <li class="menu-header small text-uppercase">
