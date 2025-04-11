@@ -23,7 +23,7 @@ class IndustriModel extends Model
 
     public function getUser($usnEmail, $type = 'username')
     {
-        return $this->select('id_industri, id_level, nama AS full_name, username, email, password, url_image, status_registrasi')
+        return $this->select('id_industri, id_level, nama, username, email, password, url_image, status_registrasi')
                     ->where($type, $usnEmail)
                     ->first();
     }

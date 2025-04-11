@@ -36,13 +36,14 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA TRANSAKSI</span>
             </li>            
-            
+            <?php if(session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-order-product-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
                 <div>Order Product Siswa</div>
               </a>
             </li>
+            <?php }?>
             <?php if(session('id_level') != 1 && session('id_level') != 3){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
@@ -50,9 +51,9 @@
                 <div>Order Product IndPer</div>
               </a>
             </li>
+            <?php }?>
             
-            
-
+            <?php if(session('id_level') != 1 && session('id_level') != 3 && session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA USER</span>
             </li>            
@@ -65,7 +66,7 @@
             </li>
             <?php }?>
 
-            <?php if(session('id_level') != 1){?>
+            <?php if(session('id_level') != 1 && session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
@@ -74,7 +75,7 @@
             </li>
             <?php }?>
 
-            <?php if(session('id_level') != 1 && session('id_level') != 3){?>
+            <?php if(session('id_level') != 1 && session('id_level') != 3 && session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage IndPer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-indper" class="menu-link">
                   <i class='menu-icon tf-icons bx bx-user-circle'></i>
@@ -100,13 +101,15 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA PRODUCT</span>
             </li>
-            
+
+            <?php if(session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-product-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
                 <div>Product Siswa</div>
               </a>
             </li>
+            <?php }?>
 
             <?php if(session('id_level') != 1 && session('id_level') != 3) {?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Industri/Perusahaan') ? 'active' : '' ?>">
@@ -115,8 +118,9 @@
                 <div>Product IndPer</div>
               </a>
             </li>
-            
+            <?php }?>
 
+            <?php if(session('id_level') != 1 && session('id_level') != 3 && session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">KELENGKAPAN PRODUK</span>
             </li>
@@ -229,6 +233,8 @@
                                     echo 'Admin';
                                 } elseif ($id_level == 4) {
                                     echo 'Superadmin';
+                                } elseif ($id_level == 5 || $id_level == 6) {
+                                    echo 'Collaborator';
                                 } else {
                                     echo 'Tidak Diketahui';
                                 }
