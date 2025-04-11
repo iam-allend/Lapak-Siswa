@@ -405,7 +405,7 @@ class Auth extends Controller
             2 => '/',
             3 => 'dashboard',
             4 => 'dashboard',
-            5 => 'industri/dashboard',
+            5 => 'dashboard',
         ];
 
         return redirect()->to(base_url($redirectRoutes[$sessionData['id_level']] ?? 'login'))->with('alert', 'login_sukses');

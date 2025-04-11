@@ -43,7 +43,7 @@
                 <div>Order Product Siswa</div>
               </a>
             </li>
-            <?php if(session('id_level') != 1){?>
+            <?php if(session('id_level') != 1 && session('id_level') != 3){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
@@ -63,12 +63,18 @@
                 <div>Manage Admin</div>
               </a>
             </li>
+            <?php }?>
+
+            <?php if(session('id_level') != 1){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div>Manage Siswa</div>
               </a>
             </li>
+            <?php }?>
+
+            <?php if(session('id_level') != 1 && session('id_level') != 3){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage IndPer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-indper" class="menu-link">
                   <i class='menu-icon tf-icons bx bx-user-circle'></i>
@@ -102,7 +108,7 @@
               </a>
             </li>
 
-            <?php if(session('id_level') != 1) {?>
+            <?php if(session('id_level') != 1 && session('id_level') != 3) {?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Industri/Perusahaan') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
