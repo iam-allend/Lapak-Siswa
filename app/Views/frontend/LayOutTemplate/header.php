@@ -87,7 +87,7 @@
                         <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
                     </div>
 
-                    <?php if(!session('id_level') == 0){?>
+                    <?php if(session('id_level') == 2){?>
 
                     <div class="dropdown">
                         <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40" height="40">

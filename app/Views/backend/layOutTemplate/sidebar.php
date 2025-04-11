@@ -43,6 +43,7 @@
                 <div>Order Product Siswa</div>
               </a>
             </li>
+            <?php if(!session('id_level') == 1){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
@@ -86,13 +87,14 @@
                   <div>Keranjang Customer</div>
               </a>
             </li>
+            <?php }?>
 
             <!-- Menu lainnya -->
 
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA PRODUCT</span>
             </li>
-
+            
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-product-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
@@ -100,12 +102,14 @@
               </a>
             </li>
 
+            <?php if(!session('id_level') == 1) {?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Industri/Perusahaan') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
                 <div>Product IndPer</div>
               </a>
             </li>
+            
 
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">KELENGKAPAN PRODUK</span>
@@ -141,6 +145,7 @@
                 <div>Pajak Sistem</div>
               </a>
             </li>
+            <?php }?>
 
           </ul>
         </aside>
