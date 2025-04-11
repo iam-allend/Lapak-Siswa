@@ -23,25 +23,49 @@ class CartController extends BaseController
         $userId = session()->get('id_customer');
 
         if (!$userId) {
-            return redirect()->to('/login')->with('error', 'You need to log in first.'); // Redirect if not logged in
+            return redirect()->to('/login')->with('error', 'You need to log in first.'); 
         }
 
         $cart = $this->cartModel->getProduk($userId);
 
-        // Fixing the loop to correctly modify cart items
         foreach ($cart as &$product) {
             $product['images'] = $this->urlImageProductSiswaModel->getImagesByProductId($product['id_product']);
         }
-        unset($product); // Unset reference to prevent accidental modification outside the loop
+        unset($product); 
 
         $data = [
             'activePage' => 'Keranjang',
-            'tittle' => 'Lapak Siswa | Keranjang', // Fixed typo
+            'tittle' => 'Lapak Siswa | Keranjang', 
             'navigasi' => 'Keranjang',
             'cart' => $cart
         ];
 
         return view('frontend/dashboard/cart', $data);
+    }
+
+    public function getCartItems()
+    {
+        $userId = session()->get('id_customer');
+
+        if (!$userId) {
+            return redirect()->to('/login')->with('error', 'You need to log in first.'); 
+        }
+
+        $cart = $this->cartModel->getProduk($userId);
+
+        foreach ($cart as &$product) {
+            $product['images'] = $this->urlImageProductSiswaModel->getImagesByProductId($product['id_product']);
+        }
+        unset($product);
+
+        $data = [
+            'activePage' => 'Keranjang',
+            'tittle' => 'Lapak Siswa | Keranjang',
+            'navigasi' => 'Keranjang',
+            'cart' => $cart
+        ];
+
+        return view('frontend/dashboard/cart_produk', $data);
     }
 
     public function getCartCount()
@@ -100,5 +124,16 @@ class CartController extends BaseController
 
         return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid request']);
     }
+
+    public function hapus($id)
+    {
+        if ($this->request->isAJAX()) {
+            if ($this->cartModel->delete($id)) {
+                return $this->response->setJSON(['status' => 'success', 'message' => 'Item deleted successfully.']);
+            } else {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to delete item.']);
+            }
+        }
+    }  
 
 }
