@@ -43,7 +43,7 @@
                 <div>Order Product Siswa</div>
               </a>
             </li>
-            <?php if(!session('id_level') == 1){?>
+            <?php if(session('id_level') != 1){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
@@ -102,7 +102,7 @@
               </a>
             </li>
 
-            <?php if(!session('id_level') == 1) {?>
+            <?php if(session('id_level') != 1) {?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Industri/Perusahaan') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
@@ -215,9 +215,9 @@
                             <small class="text-muted">
                                 <?php
                                 $id_level = session('id_level');
-                                if ($id_level == 1) {
+                                if ($id_level == 2) {
                                     echo 'Customer';
-                                } elseif ($id_level == 2) {
+                                } elseif ($id_level == 1) {
                                     echo 'Siswa';
                                 } elseif ($id_level == 3) {
                                     echo 'Admin';
