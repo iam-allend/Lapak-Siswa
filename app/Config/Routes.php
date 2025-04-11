@@ -23,6 +23,7 @@ $routes->get('cart/getCartItems', 'CartController::getCartItems');
 $routes->get('shoptest', 'Home::shoptest'); 
 $routes->get('blog', 'Home::blog'); 
 $routes->get('mitra', 'Home::mitra'); 
+$routes->get('testimonial', 'Home::testimonial');
 
 $routes->get('register', 'Auth::register');
 $routes->post('auth/register', 'Auth::add_register');
