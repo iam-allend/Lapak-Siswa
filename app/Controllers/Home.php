@@ -49,7 +49,7 @@ class Home extends BaseController
     public function dashboard()
     {
         $data = [
-            'activePage' => 'Dashboard',
+            'activePage' => 'Dashboard Customer',
             'tittle' => 'Lapak Siswa | Dashboard',
             'navigasi' => 'Dashboard'
         ];

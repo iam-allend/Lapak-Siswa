@@ -375,6 +375,8 @@ class Auth extends Controller
                 $sessionData['username']  = $user['username'];
                 $sessionData['email']     = $user['email'];
                 $sessionData['gender']    = $user['gender'];
+                $sessionData['no_telp']    = $user['no_telp'];
+                $sessionData['alamat']    = $user['alamat'];
                 $sessionData['url_image'] = $user['url_image'];
                 break;
 

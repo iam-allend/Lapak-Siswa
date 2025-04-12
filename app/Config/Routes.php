@@ -10,7 +10,7 @@ $routes->get('/', 'Home::index');
 
 $routes->get('about', 'Home::about');
 $routes->get('contactus', 'Home::contactus');
-$routes->get('profile', 'Home::profile');
+$routes->get('dashboard-customer', 'Home::dashboard');
 $routes->get('shop', 'Home::shop'); 
 $routes->get('detail', 'Home::detail'); 
 
@@ -35,6 +35,19 @@ $routes->get('auth/logout', 'Auth::logout'); // Proses logout
 
 // $routes->get('admin/dashboard', 'Admin::dashboard'); // Halaman dashboard untuk admin
 // $routes->get('superadmin/dashboard', 'SuperAdmin::dashboard'); // Halaman dashboard untuk superadmin
+
+
+$routes->group('deposit', function($routes) {
+    $routes->get('/', 'CustomerDepositController::index');
+    $routes->get('create', 'CustomerDepositController::create');
+    $routes->post('store', 'CustomerDepositController::store');
+});
+
+
+$routes->group('profile', function($routes) {
+    $routes->get('/', 'CustomerProfileController::index');
+    $routes->post('update', 'CustomerProfileController::update');
+});
 
 
 $routes->get('dashboard', 'DashboardController::dashboard');

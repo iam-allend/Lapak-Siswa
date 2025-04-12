@@ -30,4 +30,13 @@ class DepositModel extends Model
 
         return $builder->get()->getResultArray();
     }
+
+    public function getDepositsByCustomer($customerId)
+    {
+        return $this->select('deposit.*, bank.nama_bank, bank.nomor_rekening')
+            ->join('bank', 'bank.id_bank = deposit.id_bank')
+            ->where('id_customer', $customerId)
+            ->orderBy('created_at', 'DESC')
+            ->findAll();
+    }
 }
