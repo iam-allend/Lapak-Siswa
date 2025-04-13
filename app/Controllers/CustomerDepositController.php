@@ -7,6 +7,7 @@ use App\Models\BankModel;
 class CustomerDepositController extends BaseController
 {
     protected $depositModel;
+    protected $session;
     protected $bankModel;
 
     public function __construct()
@@ -22,6 +23,12 @@ class CustomerDepositController extends BaseController
 
     public function index()
     {
+        $this->session = session();
+
+        if (!$this->session->has('logged_in')) {
+            return redirect()->to(base_url('login'))->with('alert','belum_login');
+        }
+
         $data = [
             'deposits' => $this->depositModel->getDepositsByCustomer(session()->get('id_customer')),
             'banks' => $this->bankModel->findAll(),
