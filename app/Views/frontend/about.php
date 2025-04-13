@@ -186,7 +186,4 @@
     </div>
 </div>
 <!-- Team End -->
-
-
-
 <?php include("LayOutTemplate/footer.php"); ?>

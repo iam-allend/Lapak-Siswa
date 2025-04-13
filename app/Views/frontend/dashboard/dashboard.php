@@ -141,29 +141,59 @@
                     <div class="card-body">
                         <ul class="p-0 m-0">
                             <?php
-                            // Ambil transaksi dari kedua tabel
-                            $transaksiSiswa = $transaksiSiswaProses->where('id_customer', session('id_customer'))->findAll();
-                            $transaksiIndper = $transaksiIndperProses->where('id_customer', session('id_customer'))->findAll();
+                            // Model tambahan yang diperlukan
+                            $productSiswaModel = new \App\Models\ProductSiswaModel();
+                            $productIndperModel = new \App\Models\ProductIndperModel();
+                            $urlImageSiswaModel = new \App\Models\UrlImageProductSiswaModel();
+                            $urlImageIndperModel = new \App\Models\UrlImageProductIndperModel();
+
+                            // Ambil transaksi dengan detail produk
+                            $transaksiSiswa = $transaksiSiswaProses
+                                ->select('transaksi_siswa.*, product_siswa.product_name')
+                                ->join('product_siswa', 'product_siswa.id_product = transaksi_siswa.id_product')
+                                ->where('transaksi_siswa.id_customer', session('id_customer'))
+                                ->findAll();
+
+                            $transaksiIndper = $transaksiIndperProses
+                                ->select('transaksi_industri_perusahaan.*, product_industri_perusahaan.product_name')
+                                ->join('product_industri_perusahaan', 'product_industri_perusahaan.id_product = transaksi_industri_perusahaan.id_product')
+                                ->where('transaksi_industri_perusahaan.id_customer', session('id_customer'))
+                                ->findAll();
+
+                            // Tambahkan identifier jenis transaksi
+                            foreach($transaksiSiswa as &$t) $t['jenis'] = 'siswa';
+                            foreach($transaksiIndper as &$t) $t['jenis'] = 'industri';
                             
                             // Gabungkan dan urutkan
                             $allTransactions = array_merge($transaksiSiswa, $transaksiIndper);
                             usort($allTransactions, function($a, $b) {
                                 return strtotime($b['created_at']) - strtotime($a['created_at']);
                             });
-                            
+
                             foreach($allTransactions as $trans) : 
+                                // Ambil gambar produk
+                                if($trans['jenis'] == 'siswa') {
+                                    $images = $urlImageSiswaModel->where('id_product', $trans['id_product'])->findAll();
+                                    $product = $productSiswaModel->find($trans['id_product']);
+                                } else {
+                                    $images = $urlImageIndperModel->where('id_product', $trans['id_product'])->findAll();
+                                    $product = $productIndperModel->find($trans['id_product']);
+                                }
+                                
+                                $firstImage = !empty($images) ? base_url($images[0]['url']) : base_url('backend/assets/img/placeholder.jpg');
                             ?>
                             <li class="d-flex mb-4 pb-1">
-                                <div class="avatar flex-shrink-0 me-3">
-                                    <i class="bx bx-receipt fs-4"></i>
+                                <div class="avatar flex-shrink-0 me-5">
+                                    <img src="<?= $firstImage ?>" alt="Produk" class="rounded" style="width: 60px; height: 60px; object-fit: cover;">
                                 </div>
                                 <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                     <div class="me-2">
-                                        <small class="text-muted d-block mb-1"><?= $trans['status_order'] ?></small>
-                                        <h6 class="mb-0">ID Transaksi: <?= $trans['id_transaksi'] ?></h6>
+                                        <small class="text-muted d-block mb-1">Status: <?= ucfirst($trans['status_order']) ?></small>
+                                        <h6 class="mb-0"><?= $trans['product_name'] ?></h6>
+                                        <small class="text-muted">Jumlah: <?= $trans['quantity'] ?> pcs</small>
                                     </div>
                                     <div class="user-progress d-flex align-items-center gap-1">
-                                        <span class="text-muted">Rp </span>
+                                        <span class="text-muted">Total: Rp </span>
                                         <h6 class="mb-0"><?= number_format($trans['total_price'], 0, ',', '.') ?></h6>
                                     </div>
                                 </div>
@@ -171,6 +201,7 @@
                             <?php endforeach; ?>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
