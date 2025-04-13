@@ -15,6 +15,14 @@
             confirmButtonText: 'Oke',
         });
     </script>
+<?php elseif (session()->getFlashdata('alert') === 'belum_login'): ?>
+    <script>
+        Swal.fire({
+            title: 'Anda belum login!',
+            icon: 'error',
+            confirmButtonText: 'Oke',
+        });
+    </script>
 <?php elseif (session()->getFlashdata('alert') === 'add_cart'): ?>
     <script>
         Swal.fire({
@@ -75,8 +83,6 @@
             confirmButtonText: 'Oke',
         });
     </script>
-
-
 <?php elseif (session()->getFlashdata('alert') === 'validate_usn_email'): ?>
     <script>
         Swal.fire({

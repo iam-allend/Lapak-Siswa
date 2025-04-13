@@ -1,3 +1,4 @@
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="<?= base_url('backend/assets/js/ajax-main.js')?>"></script>
     <script src="<?= base_url()?>backend/assets/vendor/libs/jquery/jquery.js"></script>
     <script src="<?= base_url()?>backend/assets/vendor/libs/popper/popper.js"></script>
@@ -8,7 +9,7 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 
     <!-- Main JS -->
     <script src="<?= base_url('backend/assets/js/main.js')?>"></script>

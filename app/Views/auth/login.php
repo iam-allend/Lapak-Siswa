@@ -1,9 +1,20 @@
 <?= $this->include('auth/layOutTemplate/header'); ?>
 
     <div class="container-xxl">
+    <?php if (session()->getFlashdata('alert') === 'belum_login'){ ?>
+    <script>
+        Swal.fire({
+            title: 'Anda belum login!',
+            text: 'Silakan login untuk melanjutkan.',
+            icon: 'error',
+            confirmButtonText: 'Oke',
+        });
+    </script>
+    <?php }?>
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register -->
+          
           <div class="card">
             <div class="card-body">
               <!-- Logo -->
