@@ -13,7 +13,13 @@
  -->
 <!-- beautify ignore:start -->
 <html
-  lang="en">
+  lang="en"
+  class="light-style customizer-hide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="<?= base_url()?>backend/assets/"
+  data-template="vertical-menu-template-free"
+>
   <head>
     <meta charset="utf-8" />
     <meta
@@ -37,9 +43,9 @@
     />
 
     <!--=============== SWEETALERT ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/fonts/boxicons.css" />
@@ -50,14 +56,12 @@
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/css/demo.css" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Page CSS -->
     <!-- Page -->
     <link rel="stylesheet" href="<?= base_url()?>backend/assets/vendor/css/pages/page-auth.css" />
     <!-- Helpers -->
-    <script src="<?= base_url()?>backend/assets/vendor/js/helpers.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -66,4 +70,4 @@
 
   <body>
 
-  
+  <?= $this->include('flashalert')?>
