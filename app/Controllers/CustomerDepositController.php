@@ -7,6 +7,7 @@ use App\Models\BankModel;
 class CustomerDepositController extends BaseController
 {
     protected $depositModel;
+    protected $session;
     protected $bankModel;
 
     public function __construct()
@@ -22,6 +23,12 @@ class CustomerDepositController extends BaseController
 
     public function index()
     {
+        $this->session = session();
+
+        if (!$this->session->has('logged_in')) {
+            return redirect()->to(base_url('login'))->with('alert','belum_login');
+        }
+
         $data = [
             'deposits' => $this->depositModel->getDepositsByCustomer(session()->get('id_customer')),
             'banks' => $this->bankModel->findAll(),
@@ -70,6 +77,6 @@ class CustomerDepositController extends BaseController
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
-        return redirect()->to('frontend/dashboard/deposit/index')->with('success', 'Deposit berhasil diajukan!');
+        return redirect()->to('deposit')->with('success', 'Deposit berhasil diajukan!');
     }
 }

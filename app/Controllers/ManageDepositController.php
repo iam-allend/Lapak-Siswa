@@ -12,6 +12,7 @@ class ManageDepositController extends Controller
 {
     protected $depositModel;
     protected $customerModel;
+    protected $session;
     protected $bankModel;
 
     public function __construct()
@@ -24,6 +25,12 @@ class ManageDepositController extends Controller
     // Tampilkan semua deposit
     public function index()
     {
+        $this->session = session();
+
+        if (!$this->session->has('logged_in')) {
+            return redirect()->to(base_url('login'))->with('alert','belum_login');
+        }
+
         $data = [
             'deposits' => $this->depositModel->getDepositWithDetails(),
             'activePage' => 'Manage Deposit',

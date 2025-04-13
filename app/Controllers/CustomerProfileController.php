@@ -6,6 +6,7 @@ use App\Models\CustomerModel;
 class CustomerProfileController extends BaseController
 {
     protected $customerModel;
+    protected $session;
 
     public function __construct()
     {
@@ -19,6 +20,12 @@ class CustomerProfileController extends BaseController
 
     public function index()
     {
+        $this->session = session();
+
+        if (!$this->session->has('logged_in')) {
+            return redirect()->to(base_url('login'))->with('alert','belum_login');
+        }
+
         $data = [
             'activePage' => 'Profile',
             'tittle' => 'Pengaturan Profil',

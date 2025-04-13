@@ -22,4 +22,11 @@ class CartModel extends Model
                     ->where('cart.user_id', $userId)
                     ->findAll();
     }
+
+    public function getProdukCart($userId){
+        return $this->select('cart.*, product_siswa.*')
+                    ->join('product_siswa','cart.product_id = product_siswa.id_product')
+                    ->where('cart.user_id', $userId)
+                    ->findAll();
+    }
 }

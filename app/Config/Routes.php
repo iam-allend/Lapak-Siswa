@@ -16,9 +16,12 @@ $routes->get('detail', 'Home::detail');
 
 $routes->get('cart', 'CartController::index');
 $routes->post('cart/add_to_cart', 'CartController::add_cart');
+$routes->post('cart/checkout', 'CartController::checkout');
 $routes->get('cart/getCartCount', 'CartController::getCartCount');
 $routes->post('cart/hapusCart/(:num)', 'CartController::hapus/$1');
 $routes->get('cart/getCartItems', 'CartController::getCartItems');
+$routes->post('cart/updateQuantity', 'CartController::updateQuantity');
+
 
 $routes->get('shoptest', 'Home::shoptest'); 
 $routes->get('blog', 'Home::blog'); 

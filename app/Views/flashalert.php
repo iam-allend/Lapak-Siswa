@@ -15,10 +15,44 @@
             confirmButtonText: 'Oke',
         });
     </script>
+<?php elseif (session()->getFlashdata('alert') === 'belum_login'): ?>
+    <script>
+        Swal.fire({
+            title: 'Akses dilarang!',
+            icon: 'error',
+            text: 'silahkan login terlebih dahulu',
+            confirmButtonText: 'Oke',
+        });
+    </script>
 <?php elseif (session()->getFlashdata('alert') === 'add_cart'): ?>
     <script>
         Swal.fire({
             title: 'berhasil menambah produk!',
+            icon: 'success',
+            confirmButtonText: 'Oke',
+        });
+    </script>
+<?php elseif (session()->getFlashdata('alert') === 'checkout_sukses'): ?>
+    <script>
+        Swal.fire({
+            title: 'berhasil menambah produk!',
+            icon: 'success',
+            confirmButtonText: 'Oke',
+        });
+    </script>
+<?php elseif (session()->getFlashdata('alert') === 'saldo_tidak_cukup'): ?>
+    <script>
+        Swal.fire({
+            title: 'Saldo tidak cukup!',
+            icon: 'error',
+            text: 'silakan top up terlebih dahulu',
+            confirmButtonText: 'Oke',
+        });
+    </script>
+<?php elseif (session()->getFlashdata('alert') === 'delete_cart'): ?>
+    <script>
+        Swal.fire({
+            title: 'berhasil menghapus produk!',
             icon: 'success',
             confirmButtonText: 'Oke',
         });
@@ -75,8 +109,6 @@
             confirmButtonText: 'Oke',
         });
     </script>
-
-
 <?php elseif (session()->getFlashdata('alert') === 'validate_usn_email'): ?>
     <script>
         Swal.fire({

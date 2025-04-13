@@ -17,6 +17,7 @@
                 <div class="owl-carousel-item">
                     <img class="img-fluid" src="<?= base_url() ?>frontend/img/image.png" alt="">
                 </div>
+                
             </div>
         </div>
     </div>
@@ -284,7 +285,6 @@
 <!-- Property List End -->
 
 <!-- Call to Action Start -->
-
 
 
 <!-- Team Start -->
