@@ -70,6 +70,6 @@ class CustomerDepositController extends BaseController
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
-        return redirect()->to('frontend/dashboard/deposit/index')->with('success', 'Deposit berhasil diajukan!');
+        return redirect()->to('deposit')->with('success', 'Deposit berhasil diajukan!');
     }
 }
