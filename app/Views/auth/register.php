@@ -27,7 +27,7 @@
                   <select class="form-select" name="level" id="levelSelect" required>
                     <option value="">-- Pilih --</option>
                     <!-- <option value="4">Super Admin</option> -->
-                    <option value="3">Guru</option>
+                    <!-- <option value="3">Guru</option> -->
                     <option value="1">Siswa</option>
                     <option value="2">Customer</option>
                     <option value="5">Collaborator</option>

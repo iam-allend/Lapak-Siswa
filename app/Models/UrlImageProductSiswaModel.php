@@ -22,4 +22,16 @@ class UrlImageProductSiswaModel extends Model
             ->get()
             ->getResultArray();
     }
+
+    public function getImages($id_product)
+    {
+        return $this->db->table('url_image_product_siswa')
+            ->where('id_product', $id_product)
+            ->orderBy('id_product', 'ASC') // atau 'DESC' sesuai kebutuhan
+            ->limit(1)
+            ->get()
+            ->getRowArray(); // ambil satu baris saja
+    }
+
+
 }
