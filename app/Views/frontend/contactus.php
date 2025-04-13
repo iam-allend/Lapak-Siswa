@@ -63,8 +63,7 @@
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <h1 class="mb-3">Contact Us</h1>
-            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod
-                sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+            <p>Silahkan hubungi kami melalui Nomer dan Email di bawah ini,jika anda memiliki pertanyaan pertanyaan lebih lanjut.</p>
         </div>
         <div class="row g-4">
             <div class="col-12">
@@ -98,7 +97,7 @@
                                 <div class="icon me-3" style="width: 45px; height: 45px;">
                                     <i class="fa fa-phone-alt text-primary"></i>
                                 </div>
-                                <span>+012 345 6789</span>
+                                <span>+062 8945 6789</span>
                             </div>
                         </div>
                     </div>
@@ -113,9 +112,9 @@
             </div>
             <div class="col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form
-                        with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're
-                        done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <p class="mb-4">
+                        <!-- done. <a href="https://htmlcodex.com/contact-form">Download Now</a> -->
+                        .</p>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
