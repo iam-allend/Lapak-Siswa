@@ -11,12 +11,13 @@
         </div>
         <div class="col-md-6 animated fadeIn">
             <div class="owl-carousel header-carousel">
-                <div class="owl-carousel-item">
-                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/carousel-1.jpg" alt="">
+            <div class="owl-carousel-item">
+                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/Gambar ke 2.png" alt="">
                 </div>
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/carousel-2.jpg" alt="">
+                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/Halaman Awalan.png" alt="">
                 </div>
+                
             </div>
         </div>
     </div>
@@ -284,9 +285,8 @@
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <div class="mb-4">
-                            <h1 class="mb-3">Contact With Our Certified Agent</h1>
-                            <p>Eirmod sed ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam
-                                justo sed vero dolor duo.</p>
+                            <h1 class="mb-3">Hubungi Kami</h1>
+                            <p>Jika ada pertanyaan atau ingin menghubungi kami, silahkan menghubungi kami melalui
                         </div>
                         <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Make A
                             Call</a>

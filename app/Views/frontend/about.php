@@ -2,23 +2,23 @@
 
 
 <!-- Header Start -->
-<!-- <div class="container-fluid header bg-white p-4 ">
+<div class="container-fluid header bg-white p-4 ">
     <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
         <div class="col-md-6 p-5 mt-lg-5">
             <h1 class="display-5 animated fadeIn mb-4">About Us</h1>
             <nav aria-label="breadcrumb animated fadeIn">
                 <ol class="breadcrumb text-uppercase">
-                    <li class="breadcrumb-item"><a href="" >Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= base_url() ?>" >Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
                     <li class="breadcrumb-item text-body active" aria-current="page">About</li>
                 </ol>
             </nav>
         </div>
         <div class="col-md-6 animated fadeIn">
-            <img class="img-fluid" src="" alt="">
+            <img class="img-fluid" src="<?= base_url('logo/logo-text-green.webp') ?>" alt="">
         </div>
     </div>
-</div> -->
+</div>
 <!-- Header End -->
 
 
@@ -64,17 +64,16 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                    <img class="img-fluid w-100" src="<?= base_url('logo/') ?>">
+                    <img class="img-fluid" src="<?= base_url('frontend/img/lapaksiswa.png') ?>" alt="">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h1 class="mb-4">Tentang Kami</h1>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                    eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
-                <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                <h1 class="mb-4">🎓 Tempat Terbaik untuk Menemukan Karya Siswa Terbaik</h1>
+                <p class="mb-4">Lapak Siswa adalah platform yang mendukung kreativitas dan inovasi pelajar dari seluruh Indonesia. Kami menghadirkan produk-produk unik, berkualitas, dan penuh nilai edukatif hasil karya anak sekolah.</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Ragam produk kreatif karya siswa, hasil dari semangat dan ide-ide inspiratif.</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Produk orisinal buatan siswa</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Dukung langsung talenta muda Indonesia</p>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="<?= base_url() ?>about">Read More</a>
             </div>
         </div>
     </div>
@@ -187,7 +186,4 @@
     </div>
 </div>
 <!-- Team End -->
-
-
-
 <?php include("LayOutTemplate/footer.php"); ?>

@@ -5,7 +5,7 @@
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Get In Touch</h5>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Semarang, Indonesia</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+062 8945 6789</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>lapaksiswa@gmail.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
