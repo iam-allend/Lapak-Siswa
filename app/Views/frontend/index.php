@@ -6,8 +6,7 @@
             <h1 class="display-5 animated fadeIn mb-4">Satu ide kecil, satu langkah besar. Yuk, mulai di <span
                     class="text-primary">Lapak Siswa! </span>
             </h1>
-            <p class="animated fadeIn mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet
-                sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+            <p class="animated fadeIn mb-4 pb-2">Temukan dan dukung produk kreatif siswa dari berbagai sekolah. Saatnya berkarya dan menginspirasi bersama!.</p>
             <a href="<?= base_url() ?>shop" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
         </div>
         <div class="col-md-6 animated fadeIn">
@@ -65,9 +64,8 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="mb-3">Property Types</h1>
-            <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod
-                sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+            <h1 class="mb-3">Kategori Produk</h1>
+            <p>Temukan berbagai produk kreatif buatan siswa dari berbagai sekolah. Semua dibuat dengan semangat inovasi, penuh nilai edukatif, dan mencerminkan potensi generasi muda.</p>
         </div>
         <div class="row g-4">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -174,12 +172,11 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h1 class="mb-4">#1 Place To Find The Perfect Property</h1>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                    eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-                <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
+                <h1 class="mb-4">🎓 Tempat Terbaik untuk Menemukan Karya Siswa Terbaik</h1>
+                <p class="mb-4">Lapak Siswa adalah platform yang mendukung kreativitas dan inovasi pelajar dari seluruh Indonesia. Kami menghadirkan produk-produk unik, berkualitas, dan penuh nilai edukatif hasil karya anak sekolah.</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Ragam produk kreatif karya siswa, hasil dari semangat dan ide-ide inspiratif.</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Produk orisinal buatan siswa</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Dukung langsung talenta muda Indonesia</p>
                 <a class="btn btn-primary py-3 px-5 mt-3" href="<?= base_url() ?>about">Read More</a>
             </div>
         </div>
@@ -195,8 +192,7 @@
             <div class="col-lg-6">
                 <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
                     <h1 class="mb-3">Produk Tersedia</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
-                        eirmod sit diam justo sed rebum.</p>
+                    <p>Jelajahi berbagai produk hasil karya siswa, mulai dari kerajinan tangan, karya digital, hingga barang fungsional sehari-hari. Semua produk dibuat dengan semangat belajar dan kreativitas tinggi.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
