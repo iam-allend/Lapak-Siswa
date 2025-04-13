@@ -174,7 +174,7 @@ class ManageOrderProductIndperController extends Controller
                 'jumlah' => $transaction['total_price'],
                 'jenis' => 'pendapatan',
                 'keterangan' => 'Transaksi industri/perusahaan #' . $id . " - " . $transactionDetail['product_name'],
-                'asal' => 'Order Produk',
+                'asal' => 'Success Order Produk Industri',
                 'created_at' => date('Y-m-d H:i:s')
             ]);
         }

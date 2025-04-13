@@ -9,7 +9,7 @@ class KeuanganModel extends Model
     protected $table = 'keuangan';
     protected $primaryKey = 'id_keuangan';
     protected $allowedFields = [
-        'id_transaksi', 'jumlah', 'jenis', 'keterangan', 'created_at', 'updated_at'
+        'id_transaksi', 'jumlah', 'jenis', 'keterangan', 'asal', 'created_at', 'updated_at'
     ];
 
     // Method untuk menambahkan catatan keuangan

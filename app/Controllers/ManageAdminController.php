@@ -8,6 +8,7 @@ use CodeIgniter\Controller;
 class ManageAdminController extends Controller
 {
     protected $adminModel;
+    protected $session;
 
     public function __construct()
     {
@@ -17,6 +18,12 @@ class ManageAdminController extends Controller
     // Menampilkan daftar admin
     public function index()
     {
+        $this->session = session();
+
+        if (!$this->session->has('logged_in')) {
+            return redirect()->to(base_url('login'))->with('alert','belum_login');
+        }
+
         $data = [
             'admins' => $this->adminModel->where('id_level', 3)->findAll(),
             'activePage' => 'Manage Admin',

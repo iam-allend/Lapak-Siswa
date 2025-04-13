@@ -159,7 +159,6 @@ class ManageOrderProductSiswaController extends Controller
     // Mengupdate status transaksi (misal: ke "selesai")
     public function update($id)
     {
-        
         $transaction = $this->transaksiModel->find($id);
         $transactiondetail = $this->transaksiModel->getTransactionWithDetails($id);
 
@@ -169,27 +168,27 @@ class ManageOrderProductSiswaController extends Controller
 
         $newStatus = $this->request->getPost('status_order');
 
-        // Jika status diubah ke "selesai", kurangi stok produk dan tambahkan catatan keuangan
+        // Jika status diubah ke "selesai" DAN sebelumnya bukan "selesai"
         if ($newStatus === 'selesai' && $transaction['status_order'] !== 'selesai') {
+            // 1. Update stok produk
             $product = $this->productModel->find($transaction['id_product']);
             $this->productModel->update($product['id_product'], [
                 'stock' => $product['stock'] - $transaction['quantity'],
                 'sell' => $product['sell'] + $transaction['quantity']
             ]);
 
-            // Simpan catatan keuangan
+            // 2. Tambahkan catatan keuangan HANYA jika status berubah ke selesai
             $this->keuanganModel->addKeuangan([
                 'id_transaksi' => $id,
                 'jumlah' => $transaction['total_price'],
                 'jenis' => 'pendapatan',
-                'keterangan' => 'Transaksi produk siswa #' . $id . " - ". $transactiondetail['product_name'],
-                'asal' => 'Order Produk',
+                'keterangan' => 'Transaksi produk siswa #' . $id . " - " . $transactiondetail['product_name'],
+                'asal' => 'Success Order Produk Siswa',
                 'created_at' => date('Y-m-d H:i:s')
             ]);
-            return redirect()->to('/manage-keuangan-siswa')->with('primary', 'Status transaksi berhasil diubah!');
         }
 
-        // Update status transaksi
+        // 3. Update status transaksi untuk SEMUA kasus
         $this->transaksiModel->update($id, [
             'status_order' => $newStatus,
             'updated_at' => date('Y-m-d H:i:s')
