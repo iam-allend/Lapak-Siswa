@@ -22,7 +22,7 @@
 
 
 <!-- Search Start -->
-<div class="container-fluid bg-primary mb-5 wow fadeIn mt-5" data-wow-delay="0.1s" style="padding: 35px;">
+<!--<div class="container-fluid bg-primary mb-5 wow fadeIn mt-5" data-wow-delay="0.1s" style="padding: 35px;">
     <div class="container">
         <div class="row g-2">
             <div class="col-md-10">
@@ -38,7 +38,7 @@
                             <option value="3">Property Type 3</option>
                         </select>
                     </div> -->
-                    <div class="col-md-6">
+                   <!-- <div class="col-md-6">
                         <select class="form-select border-0 py-3">
                             <option selected>Location</option>
                             <option value="1">Location 1</option>
@@ -64,8 +64,7 @@
             <div class="col-lg-6">
                 <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
                     <h1 class="mb-3">Produk Kami</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
-                        eirmod sit diam justo sed rebum.</p>
+                    <p>Jelajahi berbagai produk hasil karya siswa, mulai dari kerajinan tangan, karya digital, hingga barang fungsional sehari-hari. Semua produk dibuat dengan semangat belajar dan kreativitas tinggi.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
