@@ -20,6 +20,7 @@
         Swal.fire({
             title: 'Anda belum login!',
             icon: 'error',
+            text: 'silahkan login terlebih dahulu',
             confirmButtonText: 'Oke',
         });
     </script>
@@ -27,6 +28,31 @@
     <script>
         Swal.fire({
             title: 'berhasil menambah produk!',
+            icon: 'success',
+            confirmButtonText: 'Oke',
+        });
+    </script>
+<?php elseif (session()->getFlashdata('alert') === 'checkout_sukses'): ?>
+    <script>
+        Swal.fire({
+            title: 'berhasil menambah produk!',
+            icon: 'success',
+            confirmButtonText: 'Oke',
+        });
+    </script>
+<?php elseif (session()->getFlashdata('alert') === 'saldo_tidak_cukup'): ?>
+    <script>
+        Swal.fire({
+            title: 'Saldo tidak cukup!',
+            icon: 'error',
+            text: 'silakan top up terlebih dahulu',
+            confirmButtonText: 'Oke',
+        });
+    </script>
+<?php elseif (session()->getFlashdata('alert') === 'delete_cart'): ?>
+    <script>
+        Swal.fire({
+            title: 'berhasil menghapus produk!',
             icon: 'success',
             confirmButtonText: 'Oke',
         });

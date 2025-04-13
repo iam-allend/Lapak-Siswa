@@ -7,9 +7,11 @@ class OrderProductSiswaModel extends Model {
     protected $primaryKey = 'id_transaksi';
     protected $allowedFields = [
         'id_product', 'id_admin', 'id_customer', 'quantity', 
-        'price_at_transaction', 'total_price', 'status_order', 
-        'created_at', 'updated_at'
+        'price_at_transaction', 'total_price', 'status_order'
     ];
+    protected $useTimestamps = true;
+    protected $createdField = 'created_at';
+    protected $updatedField = 'updated_at';
 
     public function getTransactionsWithDetails() {//AMBIL DNGN TANPA ID
         return $this->db->table('transaksi_siswa')
