@@ -18,7 +18,7 @@
 <?php elseif (session()->getFlashdata('alert') === 'belum_login'): ?>
     <script>
         Swal.fire({
-            title: 'Anda belum login!',
+            title: 'Akses dilarang!',
             icon: 'error',
             text: 'silahkan login terlebih dahulu',
             confirmButtonText: 'Oke',

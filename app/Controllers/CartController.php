@@ -28,6 +28,12 @@ class CartController extends BaseController
 
     public function index()
     {
+        $this->session = session();
+
+        if (!$this->session->has('logged_in')) {
+            return redirect()->to(base_url('login'))->with('alert','belum_login');
+        }
+        
         $userId = session()->get('id_customer');
 
         if (!$userId) {

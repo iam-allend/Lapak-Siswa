@@ -12,6 +12,7 @@ class Home extends BaseController
     protected $productModel;
     protected $kategoriModel;
     protected $adminModel;
+    protected $session;
     protected $urlImageProductSiswaModel;
 
     public function __construct()
@@ -48,6 +49,11 @@ class Home extends BaseController
     }
     public function dashboard()
     {
+        $this->session = session();
+
+        if (!$this->session->has('logged_in')) {
+            return redirect()->to(base_url('login'))->with('alert','belum_login');
+        }
         $data = [
             'activePage' => 'Dashboard Customer',
             'tittle' => 'Lapak Siswa | Dashboard',
