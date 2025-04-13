@@ -10,13 +10,15 @@ $routes->get('/', 'Home::index');
 
 $routes->get('about', 'Home::about');
 $routes->get('contactus', 'Home::contactus');
-$routes->get('profile', 'Home::profile');
+$routes->get('dashboard-customer', 'Home::dashboard');
 $routes->get('shop', 'Home::shop'); 
 $routes->get('detail', 'Home::detail'); 
 
 $routes->get('cart', 'CartController::index');
 $routes->post('cart/add_to_cart', 'CartController::add_cart');
 $routes->get('cart/getCartCount', 'CartController::getCartCount');
+$routes->post('cart/hapusCart/(:num)', 'CartController::hapus/$1');
+$routes->get('cart/getCartItems', 'CartController::getCartItems');
 
 $routes->get('shoptest', 'Home::shoptest'); 
 $routes->get('blog', 'Home::blog'); 
@@ -33,6 +35,19 @@ $routes->get('auth/logout', 'Auth::logout'); // Proses logout
 
 // $routes->get('admin/dashboard', 'Admin::dashboard'); // Halaman dashboard untuk admin
 // $routes->get('superadmin/dashboard', 'SuperAdmin::dashboard'); // Halaman dashboard untuk superadmin
+
+
+$routes->group('deposit', function($routes) {
+    $routes->get('/', 'CustomerDepositController::index');
+    $routes->get('create', 'CustomerDepositController::create');
+    $routes->post('store', 'CustomerDepositController::store');
+});
+
+
+$routes->group('profile', function($routes) {
+    $routes->get('/', 'CustomerProfileController::index');
+    $routes->post('update', 'CustomerProfileController::update');
+});
 
 
 $routes->get('dashboard', 'DashboardController::dashboard');
@@ -167,4 +182,19 @@ $routes->group('customer',function($routes){
 
 $routes->group('industri',function($routes){
     $routes->get('dashboard', 'Industri::index'); // Halaman shop untuk customer
+});
+
+
+
+$routes->group('manage-deposit', function($routes) {
+    $routes->get('/', 'ManageDepositController::index');
+    $routes->get('create', 'ManageDepositController::create');
+    $routes->post('store', 'ManageDepositController::store');
+    $routes->get('edit/(:num)', 'ManageDepositController::edit/$1');
+    $routes->post('update/(:num)', 'ManageDepositController::update/$1');
+    $routes->get('delete/(:num)', 'ManageDepositController::delete/$1');
+    $routes->get('view/(:num)', 'ManageDepositController::view/$1');
+    
+    // API untuk get data customer (jika diperlukan)
+    $routes->get('get-customer/(:num)', 'ManageDepositController::getCustomer/$1');
 });

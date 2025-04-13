@@ -87,17 +87,17 @@
                         <a href="<?= base_url() ?>contactus" class="nav-item nav-link">Contact</a>
                     </div>
 
-                    <?php if(!session('id_level') == 0){?>
+                    <?php if(session('id_level') == 2){?>
 
                     <div class="dropdown">
-                        <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40" height="40">
+                        <img src="<?= base_url(session('url_image') ? session('url_image') : 'img_user/default.png') ?>" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle" width="40" height="40">
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                             <a class="dropdown-item" href="<?= base_url('profile')?>">
                                 <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
-                                    <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" alt width="40" height="40" class="rounded-circle" />
+                                    <img src="<?= base_url(session('url_image') ? session('url_image') : 'img_user/default.png') ?>" alt width="40" height="40" class="rounded-circle" />
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">

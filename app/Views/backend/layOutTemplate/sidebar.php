@@ -36,20 +36,31 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA TRANSAKSI</span>
             </li>            
-            
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Deposit') ? 'active' : '' ?>">
+              <a href="<?= base_url() ?>manage-deposit" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-git-compare' ></i>
+                <div>Data Deposit</div>
+              </a>
+            </li>
+            <?php if(session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-order-product-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
                 <div>Order Product Siswa</div>
               </a>
             </li>
+            <?php }?>
+            <?php if(session('id_level') != 1 && session('id_level') != 3){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product IndPer') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-order-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
                 <div>Order Product IndPer</div>
               </a>
             </li>
+            <?php }?>
             
+            <?php if(session('id_level') != 1 && session('id_level') != 3 && session('id_level') != 5 && session('id_level') != 6){?>
+
             
 
             <li class="menu-header small text-uppercase">
@@ -62,12 +73,18 @@
                 <div>Manage Admin</div>
               </a>
             </li>
+            <?php }?>
+
+            <?php if(session('id_level') != 1 && session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div>Manage Siswa</div>
               </a>
             </li>
+            <?php }?>
+
+            <?php if(session('id_level') != 1 && session('id_level') != 3 && session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage IndPer') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-indper" class="menu-link">
                   <i class='menu-icon tf-icons bx bx-user-circle'></i>
@@ -86,6 +103,7 @@
                   <div>Keranjang Customer</div>
               </a>
             </li>
+            <?php }?>
 
             <!-- Menu lainnya -->
 
@@ -93,20 +111,25 @@
               <span class="menu-header-text">DATA PRODUCT</span>
             </li>
 
+            <?php if(session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-product-siswa" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
                 <div>Product Siswa</div>
               </a>
             </li>
+            <?php }?>
 
+            <?php if(session('id_level') != 1 && session('id_level') != 3) {?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Product Industri/Perusahaan') ? 'active' : '' ?>">
               <a disabled href="<?= base_url() ?>manage-product-indper" class="menu-link">
                 <i class='menu-icon tf-icons bx bx bx-package'></i>
                 <div>Product IndPer</div>
               </a>
             </li>
+            <?php }?>
 
+            <?php if(session('id_level') != 1 && session('id_level') != 3 && session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">KELENGKAPAN PRODUK</span>
             </li>
@@ -141,6 +164,7 @@
                 <div>Pajak Sistem</div>
               </a>
             </li>
+            <?php }?>
 
           </ul>
         </aside>
@@ -210,14 +234,16 @@
                             <small class="text-muted">
                                 <?php
                                 $id_level = session('id_level');
-                                if ($id_level == 1) {
+                                if ($id_level == 2) {
                                     echo 'Customer';
-                                } elseif ($id_level == 2) {
+                                } elseif ($id_level == 1) {
                                     echo 'Siswa';
                                 } elseif ($id_level == 3) {
                                     echo 'Admin';
                                 } elseif ($id_level == 4) {
                                     echo 'Superadmin';
+                                } elseif ($id_level == 5 || $id_level == 6) {
+                                    echo 'Collaborator';
                                 } else {
                                     echo 'Tidak Diketahui';
                                 }

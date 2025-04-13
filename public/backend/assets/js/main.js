@@ -138,4 +138,47 @@ setInterval(updateCartCount, 100);
 
 $(document).ready(function() {
   updateCartCount();
+
+  $(document).on('click', '.delete-btn', function() {  
+    let itemId = $(this).data('id');
+  
+    if (confirm('Apakah Anda yakin ingin menghapus produk ini dari keranjang?')) {
+        $.ajax({
+            url: '/cart/hapusCart/' + itemId,
+            type: 'POST',
+            data: { id: itemId },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    $('#row-' + itemId).fadeOut(500, function() {
+                        $(this).remove();
+                        updateCart(); // Perbarui daftar keranjang
+                    });
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function() {
+                alert('Terjadi kesalahan saat menghapus produk. Silakan coba lagi.');
+            }
+        });
+    }
+  });
+  
+  // Fungsi untuk memperbarui tampilan cart
+  function updateCart() {
+    $.ajax({
+        url: '/cart/getCartItems',
+        type: 'GET',
+        dataType: 'html',
+        success: function(response) {
+            $('.cart-container').html(response); // Update daftar produk
+        }
+    });
+  }
+  
 });
+
+
+
+  

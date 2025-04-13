@@ -375,6 +375,8 @@ class Auth extends Controller
                 $sessionData['username']  = $user['username'];
                 $sessionData['email']     = $user['email'];
                 $sessionData['gender']    = $user['gender'];
+                $sessionData['no_telp']    = $user['no_telp'];
+                $sessionData['alamat']    = $user['alamat'];
                 $sessionData['url_image'] = $user['url_image'];
                 break;
 
@@ -401,11 +403,12 @@ class Auth extends Controller
         $session->set($sessionData);
 
         $redirectRoutes = [
-            1 => 'profile',
-            2 => 'profile',
+            1 => 'dashboard',
+            2 => '/',
             3 => 'dashboard',
             4 => 'dashboard',
-            5 => 'industri/dashboard',
+            5 => 'dashboard',
+            6 => 'dashboard'
         ];
 
         return redirect()->to(base_url($redirectRoutes[$sessionData['id_level']] ?? 'login'))->with('alert', 'login_sukses');
