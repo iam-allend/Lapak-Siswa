@@ -27,15 +27,22 @@
                 </a>
             </li>
 
-            <li class="menu-item <?= (isset($activePage) && $activePage == 'Profile') ? 'active' : '' ?>">
-                <a href="<?= base_url('profile') ?>" class="menu-link">
-                    <i class='menu-icon tf-icons bx bx-user'></i>
-                    <div data-i18n="Analytics">Profile</div>
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Dashboard Customer') ? 'active' : '' ?>">
+                <a href="<?= base_url('dashboard-customer') ?>" class="menu-link">
+                    <i class='menu-icon tf-icons bx bx-tachometer'></i>
+                    <div data-i18n="Analytics">Dashboard</div>
+                </a>
+            </li>
+
+            <li class="menu-item <?= (isset($activePage) && $activePage == 'Deposit') ? 'active' : '' ?>">
+                <a href="<?= base_url('deposit') ?>" class="menu-link">
+                    <i class='menu-icon tf-icons bx bx-money'></i>
+                    <div data-i18n="Analytics">Deposit</div>
                 </a>
             </li>
 
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Keranjang') ? 'active' : '' ?>">
-                <a href="<?= base_url('keranjang') ?>" class="menu-link">
+                <a href="<?= base_url('cart') ?>" class="menu-link">
                     <i class='menu-icon tf-icons bx bx-cart-alt'></i>
                     <div data-i18n="Analytics">Keranjang</div>
                 </a>
@@ -92,7 +99,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="<?= session('url_image')?>" alt="Profile" class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -100,8 +107,8 @@
                       <a class="dropdown-item" href="#">
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="<?= base_url('backend/img_customer/' . session('url_image'))?>" alt class="w-px-40 h-auto rounded-circle" />
+                            <div div class="avatar avatar-online">
+                              <img src="<?= session('url_image')?>" alt="Profile" class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -130,7 +137,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="<?= base_url('profile-admin')?>">
+                      <a class="dropdown-item" href="<?= base_url('profile')?>">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">My Profile</span>
                       </a>
