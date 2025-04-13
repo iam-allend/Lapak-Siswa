@@ -54,7 +54,7 @@
   });
 
   const formattedTotal = "Rp. " + formatRupiah(total);
-  const formattedDiskon = "-Rp. " + formatRupiah(totalDiskon);
+  const formattedDiskon = "-Rp. " + formatRupiah(Math.round(totalDiskon));
 
   // Tampilkan total harga
   const totalHargaId = document.getElementById('totalHarga');

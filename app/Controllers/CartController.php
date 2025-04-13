@@ -210,7 +210,7 @@ class CartController extends BaseController
             return redirect()->to(base_url('cart'))->with('alert', 'saldo_tidak_cukup');
         }
     } else {
-        return redirect()->to(base_url('cart'))->with('alert', 'saldo_tidak_ditemukan');
+        return redirect()->to(base_url('cart'))->with('alert', 'saldo_tidak_cukup');
     }
 }
 
