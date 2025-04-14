@@ -35,13 +35,15 @@
             
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">DATA TRANSAKSI</span>
-            </li>            
+            </li>
+            <?php if(session('id_level') != 3 && session('id_level') != 1 && session('id_level') != 5 && session('id_level') != 6){?>  
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Deposit') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-deposit" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-compare' ></i>
                 <div>Data Deposit</div>
               </a>
             </li>
+            <?php }?>
             <?php if(session('id_level') != 5 && session('id_level') != 6){?>
             <li class="menu-item <?= (isset($activePage) && $activePage == 'Manage Order Product Siswa') ? 'active' : '' ?>">
               <a href="<?= base_url() ?>manage-order-product-siswa" class="menu-link">
