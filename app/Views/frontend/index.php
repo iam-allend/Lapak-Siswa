@@ -12,10 +12,10 @@
         <div class="col-md-6 animated fadeIn">
             <div class="owl-carousel header-carousel">
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/image4.png" alt="">
+                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/Gambar ke 2.png" alt="">
                 </div>
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/image.png" alt="">
+                    <img class="img-fluid" src="<?= base_url() ?>frontend/img/Halaman Awalan.png" alt="">
                 </div>
                 
             </div>
