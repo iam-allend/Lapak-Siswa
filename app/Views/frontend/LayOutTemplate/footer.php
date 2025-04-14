@@ -5,7 +5,7 @@
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Get In Touch</h5>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Semarang, Indonesia</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+062 8945 6789</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>lapaksiswa@gmail.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
@@ -25,28 +25,27 @@
                 <h5 class="text-white mb-4">Photo Gallery</h5>
                 <div class="row g-2 pt-2">
                     <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
+                        <img class="img-fluid rounded bg-light p-1" src="<?= base_url('frontend/img/Kotak Pensil.png')?>" alt="">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
+                        <img class="img-fluid rounded bg-light p-1" src="<?= base_url('frontend/img/Sabun.png')?>" alt="">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
+                        <img class="img-fluid rounded bg-light p-1" src="<?= base_url('frontend/img/Gantungan Kunci.png')?>" alt="">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
+                        <img class="img-fluid rounded bg-light p-1" src="<?= base_url('frontend/img/Sapu Lidi.png')?>" alt="">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
+                        <img class="img-fluid rounded bg-light p-1" src="<?= base_url('frontend/img/Scrub Kopi.png')?>" alt="">
                     </div>
                     <div class="col-4">
-                        <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
+                        <img class="img-fluid rounded bg-light p-1" src="<?= base_url('frontend/img/Taplak Meja.png')?>" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Newsletter</h5>
-                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+               
                 <div class="position-relative mx-auto" style="max-width: 400px;">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3630783180824!2d110.39943937499694!3d-6.966424193034101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f4c8081bffaf%3A0xbb522f8061199b3!2sSMK%20Negeri%2010%20Semarang!5e0!3m2!1sid!2sid!4v1740027626334!5m2!1sid!2sid"
@@ -60,10 +59,10 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">Lapak Siswa</a>, All Right Reserved.
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="">Taqim Design Team</a>
+                    Designed By <a class="border-bottom" href=""> Mahasiswa D3 Teknik Informatika</a>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
