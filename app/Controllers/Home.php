@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\ProductSiswaModel;
 use App\Models\KategoriModel;
 use App\Models\AdminModel;
+use App\Models\CustomerModel;
 use App\Models\UrlImageProductSiswaModel;
 
 
@@ -12,6 +13,7 @@ class Home extends BaseController
     protected $productModel;
     protected $kategoriModel;
     protected $adminModel;
+    protected $deposit;
     protected $session;
     protected $urlImageProductSiswaModel;
 
@@ -19,6 +21,8 @@ class Home extends BaseController
     {
         $this->productModel = new ProductSiswaModel();
         $this->kategoriModel = new KategoriModel();
+        $this->deposit = new CustomerModel();
+        $this->session = session();
         $this->urlImageProductSiswaModel = new UrlImageProductSiswaModel();
         $this->adminModel = new AdminModel();
     }
@@ -31,15 +35,23 @@ class Home extends BaseController
         foreach ($products as &$product) {
             $product['images'] = $this->urlImageProductSiswaModel->getImagesByProductId($product['id_product']);
         }
+
+        $userId = session()->get('id_customer');
+
+        $saldo = $this->deposit
+                    ->where('id_customer', $userId)
+                    ->first();
         
         $data = [
             'products' => $products,
             'activePage' => 'Produk Siswa',
             'tittle' => 'Beranda',
-            'navigasi' => 'Produk Siswa'
+            'navigasi' => 'Produk Siswa',
+            'saldo' => $saldo
         ];
         return view('frontend/index', $data);
     }
+
     public function about()
     {
         $data = [

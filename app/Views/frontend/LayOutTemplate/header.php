@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <span class="fw-semibold d-block"><?= session('fullname')?></span>
-                                    <small class="text-muted">Rp30.000</small>
+                                    <small class="text-muted">Rp.<?= number_format($saldo['saldo'], 0, ',', '.') ?></small>
                                 </div>
                                 </div>
                             </a>
