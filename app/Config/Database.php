@@ -49,7 +49,27 @@ class Database extends Config
             'datetime' => 'Y-m-d H:i:s',
             'time'     => 'H:i:s',
         ],
+    ];// BARU: Tambahkan koneksi untuk database produk 'android'
+    public array $androidDB = [
+        'DSN'      => '',
+        'hostname' => 'localhost', // Sesuaikan jika database di server lain
+        'username' => 'root',
+        'password' => '',
+        'database' => 'android', // Nama database produk Anda
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => true, // Ubah ke false di produksi!
+        'charset'  => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'     => 3306,
     ];
+
 
     //    /**
     //     * Sample database connection for SQLite3.

@@ -314,7 +314,22 @@
         </div>
       </div>
     </div>
-
+     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+      <div class="team-item rounded overflow-hidden">
+        <div class="position-relative">
+          <img class="img-fluid" src="<?= base_url() ?>frontend/img/sarep.JPG" alt="">
+          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+            <a class="btn btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="text-center p-4 mt-3">
+          <h5 class="fw-bold mb-0">Muhammad Najwa Syarif</h5>
+          <small>Front-end Developer</small>
+        </div>
+      </div>
+    </div>
     <!-- Card 2 -->
     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
       <div class="team-item rounded overflow-hidden">
@@ -386,25 +401,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Card 6 -->
-    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-      <div class="team-item rounded overflow-hidden">
-        <div class="position-relative">
-          <img class="img-fluid" src="<?= base_url() ?>frontend/img/sarep.JPG" alt="">
-          <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-            <a class="btn btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-            <a class="btn btn-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="text-center p-4 mt-3">
-          <h5 class="fw-bold mb-0">Muhammad Najwa Syarif</h5>
-          <small>Front-end Developer</small>
-        </div>
-      </div>
-    </div>
-
     <!-- Card 7 -->
     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
       <div class="team-item rounded overflow-hidden">

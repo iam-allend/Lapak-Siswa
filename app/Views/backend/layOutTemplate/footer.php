@@ -25,6 +25,8 @@
 
         <!-- Main JS -->
         <script src="<?= base_url()?>backend/assets/js/main.js"></script>
+        
+        <script src="<?= base_url() ?>public/backend/assets/js/config.js"></script>
 
         <!-- Page JS -->
         <script src="<?= base_url()?>backend/assets/js/dashboards-analytics.js"></script>

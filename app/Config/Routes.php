@@ -6,6 +6,14 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
+
+// startup
+
+
+
+
+
+
 $routes->get('/', 'Home::index');
 
 $routes->get('about', 'Home::about');
@@ -200,4 +208,8 @@ $routes->group('manage-deposit', function($routes) {
     
     // API untuk get data customer (jika diperlukan)
     $routes->get('get-customer/(:num)', 'ManageDepositController::getCustomer/$1');
+});
+
+ $routes->group('admin/product', function($routes) {
+    $routes->get('/', 'AdminProduct::index'); 
 });
